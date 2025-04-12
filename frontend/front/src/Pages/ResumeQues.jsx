@@ -46,11 +46,13 @@ export const ResumeQues = () => {
   const [currentSocial, setCurrentSocial] = useState({ name: "", link: "" });
 
 const defaultSocials = [
-  { name: "GitHub", key: "github", icon: "/icons/github.svg" },
-  { name: "LinkedIn", key: "linkedin", icon: "/icons/linkedin.svg" },
-  { name: "Instagram", key: "instagram", icon: "/icons/instagram.svg" },
-  { name: "Facebook", key: "facebook", icon: "/icons/facebook.svg" },
-  { name: "Portfolio", key: "portfolio", icon: "/icons/portfolio.svg" },
+  { name: "GitHub", key: "github", icon: "logo-github" },
+  { name: "LinkedIn", key: "linkedin", icon: "logo-linkedin" },
+  { name: "Instagram", key: "instagram", icon: "logo-instagram" },
+  { name: "Facebook", key: "facebook", icon: "logo-facebook" },
+  { name: "Portfolio", key: "portfolio", icon: "at" },
+  { name: "Contact", key: "contact", icon: "contact" },
+  { name: "EmailId", key: "EmailId", icon: "mail" },
 ];
 
   return (
@@ -247,7 +249,7 @@ const defaultSocials = [
                 onClick={BackStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
-                BackStep
+                Back
               </button>
               <button 
                 onClick={nextStep}
@@ -542,7 +544,7 @@ const defaultSocials = [
             <div className="space-y-4 mb-6">
               {defaultSocials.map((social, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <img src={social.icon} alt={social.name} className="w-8 h-8" />
+                  <ion-icon name={social.icon} alt={social.name} className="w-8 h-8" />
                   <input
                     type="text"
                     placeholder={`Your ${social.name} link`}

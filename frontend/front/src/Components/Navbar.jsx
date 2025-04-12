@@ -12,6 +12,7 @@ const Navbar = () => {
           <Link to = "/resumeques" className="hover:text-blue-500 font-times-new-roman">Resume Ques</Link>
           <Link to = "/resumethemes" className="hover:text-blue-500 font-times-new-roman">Resume Themes</Link>
           <Link to = "/resume" className="hover:text-blue-500 font-times-new-roman">Resume</Link>
+          <Link to = "/test" className="hover:text-blue-500 font-times-new-roman">Test</Link>
         </div>
       </nav>
     </div>
