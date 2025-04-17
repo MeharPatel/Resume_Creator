@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+// import axios from "axios";
+import React, { useState } from "react";
 
 export const ResumeQues = () => {
-    const [step, setStep] = useState(1);
+  const [step, setStep] = useState(1);
+  // const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,19 +24,33 @@ export const ResumeQues = () => {
     otherSocialLinks: [],
   });
 
-  const nextStep = () => setStep(prev => prev + 1);
-  const skipStep = () => setStep(prev => prev + 1);
-  const BackStep = () => setStep(prev => prev - 1);
+  // const saveResumeData = async () => {
+  //   const response = await fetch('http://localhost:3000/resumedata', {
+  //     method : 'POST',
+  //     headers : { 'Content-Type' : 'application/json' },
+  //     body : JSON.stringify(formData)
+  //   })
+
+  //   const result = await response.json()
+  //   console.log("Saved Resume Data!", result);    
+  // }
+
+  const nextStep = () => setStep((prev) => prev + 1);
+  const skipStep = () => setStep((prev) => prev + 1);
+  const BackStep = () => setStep((prev) => prev - 1);
 
   const handleChange = (e) => {
-    setFormData({ 
-      ...formData, 
-      [e.target.name]: e.target.value 
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
   };
 
   const [currentSkill, setCurrentSkill] = useState();
-  const [currentAchievement, setCurrentAchievement] = useState({ title: "", file: null });
+  const [currentAchievement, setCurrentAchievement] = useState({
+    title: "",
+    file: null,
+  });
   const [currentProject, setCurrentProject] = useState({
     title: "",
     projectUrl: "",
@@ -45,18 +61,17 @@ export const ResumeQues = () => {
 
   const [currentSocial, setCurrentSocial] = useState({ name: "", link: "" });
 
-const defaultSocials = [
-  { name: "GitHub", key: "github", icon: "logo-github" },
-  { name: "LinkedIn", key: "linkedin", icon: "logo-linkedin" },
-  { name: "Instagram", key: "instagram", icon: "logo-instagram" },
-  { name: "Facebook", key: "facebook", icon: "logo-facebook" },
-  { name: "Portfolio", key: "portfolio", icon: "at" },
-  { name: "Contact", key: "contact", icon: "contact" },
-  { name: "EmailId", key: "EmailId", icon: "mail" },
-];
+  const defaultSocials = [
+    { name: "GitHub", key: "github", icon: "logo-github" },
+    { name: "LinkedIn", key: "linkedin", icon: "logo-linkedin" },
+    { name: "Instagram", key: "instagram", icon: "logo-instagram" },
+    { name: "Facebook", key: "facebook", icon: "logo-facebook" },
+    { name: "Portfolio", key: "portfolio", icon: "at" },
+    { name: "Contact", key: "contact", icon: "contact" },
+    { name: "EmailId", key: "EmailId", icon: "mail" },
+  ];
 
   return (
-
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
         <div className="text-gray-500 mb-6 text-sm text-center">
@@ -65,7 +80,9 @@ const defaultSocials = [
 
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-center">Personal Information</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Personal Information
+            </h2>
             <input
               type="text"
               name="firstName"
@@ -100,7 +117,7 @@ const defaultSocials = [
             />
             <div className="flex justify-between">
               {/* No skip on Personal Info */}
-              <button 
+              <button
                 onClick={nextStep}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg"
               >
@@ -125,7 +142,8 @@ const defaultSocials = [
                     updatedEducation[index].school = e.target.value;
                     setFormData({ ...formData, education: updatedEducation });
                   }}
-                  className="border p-2 mb-2 w-full rounded-lg" />
+                  className="border p-2 mb-2 w-full rounded-lg"
+                />
                 <input
                   type="text"
                   placeholder="Degree / Program"
@@ -135,7 +153,8 @@ const defaultSocials = [
                     updatedEducation[index].degree = e.target.value;
                     setFormData({ ...formData, education: updatedEducation });
                   }}
-                  className="border p-2 mb-2 w-full rounded-lg" />
+                  className="border p-2 mb-2 w-full rounded-lg"
+                />
                 <input
                   type="text"
                   placeholder="Year"
@@ -145,7 +164,8 @@ const defaultSocials = [
                     updatedEducation[index].year = e.target.value;
                     setFormData({ ...formData, education: updatedEducation });
                   }}
-                  className="border p-2 w-full rounded-lg" />
+                  className="border p-2 w-full rounded-lg"
+                />
               </div>
             ))}
 
@@ -153,7 +173,10 @@ const defaultSocials = [
               onClick={() =>
                 setFormData({
                   ...formData,
-                  education: [...formData.education, { school: "", degree: "", year: "" }],
+                  education: [
+                    ...formData.education,
+                    { school: "", degree: "", year: "" },
+                  ],
                 })
               }
               className="bg-green-500 text-white px-4 py-2 mb-6 rounded-lg"
@@ -162,19 +185,19 @@ const defaultSocials = [
             </button>
 
             <div className="flex justify-between">
-              <button 
+              <button
                 onClick={skipStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
                 Skip
               </button>
-              <button 
+              <button
                 onClick={BackStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
                 Back
               </button>
-              <button 
+              <button
                 onClick={nextStep}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg"
               >
@@ -230,7 +253,10 @@ const defaultSocials = [
               onClick={() =>
                 setFormData({
                   ...formData,
-                  experience: [...formData.experience, { company: "", position: "", duration: "" }],
+                  experience: [
+                    ...formData.experience,
+                    { company: "", position: "", duration: "" },
+                  ],
                 })
               }
               className="bg-green-500 text-white px-4 py-2 mb-6 rounded-lg"
@@ -239,19 +265,19 @@ const defaultSocials = [
             </button>
 
             <div className="flex justify-between">
-              <button 
+              <button
                 onClick={skipStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
                 Skip
               </button>
-              <button 
+              <button
                 onClick={BackStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
                 Back
               </button>
-              <button 
+              <button
                 onClick={nextStep}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg"
               >
@@ -291,29 +317,29 @@ const defaultSocials = [
 
             <div className="flex flex-wrap gap-2 mb-6">
               {formData.skills.map((skill, index) => (
-                <span key={index} className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
+                <span
+                  key={index}
+                  className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full"
+                >
                   {skill}
                 </span>
               ))}
             </div>
 
             <div className="flex justify-between">
-              <button 
+              <button
                 onClick={skipStep}
-                className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
-              >
+                className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg">
                 Skip
               </button>
-              <button 
+              <button
                 onClick={BackStep}
-                className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
-              >
+                className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg">
                 Back
               </button>
-              <button 
+              <button
                 onClick={nextStep}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg"
-              >
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg">
                 Next
               </button>
             </div>
@@ -322,7 +348,9 @@ const defaultSocials = [
 
         {step === 5 && (
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-center">Achievements</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Achievements
+            </h2>
 
             <div className="mb-4">
               <input
@@ -374,7 +402,9 @@ const defaultSocials = [
                 >
                   <span>{ach.title}</span>
                   {ach.file && (
-                    <span className="text-sm text-blue-600">{ach.file.name}</span>
+                    <span className="text-sm text-blue-600">
+                      {ach.file.name}
+                    </span>
                   )}
                 </li>
               ))}
@@ -413,7 +443,10 @@ const defaultSocials = [
                 placeholder="Project Title"
                 value={currentProject.title}
                 onChange={(e) =>
-                  setCurrentProject({ ...currentProject, title: e.target.value })
+                  setCurrentProject({
+                    ...currentProject,
+                    title: e.target.value,
+                  })
                 }
                 className="border p-2 w-full rounded mb-2"
               />
@@ -423,7 +456,10 @@ const defaultSocials = [
                 placeholder="Project URL (optional)"
                 value={currentProject.projectUrl}
                 onChange={(e) =>
-                  setCurrentProject({ ...currentProject, projectUrl: e.target.value })
+                  setCurrentProject({
+                    ...currentProject,
+                    projectUrl: e.target.value,
+                  })
                 }
                 className="border p-2 w-full rounded mb-2"
               />
@@ -433,7 +469,10 @@ const defaultSocials = [
                 placeholder="GitHub Link (optional)"
                 value={currentProject.githubLink}
                 onChange={(e) =>
-                  setCurrentProject({ ...currentProject, githubLink: e.target.value })
+                  setCurrentProject({
+                    ...currentProject,
+                    githubLink: e.target.value,
+                  })
                 }
                 className="border p-2 w-full rounded mb-2"
               />
@@ -441,7 +480,10 @@ const defaultSocials = [
               <input
                 type="file"
                 onChange={(e) =>
-                  setCurrentProject({ ...currentProject, image: e.target.files[0] })
+                  setCurrentProject({
+                    ...currentProject,
+                    image: e.target.files[0],
+                  })
                 }
                 className="mb-2"
               />
@@ -450,7 +492,10 @@ const defaultSocials = [
                 placeholder="Project Description (optional)"
                 value={currentProject.description}
                 onChange={(e) =>
-                  setCurrentProject({ ...currentProject, description: e.target.value })
+                  setCurrentProject({
+                    ...currentProject,
+                    description: e.target.value,
+                  })
                 }
                 className="border p-2 w-full rounded mb-4 h-24"
               ></textarea>
@@ -539,12 +584,18 @@ const defaultSocials = [
 
         {step === 7 && (
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-center">Social Accounts</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Social Accounts
+            </h2>
 
             <div className="space-y-4 mb-6">
               {defaultSocials.map((social, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <ion-icon name={social.icon} alt={social.name} className="w-8 h-8" />
+                  <ion-icon
+                    name={social.icon}
+                    alt={social.name}
+                    className="w-8 h-8"
+                  />
                   <input
                     type="text"
                     placeholder={`Your ${social.name} link`}
@@ -566,7 +617,9 @@ const defaultSocials = [
 
             {/* Add another social media link */}
             <div className="mb-4 border-t pt-6">
-              <h3 className="text-lg font-semibold mb-4">Add Other Social Media</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                Add Other Social Media
+              </h3>
 
               <input
                 type="text"
@@ -592,7 +645,10 @@ const defaultSocials = [
                   if (currentSocial.name.trim() && currentSocial.link.trim()) {
                     setFormData({
                       ...formData,
-                      otherSocialLinks: [...formData.otherSocialLinks, currentSocial],
+                      otherSocialLinks: [
+                        ...formData.otherSocialLinks,
+                        currentSocial,
+                      ],
                     });
                     setCurrentSocial({ name: "", link: "" });
                   }
@@ -625,16 +681,16 @@ const defaultSocials = [
                 Back
               </button>
               <button
-                // onClick={}
+                // onClick={saveResumeData()}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg"
               >
                 Finish
               </button>
+              {/* <div>{message}</div> */}
             </div>
           </div>
         )}
-
       </div>
     </div>
-  )
-}
+  );
+};
