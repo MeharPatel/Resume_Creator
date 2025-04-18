@@ -669,12 +669,6 @@ export const ResumeQues = () => {
 
             <div className="flex justify-between">
               <button
-                onClick={skipStep}
-                className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
-              >
-                Skip
-              </button>
-              <button
                 onClick={BackStep}
                 className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
               >
