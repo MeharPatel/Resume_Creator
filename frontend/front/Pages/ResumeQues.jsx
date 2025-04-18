@@ -24,16 +24,16 @@ export const ResumeQues = () => {
     otherSocialLinks: [],
   });
 
-  // const saveResumeData = async () => {
-  //   const response = await fetch('http://localhost:3000/resumedata', {
-  //     method : 'POST',
-  //     headers : { 'Content-Type' : 'application/json' },
-  //     body : JSON.stringify(formData)
-  //   })
+  const saveResumeData = async () => {
+    const response = await fetch('http://localhost:3000/resumedata', {
+      method : 'POST',
+      headers : { 'Content-Type' : 'application/json' },
+      body : JSON.stringify(formData)
+    })
 
-  //   const result = await response.json()
-  //   console.log("Saved Resume Data!", result);    
-  // }
+    // const result = await response.json()
+    console.log("Saved Resume Data!");    
+  }
 
   const nextStep = () => setStep((prev) => prev + 1);
   const skipStep = () => setStep((prev) => prev + 1);
@@ -681,7 +681,7 @@ export const ResumeQues = () => {
                 Back
               </button>
               <button
-                // onClick={saveResumeData()}
+                onClick={saveResumeData}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg"
               >
                 Finish

@@ -22,11 +22,16 @@ class ResumeController {
 
     static resume_data = async (req, res) => {
         try {
-            console.log(req);
+            console.log(req.body);
             
-            // const new_resume_data = new ResumeDataModel({
-            //     firstName = req.
-            // })
+            const new_resume_data = new ResumeDataModel({
+                firstName : req.body.firstName,
+                lastName : req.body.lastName,
+                email : req.body.email,
+                phone : req.body.phone
+            })
+
+            const education_data = new EducationMode
         } catch (error) {
             console.log(error)
         }
