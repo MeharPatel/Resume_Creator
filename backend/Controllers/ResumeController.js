@@ -22,10 +22,11 @@ class ResumeController {
         }
     }
 
-    static resume_data = async (req, res) => {
+    static save_resume_data = async (req, res) => {
         try {
             const user_email = req.body.email
-
+            console.log(req.body);
+            
             const new_resume_data = new ResumeDataModel({
                 firstName : req.body.firstName,
                 lastName : req.body.lastName,
@@ -37,11 +38,39 @@ class ResumeController {
                 achievements : req.body.achievements,
                 projects : req.body.projects,
                 socialLinks : req.body.socialLinks,
-                otherSocialLinks : req.body.otherSocialLinks
+                otherSocialLinks : req.body.otherSocialLinks,
+                customSections : req.body.customSections
             })
             await new_resume_data.save();
 
+            console.log(new_resume_data);
+            res.json({ message: "Resume saved successfully!" });
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({ error: "Something went wrong!" });
+        }
+    }
+
+    static get_resume_data = async (req, res) => {
+        try {
+            const user_email = req.body.email
             console.log(req.body);
+            
+            const new_resume_data = new ResumeDataModel({
+                firstName : req.body.firstName,
+                lastName : req.body.lastName,
+                email : user_email,
+                phone : req.body.phone,
+                education : req.body.education,
+                experience : req.body.experience,
+                skills : req.body.skills,
+                achievements : req.body.achievements,
+                projects : req.body.projects,
+                socialLinks : req.body.socialLinks,
+                otherSocialLinks : req.body.otherSocialLinks,
+                customSections : req.body.customSections
+            })
+
             console.log(new_resume_data);
             res.json({ message: "Resume saved successfully!" });
         } catch (error) {

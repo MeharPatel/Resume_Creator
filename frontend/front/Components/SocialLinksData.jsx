@@ -92,6 +92,11 @@ export const SocialLinksData = ({ formData, setFormData, skipStep, BackStep, nex
             Back
             </button>
             <button
+            onClick={skipStep}
+            className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg">
+            Skip
+            </button>
+            <button
             onClick={nextStep}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg">
             Next

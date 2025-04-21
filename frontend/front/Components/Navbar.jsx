@@ -10,8 +10,7 @@ const Navbar = () => {
         </div>
         <div className="space-x-6 text-lg">
           <Link to = "/resumeques" className="hover:text-blue-500 font-times-new-roman">Resume Ques</Link>
-          <Link to = "/resumethemes" className="hover:text-blue-500 font-times-new-roman">Resume Themes</Link>
-          <Link to = "/resume" className="hover:text-blue-500 font-times-new-roman">Resume</Link>
+          <Link to = "/resumepreview" className="hover:text-blue-500 font-times-new-roman">Resume Preview</Link>
           <Link to = "/test" className="hover:text-blue-500 font-times-new-roman">Test</Link>
         </div>
       </nav>

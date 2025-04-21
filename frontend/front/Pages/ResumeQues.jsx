@@ -40,6 +40,7 @@ export const ResumeQues = () => {
       body : JSON.stringify(formData)
     })
     console.log("Saved Resume Data!");    
+    console.log(response);    
   }
 
   const nextStep = () => setStep((prev) => prev + 1);
@@ -89,7 +90,7 @@ export const ResumeQues = () => {
         )}
 
         {step === 8 && (
-          <CustomSection formData = {formData} setFormData = {setFormData} saveResumeData = {saveResumeData} BackStep = {BackStep} />              
+          <CustomSection saveResumeData = {saveResumeData} BackStep = {BackStep} formData = {formData} setFormData={setFormData} />              
         )}
           {/* <CustomSection onChange={(data) => setCustomSections(data)} /> */}
       </div>

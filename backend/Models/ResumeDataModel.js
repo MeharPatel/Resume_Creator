@@ -112,6 +112,16 @@ const ResumeDataSchema = new mongoose.Schema({
             type : String,
             required : false
         }
+    }],
+    customSections : [{
+        sectionName : {
+            type : String,
+            required : false
+        },
+        items : [{
+            type : String,
+            required : false
+        }]
     }]
 }, {timestamps : true})
 
