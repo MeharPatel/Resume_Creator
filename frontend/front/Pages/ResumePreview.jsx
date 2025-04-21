@@ -35,13 +35,52 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         key={selectedTemplate}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
         ref={targetRef}
         className={template.container}
       >
         {/* Name */}
-        <h1 className={template.name}>
+        {/* <h1 className={template.name}>
           {formData.firstName} {formData.lastName}
+        </h1> */}
+
+        <h1 className={template.name}>
+          {selectedTemplate === 'creative' ? (
+            <>
+              <svg 
+                width="100%" 
+                height="50px" 
+                className="inset-0"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="name-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#9333ea" />
+                    <stop offset="100%" stopColor="#ec4899" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0" 
+                  y="45" 
+                  fontFamily="sans-serif"
+                  fontSize="2.5rem" 
+                  fontWeight="bold" 
+                  fill="url(#name-gradient)"
+                >
+                  {formData.firstName} {formData.lastName}
+                </text>
+              </svg>
+              {/* Fallback text */}
+              <span className="opacity-0 pointer-events-none">
+                {formData.firstName} {formData.lastName}
+              </span>
+            </>
+          ) : (
+            /* Regular text for other templates */
+            <>
+              {formData.firstName} {formData.lastName}
+            </>
+          )}
         </h1>
         
         {/* Contact Info */}

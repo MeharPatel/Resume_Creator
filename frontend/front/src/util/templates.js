@@ -28,5 +28,105 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-2 pl-4 border-l-2 border-purple-200",
         customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
         container: "bg-white p-6 max-w-2xl mx-auto border-l-8 border-purple-500"
+    },
+    nordic: {
+        container: "bg-white p-8 max-w-2xl mx-auto border border-gray-100 shadow-sm",
+        name: "text-3xl font-light text-gray-800 mb-1 tracking-wide",
+        contact: "text-sm text-gray-500 mb-6",
+        sectionTitle: "text-lg font-medium text-gray-700 uppercase tracking-widest border-b border-gray-100 pb-2 mb-3",
+        itemTitle: "text-base font-normal text-gray-900",
+        itemSubtitle: "text-xs text-gray-500 italic",
+        itemDescription: "text-sm text-gray-600 mt-1 leading-snug",
+        customSection: "mt-4 pl-2 border-l-2 border-gray-200",
+        accentColor: "text-gray-800"
+    },
+    darkTech: {
+        container: "bg-gray-900 p-8 max-w-2xl mx-auto text-gray-100",
+        name: "text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 text-ellipsis",
+        contact: "text-blue-300 text-sm mb-6",
+        sectionTitle: "text-xl font-mono text-blue-400 border-b border-blue-800 pb-1 mb-3",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-blue-300 font-mono",
+        itemDescription: "text-gray-300 mt-2 text-sm",
+        customSection: "mt-6 bg-gray-800 p-3 rounded",
+        accentColor: "text-blue-400"
+    },
+    vintage: {
+        container: "bg-amber-50 p-8 max-w-2xl mx-auto border-l-4 border-amber-300",
+        name: "text-4xl font-serif text-amber-900 mb-2",
+        contact: "text-amber-700 text-sm italic mb-6",
+        sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-200 pb-1 mb-3",
+        itemTitle: "text-lg font-serif text-amber-900",
+        itemSubtitle: "text-sm text-amber-600",
+        itemDescription: "text-amber-800 mt-1 text-sm leading-relaxed",
+        customSection: "mt-4 pl-4 border-l border-amber-200",
+        accentColor: "text-amber-700"
+    },
+    neon: {
+        container: "bg-black p-8 max-w-2xl mx-auto border border-purple-500/20",
+        name: "text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400",
+        contact: "text-purple-300 text-xs tracking-widest mb-8",
+        sectionTitle: "text-2xl font-bold text-pink-400 uppercase tracking-wider mb-4",
+        itemTitle: "text-lg font-bold text-white",
+        itemSubtitle: "text-sm text-purple-300",
+        itemDescription: "text-gray-300 mt-2 text-sm",
+        customSection: "mt-6 bg-gray-900/50 p-4 rounded-lg border border-purple-500/10",
+        accentColor: "text-pink-400"
+    },
+    material: {
+        container: "bg-white p-8 max-w-2xl mx-auto shadow-md rounded-lg",
+        name: "text-4xl font-medium text-gray-800 mb-2",
+        contact: "text-blue-600 text-sm mb-8",
+        sectionTitle: "text-xl font-medium text-blue-700 bg-blue-50 px-3 py-2 rounded-lg mb-3",
+        itemTitle: "text-lg font-medium text-gray-800",
+        itemSubtitle: "text-sm text-blue-600",
+        itemDescription: "text-gray-600 mt-1 text-sm",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        accentColor: "text-blue-600"
+    },
+    glass: {
+        container: "bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-lg",
+        name: "text-4xl font-bold text-white",
+        contact: "text-blue-100/80 text-sm mb-6",
+        sectionTitle: "text-xl font-semibold text-white border-b border-white/20 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-white",
+        itemSubtitle: "text-blue-100/70 text-sm",
+        itemDescription: "text-white/80 text-sm mt-1"
+    },
+    brutalist: {
+        container: "bg-yellow-100 p-6 border-4 border-black",
+        name: "text-5xl font-black tracking-tight text-black mb-2",
+        contact: "text-black/70 text-sm uppercase mb-8",
+        sectionTitle: "text-2xl font-extrabold underline underline-offset-4 mb-4",
+        itemTitle: "text-xl font-bold text-black",
+        itemSubtitle: "text-black/60 text-sm font-mono",
+        itemDescription: "text-black/80 text-sm mt-2 leading-tight"
+    },
+    cyberpunk: {
+        container: "bg-black p-6 border-2 border-pink-500",
+        name: "text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400",
+        contact: "text-green-400 text-xs font-mono mb-8",
+        sectionTitle: "text-xl font-bold text-pink-500 border-b border-pink-500/30 pb-1 mb-3",
+        itemTitle: "text-lg font-bold text-white",
+        itemSubtitle: "text-blue-400 text-xs font-mono",
+        itemDescription: "text-gray-300 text-sm mt-1"
+    },
+    vintagePaper: {
+        container: "bg-amber-50 p-8 border-l-8 border-amber-700 shadow-inner",
+        name: "text-4xl font-serif text-amber-900 mb-2",
+        contact: "text-amber-700/80 text-sm italic mb-8",
+        sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-200 pb-1 mb-3",
+        itemTitle: "text-lg font-serif text-amber-900",
+        itemSubtitle: "text-amber-700/70 text-sm",
+        itemDescription: "text-amber-800/80 text-sm mt-1 leading-relaxed"
+    },
+    biophilic: {
+        container: "bg-white p-8 border-2 border-green-700/10 rounded-lg",
+        name: "text-4xl font-bold text-green-800",
+        contact: "text-green-600/80 text-sm mb-6",
+        sectionTitle: "text-xl font-semibold text-green-700 border-b border-green-200 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-green-900",
+        itemSubtitle: "text-green-600 text-sm",
+        itemDescription: "text-green-800/80 text-sm mt-1"
     }
 };
