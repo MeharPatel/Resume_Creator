@@ -249,5 +249,192 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-green-50/50 p-4 rounded",
         accentColor: "text-green-700"
+    },
+    cosmicGlow: {
+        container: "bg-black p-8 max-w-2xl mx-auto border border-indigo-500/30",
+        name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500",
+        contact: "text-sm text-indigo-300 font-mono mb-6",
+        sectionTitle: "text-xl font-bold text-violet-400 border-b border-indigo-700/50 pb-2 mb-3",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-indigo-300 font-mono",
+        itemDescription: "text-gray-300 text-sm mt-1",
+        customSection: "mt-6 bg-gray-900/80 p-4 rounded-lg border border-indigo-500/20",
+        accentColor: "text-violet-400"
+    },
+    classicParchment: {
+        container: "bg-amber-100 p-8 max-w-2xl mx-auto border-2 border-amber-600 shadow-inner",
+        name: "text-4xl font-serif text-amber-900 mb-2 tracking-wide",
+        contact: "text-sm text-amber-700 italic mb-6",
+        sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-300 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-amber-900",
+        itemSubtitle: "text-sm text-amber-600",
+        itemDescription: "text-sm text-amber-800 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-amber-200/50 p-4 rounded",
+        accentColor: "text-amber-700"
+    },
+    vibrantCitrus: {
+        container: "bg-orange-50 p-8 max-w-2xl mx-auto border-l-4 border-lime-400",
+        name: "text-4xl font-bold text-orange-600 mb-2",
+        contact: "text-sm text-lime-600 mb-6",
+        sectionTitle: "text-xl font-semibold text-orange-600 border-b border-lime-200 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-gray-900",
+        itemSubtitle: "text-sm text-lime-500",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-lime-100/30 p-4 rounded",
+        accentColor: "text-orange-600"
+    },
+    industrialForge: {
+        container: "bg-gray-100 p-8 max-w-2xl mx-auto border-2 border-red-600",
+        name: "text-4xl font-bold text-gray-800 mb-2 tracking-tight",
+        contact: "text-sm text-red-600 font-mono mb-6",
+        sectionTitle: "text-xl font-semibold text-gray-700 border-b border-red-300 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-gray-900",
+        itemSubtitle: "text-sm text-red-500 font-mono",
+        itemDescription: "text-sm text-gray-700 mt-1",
+        customSection: "mt-6 bg-gray-200/50 p-4 rounded",
+        accentColor: "text-red-600"
+    },
+    floralElegance: {
+        container: "bg-cream-50 p-8 max-w-2xl mx-auto border border-pink-200 rounded-lg",
+        name: "text-4xl font-serif text-pink-700 mb-2",
+        contact: "text-sm text-pink-500 mb-6",
+        sectionTitle: "text-xl font-medium text-pink-600 border-b border-pink-100 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-gray-800",
+        itemSubtitle: "text-sm text-pink-500",
+        itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-pink-50/50 p-4 rounded",
+        accentColor: "text-pink-600"
+    },
+    holoTech: {
+        container: "bg-gray-900 p-8 max-w-2xl mx-auto border border-teal-500/20",
+        name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500",
+        contact: "text-sm text-teal-300 font-mono mb-6",
+        sectionTitle: "text-xl font-bold text-teal-400 border-b border-teal-700/50 pb-2 mb-3",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-teal-300 font-mono",
+        itemDescription: "text-gray-300 text-sm mt-1",
+        customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-teal-500/10",
+        accentColor: "text-teal-400"
+    },
+    gothic: {
+        container: "bg-gray-900 p-8 max-w-2xl mx-auto border-2 border-gray-700 shadow-lg",
+        name: "text-4xl font-serif text-white mb-2 tracking-wide",
+        contact: "text-sm text-gray-400 italic mb-6",
+        sectionTitle: "text-xl font-serif text-gray-300 border-b border-gray-600 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-white",
+        itemSubtitle: "text-sm text-gray-500 font-serif",
+        itemDescription: "text-sm text-gray-400 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-gray-800 p-4 rounded border border-gray-700/50",
+        accentColor: "text-gray-300"
+    },
+    retroArcade: {
+        container: "bg-black p-8 max-w-2xl mx-auto border-4 border-red-500",
+        name: "text-4xl font-mono text-blue-400 mb-2 tracking-tight",
+        contact: "text-sm text-red-400 font-mono mb-6",
+        sectionTitle: "text-xl font-mono text-blue-400 border-b-2 border-red-500 pb-2 mb-3",
+        itemTitle: "text-lg font-mono text-white",
+        itemSubtitle: "text-sm text-red-400 font-mono",
+        itemDescription: "text-sm text-gray-300 mt-1",
+        customSection: "mt-6 bg-gray-900 p-4 rounded border border-blue-500/20",
+        accentColor: "text-blue-400"
+    },
+    midnightBloom: {
+        container: "bg-blue-950 p-8 max-w-2xl mx-auto border-l-4 border-blue-400",
+        name: "text-4xl font-serif text-blue-200 mb-2",
+        contact: "text-sm text-blue-300 mb-6",
+        sectionTitle: "text-xl font-serif text-blue-200 border-b border-blue-600 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-white",
+        itemSubtitle: "text-sm text-blue-300",
+        itemDescription: "text-sm text-gray-300 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-blue-900/50 p-4 rounded",
+        accentColor: "text-blue-200"
+    },
+    tropicalVibe: {
+        container: "bg-green-50 p-8 max-w-2xl mx-auto border border-yellow-300 rounded-lg",
+        name: "text-4xl font-bold text-green-700 mb-2",
+        contact: "text-sm text-yellow-600 mb-6",
+        sectionTitle: "text-xl font-semibold text-green-600 border-b border-yellow-200 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-gray-900",
+        itemSubtitle: "text-sm text-yellow-500",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-yellow-100/30 p-4 rounded",
+        accentColor: "text-green-600"
+    },
+    baroqueOpulence: {
+        container: "bg-cream-50 p-8 max-w-2xl mx-auto border-t-4 border-gold-600",
+        name: "text-4xl font-serif text-gray-900 mb-2 tracking-wide",
+        contact: "text-sm text-gold-600 italic mb-6",
+        sectionTitle: "text-xl font-serif text-gray-800 border-b border-gold-300 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-gray-900",
+        itemSubtitle: "text-sm text-gold-500",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-cream-100/50 p-4 rounded",
+        accentColor: "text-gold-600"
+    },
+    neoMinimal: {
+        container: "bg-white p-8 max-w-2xl mx-auto border border-gray-100",
+        name: "text-3xl font-semibold text-gray-900 mb-3",
+        contact: "text-sm text-gray-500 mb-6",
+        sectionTitle: "text-lg font-medium text-indigo-600 border-b border-gray-200 pb-2 mb-3",
+        itemTitle: "text-base font-semibold text-gray-900",
+        itemSubtitle: "text-sm text-gray-600",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6",
+        accentColor: "text-indigo-600"
+    },
+    purpleMajesty: {
+        container: "bg-purple-50 p-8 max-w-2xl mx-auto border-l-4 border-purple-600 rounded-lg",
+        name: "text-4xl font-bold text-purple-800 mb-2",
+        contact: "text-sm text-purple-500 mb-6",
+        sectionTitle: "text-xl font-semibold text-purple-700 border-b border-purple-200 pb-2 mb-3",
+        itemTitle: "text-lg font-medium text-gray-900",
+        itemSubtitle: "text-sm text-purple-600",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-purple-100/30 p-4 rounded",
+        accentColor: "text-purple-700"
+    },
+    vintageTypewriter: {
+        container: "bg-gray-100 p-8 max-w-2xl mx-auto border-2 border-gray-600",
+        name: "text-4xl font-mono text-gray-800 mb-2 tracking-tight",
+        contact: "text-sm text-gray-500 font-mono mb-6",
+        sectionTitle: "text-xl font-mono text-gray-700 border-b border-gray-400 pb-2 mb-3",
+        itemTitle: "text-lg font-mono text-gray-800",
+        itemSubtitle: "text-sm text-gray-500 font-mono",
+        itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-gray-200/50 p-4 rounded",
+        accentColor: "text-gray-700"
+    },
+    auroraGlow: {
+        container: "bg-gray-900 p-8 max-w-2xl mx-auto border border-teal-500/30",
+        name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-400",
+        contact: "text-sm text-teal-300 mb-6",
+        sectionTitle: "text-xl font-bold text-purple-400 border-b border-teal-600/50 pb-2 mb-3",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-teal-300",
+        itemDescription: "text-sm text-gray-300 mt-1",
+        customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-purple-500/20",
+        accentColor: "text-purple-400"
+    },
+    artNouveau: {
+        container: "bg-green-50 p-8 max-w-2xl mx-auto border-t-4 border-gold-500",
+        name: "text-4xl font-serif text-green-800 mb-2 tracking-wide",
+        contact: "text-sm text-gold-600 mb-6",
+        sectionTitle: "text-xl font-serif text-green-700 border-b border-gold-200 pb-2 mb-3",
+        itemTitle: "text-lg font-serif text-green-800",
+        itemSubtitle: "text-sm text-gold-500",
+        itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-green-100/30 p-4 rounded",
+        accentColor: "text-green-700"
+    },
+    cyberGrid: {
+        container: "bg-black p-8 max-w-2xl mx-auto border-2 border-green-500/50",
+        name: "text-4xl font-mono text-green-400 mb-2 tracking-tight",
+        contact: "text-sm text-blue-400 font-mono mb-6",
+        sectionTitle: "text-xl font-mono text-green-400 border-b border-blue-500/50 pb-2 mb-3",
+        itemTitle: "text-lg font-mono text-white",
+        itemSubtitle: "text-sm text-blue-400 font-mono",
+        itemDescription: "text-sm text-gray-300 mt-1",
+        customSection: "mt-6 bg-gray-900/80 p-4 rounded border border-green-500/20",
+        accentColor: "text-green-400"
     }
 }

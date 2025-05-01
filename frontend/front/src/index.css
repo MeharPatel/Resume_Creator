@@ -1,3 +1,26 @@
 .font-times-new-roman{
     font-family: 'Times New Roman', Times, serif;
 }
+
+
+
+
+
+/* Resume Preview Themes */
+
+.cream-50 { background-color: #FFF8F0; }
+.cream-100 { background-color: #FFF1E6; }
+.bronze-600 { background-color: #8B4513; }
+.bronze-700 { background-color: #7B3F00; }
+.bronze-800 { background-color: #6B3600; }
+.navy-50 { background-color: #F0F5FF; }
+.navy-100 { background-color: #E6EFFF; }
+.navy-600 { background-color: #2563EB; }
+.navy-700 { background-color: #1E40AF; }
+.navy-800 { background-color: #1E3A8A; }
+.navy-900 { background-color: #1E2A78; }
+.gold-200 { background-color: #FDE68A; }
+.gold-300 { background-color: #FCD34D; }
+.gold-400 { background-color: #FBBF24; }
+.gold-500 { background-color: #F59E0B; }
+.gold-600 { background-color: #D97706; }
