@@ -436,5 +436,60 @@ export const templates = {
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-900/80 p-4 rounded border border-green-500/20",
         accentColor: "text-green-400"
+    },
+    gradientPulse: {
+        container: "bg-gradient-to-br from-purple-600 to-teal-500 p-8 max-w-2xl mx-auto rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-400/50",
+        name: "text-4xl font-extrabold text-white mb-2 tracking-wide",
+        contact: "text-sm text-teal-200 mb-6",
+        sectionTitle: "text-xl font-bold text-white border-b border-teal-400/50 pb-2 mb-3 hover:scale-105 transition-transform duration-200",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-teal-300",
+        itemDescription: "text-sm text-gray-200 mt-1 leading-relaxed",
+        customSection: "mt-6 bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-teal-400/30",
+        accentColor: "text-teal-400"
+    },
+    cosmicWave: {
+        container: "bg-gradient-to-r from-blue-900 to-pink-800 p-8 max-w-2xl mx-auto rounded-lg shadow-md backdrop-blur-sm border border-pink-400/30",
+        name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400 mb-2",
+        contact: "text-sm text-pink-300 mb-6",
+        sectionTitle: "text-xl font-bold text-white border-b border-pink-400/50 pb-2 mb-3",
+        itemTitle: "text-lg font-semibold text-white hover:text-pink-200 transition-colors duration-200",
+        itemSubtitle: "text-sm text-pink-300",
+        itemDescription: "text-sm text-gray-200 mt-1",
+        customSection: "mt-6 bg-pink-900/20 backdrop-blur-md p-4 rounded-lg shadow-sm",
+        accentColor: "text-pink-400"
+    },
+    neonHorizon: {
+        container: "bg-gradient-to-t from-orange-600 to-cyan-600 p-8 max-w-2xl mx-auto rounded-xl border-2 border-cyan-400 shadow-lg hover:shadow-cyan-400/50 transition-shadow duration-300",
+        name: "text-4xl font-extrabold text-white mb-2 tracking-tight",
+        contact: "text-sm text-cyan-300 font-mono mb-6",
+        sectionTitle: "text-xl font-mono text-cyan-300 border-b border-orange-400/50 pb-2 mb-3 hover:scale-105 transition-transform duration-200",
+        itemTitle: "text-lg font-mono text-white",
+        itemSubtitle: "text-sm text-orange-300 font-mono",
+        itemDescription: "text-sm text-gray-200 mt-1",
+        customSection: "mt-6 bg-cyan-900/30 p-4 rounded-lg border border-orange-400/20",
+        accentColor: "text-cyan-300"
+    },
+    twilightSpark: {
+        container: "bg-gradient-to-br from-indigo-900 to-violet-700 p-8 max-w-2xl mx-auto rounded-lg shadow-lg border border-violet-400/40",
+        name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400 mb-2",
+        contact: "text-sm text-violet-300 mb-6",
+        sectionTitle: "text-xl font-bold text-violet-200 border-b border-indigo-400/50 pb-2 mb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-gradient-to-r after:from-violet-400 after:to-indigo-400 after:w-0 after:transition-all after:duration-300 hover:after:w-full",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-indigo-300",
+        itemDescription: "text-sm text-gray-200 mt-1",
+        customSection: "mt-6 bg-violet-900/20 p-4 rounded-lg border border-indigo-400/30",
+        accentColor: "text-violet-400"
+    },
+    solarFlare: {
+        container: "bg-gradient-to-r from-red-600 to-yellow-500 p-8 max-w-2xl mx-auto rounded-xl shadow-lg hover:shadow-yellow-400/50 transition-shadow duration-300 border border-yellow-400/40",
+        name: "text-4xl font-extrabold text-white mb-2 tracking-wide",
+        contact: "text-sm text-yellow-300 mb-6",
+        sectionTitle: "text-xl font-bold text-white border-b border-yellow-400/50 pb-2 mb-3 hover:text-yellow-200 transition-colors duration-200",
+        itemTitle: "text-lg font-semibold text-white",
+        itemSubtitle: "text-sm text-red-300",
+        itemDescription: "text-sm text-gray-200 mt-1",
+        customSection: "mt-6 bg-yellow-900/20 backdrop-blur-sm p-4 rounded-lg border border-red-400/30",
+        accentColor: "text-yellow-400"
     }
 }
