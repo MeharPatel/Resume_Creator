@@ -15,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/resumeques" element={<ResumeQues />} />
         <Route path="/resumepreview" element={<ResumePreviewPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>

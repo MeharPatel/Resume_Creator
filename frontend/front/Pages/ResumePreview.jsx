@@ -12,7 +12,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
   return (
     <div className="p-8 bg-gray-50 min-h-screen">
       {/* Template Selector */}
-      <div className="flex gap-4 mb-8 justify-center">
+      <div className="flex gap-4 mb-8 justify-center flex-wrap">
         {Object.keys(templates).map((templateKey) => (
           <motion.button
             key={templateKey}

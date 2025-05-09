@@ -54,20 +54,7 @@ export const ResumePreviewPage = () => {
   const [selectedTemplate, setSelectedTemplate] = useState('professional'); // Default template
 
   return (
-    <div>
-      {/* Template Selector Buttons */}
-      <div className="template-buttons">
-        {Object.keys(templates).map((templateKey) => (
-          <button 
-            key={templateKey}
-            onClick={() => setSelectedTemplate(templateKey)} // 👈 Updates state
-            className={selectedTemplate === templateKey ? 'active' : ''}
-          >
-            {templateKey}
-          </button>
-        ))}
-      </div>
-
+    <div> 
       {/* Pass the selected template down */}
       <ResumePreview 
         formData={formData} 

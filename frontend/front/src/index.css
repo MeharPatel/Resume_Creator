@@ -8,7 +8,7 @@
 
 /* Resume Preview Themes */
 
-.cream-50 { background-color: #FFF8F0; }
+/* .cream-50 { background-color: #FFF8F0; }
 .cream-100 { background-color: #FFF1E6; }
 .bronze-600 { background-color: #8B4513; }
 .bronze-700 { background-color: #7B3F00; }
@@ -23,4 +23,274 @@
 .gold-300 { background-color: #FCD34D; }
 .gold-400 { background-color: #FBBF24; }
 .gold-500 { background-color: #F59E0B; }
-.gold-600 { background-color: #D97706; }
+.gold-600 { background-color: #D97706; } */
+
+
+
+/* Custom CSS variables for colors and border radius */
+:root {
+    /* Placeholder variables (define actual HSL values in your app) */
+    --border: hsl(var(--border));
+    --input: hsl(var(--input));
+    --ring: hsl(var(--ring));
+    --background: hsl(var(--background));
+    --foreground: hsl(var(--foreground));
+    --primary: hsl(var(--primary));
+    --primary-foreground: hsl(var(--primary-foreground));
+    --secondary: hsl(var(--secondary));
+    --secondary-foreground: hsl(var(--secondary-foreground));
+    --destructive: hsl(var(--destructive));
+    --destructive-foreground: hsl(var(--destructive-foreground));
+    --muted: hsl(var(--muted));
+    --muted-foreground: hsl(var(--muted-foreground));
+    --accent: hsl(var(--accent));
+    --accent-foreground: hsl(var(--accent-foreground));
+    --popover: hsl(var(--popover));
+    --popover-foreground: hsl(var(--popover-foreground));
+    --card: hsl(var(--card));
+    --card-foreground: hsl(var(--card-foreground));
+    --sidebar-background: hsl(var(--sidebar-background));
+    --sidebar-foreground: hsl(var(--sidebar-foreground));
+    --sidebar-primary: hsl(var(--sidebar-primary));
+    --sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+    --sidebar-accent: hsl(var(--sidebar-accent));
+    --sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+    --sidebar-border: hsl(var(--sidebar-border));
+    --sidebar-ring: hsl(var(--sidebar-ring));
+    /* Resume creator palette */
+    --resume-primary: #9b87f5;
+    --resume-secondary: #7E69AB;
+    --resume-tertiary: #6E59A5;
+    --resume-dark: #1A1F2C;
+    --resume-light: #D6BCFA;
+    /* Border radius (example value, adjust as needed) */
+    --radius: 0.5rem;
+  }
+  
+  /* Container styles */
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    max-width: 100%;
+  }
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+  
+  /* Custom font families */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Custom border radius utilities */
+  .rounded-lg {
+    border-radius: var(--radius);
+  }
+  .rounded-md {
+    border-radius: calc(var(--radius) - 2px);
+  }
+  .rounded-sm {
+    border-radius: calc(var(--radius) - 4px);
+  }
+  
+  /* Custom keyframes */
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Custom animation utilities */
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.4s ease-out;
+  }
+  .animate-fade-out {
+    animation: fade-out 0.4s ease-out;
+  }
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+  .animate-slide-in {
+    animation: slide-in 0.5s ease-out;
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Custom color utilities */
+  .border-custom {
+    border-color: var(--border);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .text-primary-foreground {
+    color: var(--primary-foreground);
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .text-secondary-foreground {
+    color: var(--secondary-foreground);
+  }
+  .bg-destructive {
+    background-color: var(--destructive);
+  }
+  .text-destructive-foreground {
+    color: var(--destructive-foreground);
+  }
+  .bg-muted {
+    background-color: var(--muted);
+  }
+  .text-muted-foreground {
+    color: var(--muted-foreground);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-accent-foreground {
+    color: var(--accent-foreground);
+  }
+  .bg-popover {
+    background-color: var(--popover);
+  }
+  .text-popover-foreground {
+    color: var(--popover-foreground);
+  }
+  .bg-card {
+    background-color: var(--card);
+  }
+  .text-card-foreground {
+    color: var(--card-foreground);
+  }
+  .bg-sidebar {
+    background-color: var(--sidebar-background);
+  }
+  .text-sidebar-foreground {
+    color: var(--sidebar-foreground);
+  }
+  .bg-sidebar-primary {
+    background-color: var(--sidebar-primary);
+  }
+  .text-sidebar-primary-foreground {
+    color: var(--sidebar-primary-foreground);
+  }
+  .bg-sidebar-accent {
+    background-color: var(--sidebar-accent);
+  }
+  .text-sidebar-accent-foreground {
+    color: var(--sidebar-accent-foreground);
+  }
+  .border-sidebar {
+    border-color: var(--sidebar-border);
+  }
+  .ring-sidebar {
+    outline-color: var(--sidebar-ring);
+  }
+  .bg-resume-primary {
+    background-color: var(--resume-primary);
+  }
+  .text-resume-primary {
+    color: var(--resume-primary);
+  }
+  .bg-resume-secondary {
+    background-color: var(--resume-secondary);
+  }
+  .text-resume-secondary {
+    color: var(--resume-secondary);
+  }
+  .bg-resume-tertiary {
+    background-color: var(--resume-tertiary);
+  }
+  .text-resume-tertiary {
+    color: var(--resume-tertiary);
+  }
+  .bg-resume-dark {
+    background-color: var(--resume-dark);
+  }
+  .text-resume-dark {
+    color: var(--resume-dark);
+  }
+  .bg-resume-light {
+    background-color: var(--resume-light);
+  }
+  .text-resume-light {
+    color: var(--resume-light);
+  }
