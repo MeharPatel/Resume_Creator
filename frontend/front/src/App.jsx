@@ -5,11 +5,13 @@ import { ResumeQues } from '../Pages/ResumeQues'
 import { ResumePreviewPage } from '../Components/ResumePreviewPage'
 import { Footer } from '../Components/Footer'
 import Navbar from '../Components/Navbar'
+// import CustomCursor from '../Components/CustomCursor'
 
 function App() {
 
   return (
     <div>
+      {/* <CustomCursor /> */}
     <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
