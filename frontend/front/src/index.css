@@ -294,3 +294,47 @@
   .text-resume-light {
     color: var(--resume-light);
   }
+
+  .gradient-text {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .primary-button {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+    color: white;
+  }
+  .secondary-button {
+    border: 2px solid #8b5cf6;
+    color: #8b5cf6;
+  }
+  .gradient-bg {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+    color: white;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+  .animate-scale-in {
+    animation: scaleIn 1s ease-in;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+
+  

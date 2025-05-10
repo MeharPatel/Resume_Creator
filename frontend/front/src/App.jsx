@@ -5,19 +5,21 @@ import { ResumeQues } from '../Pages/ResumeQues'
 import { ResumePreviewPage } from '../Components/ResumePreviewPage'
 import { Footer } from '../Components/Footer'
 import Navbar from '../Components/Navbar'
-// import CustomCursor from '../Components/CustomCursor'
+import CustomCursor from '../Components/CustomCursor'
+import Try from '../Pages/Try'
 
 function App() {
 
   return (
     <div>
-      {/* <CustomCursor /> */}
+      <CustomCursor />
     <Navbar />
       <Routes>
+        <Route path='/home' element={<Try />} />
         <Route path="/" element={<Home />} />
         <Route path="/resumeques" element={<ResumeQues />} />
         <Route path="/resumepreview" element={<ResumePreviewPage />} />
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer />
     </div>
