@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-// import { button } from "@/components/ui/button";
-// import { Card, div } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
 
 const Try = () => {

@@ -64,10 +64,10 @@ const Footer = () => {
             © {new Date().getFullYear()} VibeResume. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-resume-primary mx-2 transition-colors">
+            <Link to="" className="text-gray-400 hover:text-resume-primary mx-2 transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-resume-primary mx-2 transition-colors">
+            <Link to="" className="text-gray-400 hover:text-resume-primary mx-2 transition-colors">
               Terms of Service
             </Link>
           </div>
