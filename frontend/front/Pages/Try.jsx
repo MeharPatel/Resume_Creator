@@ -17,7 +17,7 @@ const Try = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="home-title text-4xl md:text-6xl font-bold mb-6">
                 Create Stunning <span className="gradient-text">Resumes</span> That Get You Hired
               </h1>
               
