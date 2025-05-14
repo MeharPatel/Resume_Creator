@@ -10,6 +10,9 @@ import Footer from '../Components/Footer'
 import Try from '../Pages/Try'
 import AboutPage from '../Pages/AboutPage'
 import ContactPage from '../Pages/ContactPage'
+import LoginPage from '../Pages/LoginPage'
+import RegisterPage from '../Pages/RegisterPage'
+import ForgotPasswordPage from '../Pages/ForgetPasswordPage'
 
 const App = () => {
   return (
@@ -23,6 +26,9 @@ const App = () => {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/resumecreator' element={<ResumeQues />} />
         <Route path='/resumepreview' element={<ResumePreviewPage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/forgot-password' element={<ForgotPasswordPage />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

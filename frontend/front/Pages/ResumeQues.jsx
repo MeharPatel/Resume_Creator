@@ -55,7 +55,7 @@ export const ResumeQues = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="relative pt-32 pb-20 md:py-40 overflow-hidden flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-lg">
         <div className="text-gray-500 mb-6 text-sm text-center">
           Step {step} of 8

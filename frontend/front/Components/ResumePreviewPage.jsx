@@ -54,7 +54,7 @@ export const ResumePreviewPage = () => {
   const [selectedTemplate, setSelectedTemplate] = useState('professional'); // Default template
 
   return (
-    <div> 
+    <div className='relative pt-32 pb-20 md:py-40 overflow-hidden'> 
       {/* Pass the selected template down */}
       <ResumePreview 
         formData={formData} 

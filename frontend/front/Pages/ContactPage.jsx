@@ -1,7 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
 const ContactPage = () => {
@@ -64,7 +61,7 @@ const ContactPage = () => {
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Name
                   </label>
-                  <Input
+                  <input
                     id="name"
                     name="name"
                     value={formData.name}
@@ -79,7 +76,7 @@ const ContactPage = () => {
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email
                   </label>
-                  <Input
+                  <input
                     id="email"
                     name="email"
                     type="email"
@@ -95,7 +92,7 @@ const ContactPage = () => {
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject
                   </label>
-                  <Input
+                  <input
                     id="subject"
                     name="subject"
                     value={formData.subject}
@@ -110,7 +107,7 @@ const ContactPage = () => {
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message
                   </label>
-                  <Textarea
+                  <textarea
                     id="message"
                     name="message"
                     value={formData.message}
@@ -122,13 +119,13 @@ const ContactPage = () => {
                   />
                 </div>
                 
-                <Button 
+                <button 
                   type="submit" 
                   className="primary-button w-full" 
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
+                </button>
               </form>
             </div>
             
