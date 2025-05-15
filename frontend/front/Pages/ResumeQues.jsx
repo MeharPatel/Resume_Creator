@@ -1,13 +1,13 @@
 // import axios from "axios";
 import React, { useState } from "react";
-import { CustomSection } from "../Components/CustomSection";
-import { MainResumeData } from "../Components/MainResumeData";
-import { EducationData } from "../Components/EducationData";
-import { ExperienceData } from "../Components/ExperienceData";
-import SkillsData from "../Components/SkillsData";
-import { AchievementsData } from "../Components/AchievementsData";
-import { ProjectsData } from "../Components/ProjectsData";
-import { SocialLinksData } from "../Components/SocialLinksData";
+import { CustomSection } from "../Components/ResumeParts/CustomSection";
+import { MainResumeData } from "../Components/ResumeParts/MainResumeData";
+import { EducationData } from "../Components/ResumeParts/EducationData";
+import { ExperienceData } from "../Components/ResumeParts/ExperienceData";
+import SkillsData from "../Components/ResumeParts/SkillsData";
+import { AchievementsData } from "../Components/ResumeParts/AchievementsData";
+import { ProjectsData } from "../Components/ResumeParts/ProjectsData";
+import { SocialLinksData } from "../Components/ResumeParts/SocialLinksData";
 
 export const ResumeQues = () => {
   const [step, setStep] = useState(1);

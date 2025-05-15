@@ -1,15 +1,56 @@
 import { useState } from "react";
 import { CheckIcon } from "lucide-react";
+import { MainResumeData } from "../Components/ResumeParts/MainResumeData";
+import { EducationData } from "../Components/ResumeParts/EducationData";
 
 const steps = [
-  { id: "personal", label: "Personal Info" },
-  { id: "education", label: "Education" },
-  { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
-  { id: "preview", label: "Preview" },
+  { id: "personal", label: "Personal Info", index: 1 },
+  { id: "education", label: "Education", index: 2 },
+  { id: "experience", label: "Experience", index: 3 },
+  { id: "skills", label: "Skills", index: 4 },
+  { id: "achievements", label: "Achievements", index: 5 },
+  { id: "project", label: "Projects", index: 6 },
+  { id: "socials", label: "Social Accounts", index: 7 },
+  { id: "custom-section", label: "Custom Section", index: 8 },
 ];
 
 const Try = () => {
+    const [step, setStep] = useState(1);
+  
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        education: [],
+        experience: [],
+        skills: [],
+        achievements: [],
+        projects: [],
+        socialLinks: {
+          github: "",
+          linkedin: "",
+          instagram: "",
+          facebook: "",
+          portfolio: "",
+        },
+        otherSocialLinks: [],
+        customSections : []
+      });
+
+      const nextStep = () => setStep((prev) => prev + 1);
+      const skipStep = () => setStep((prev) => prev + 1);
+      const BackStep = () => setStep((prev) => prev - 1);
+
+      const handleChange = (e) => {
+        setFormData({
+          ...formData,
+          [e.target.name]: e.target.value,
+        });
+      };
+
+
+
   const [currentStep, setCurrentStep] = useState("personal");
 
   const currentStepIndex = steps.findIndex((step) => step.id === currentStep);
@@ -24,29 +65,7 @@ const Try = () => {
       case "personal":
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Personal Info</h2>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  Full Name
-                </label>
-                <input
-                  id="name"
-                  placeholder="John Doe"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  placeholder="you@example.com"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
+            <MainResumeData />
             <div className="mt-6 text-right">
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
@@ -60,29 +79,7 @@ const Try = () => {
       case "education":
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Education</h2>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="degree" className="block text-sm font-medium text-gray-700">
-                  Degree
-                </label>
-                <input
-                  id="degree"
-                  placeholder="Bachelor of Science"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="school" className="block text-sm font-medium text-gray-700">
-                  School
-                </label>
-                <input
-                  id="school"
-                  placeholder="Example University"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
+            <EducationData />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
