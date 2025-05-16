@@ -6,7 +6,9 @@ export const ExperienceData = ({ formData, setFormData, BackStep, skipStep, next
       <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
 
       {formData.experience.map((exp, index) => (
-        <div key={index} className="mb-4">
+        <div 
+        key={index} 
+        className="mb-4">
           <input
             type="text"
             placeholder="Company / Organization"

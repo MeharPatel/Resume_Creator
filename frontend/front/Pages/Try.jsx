@@ -2,6 +2,8 @@ import { useState } from "react";
 import { CheckIcon } from "lucide-react";
 import { MainResumeData } from "../Components/ResumeParts/MainResumeData";
 import { EducationData } from "../Components/ResumeParts/EducationData";
+import { ExperienceData } from "../Components/ResumeParts/ExperienceData";
+import SkillsData from "../Components/ResumeParts/SkillsData";
 
 const steps = [
   { id: "personal", label: "Personal Info", index: 1 },
@@ -51,9 +53,9 @@ const Try = () => {
 
 
 
-  const [currentStep, setCurrentStep] = useState("personal");
+  const [currentStep, setCurrentStep] = useState(1);
 
-  const currentStepIndex = steps.findIndex((step) => step.id === currentStep);
+  const currentStepIndex = steps.findIndex((step) => step.index === currentStep);
   const progress = ((currentStepIndex + 1) / steps.length) * 100;
 
   const handleNext = (step) => {
@@ -62,115 +64,161 @@ const Try = () => {
 
   const renderStepContent = () => {
     switch (currentStep) {
-      case "personal":
+      case 1:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <MainResumeData />
+            <MainResumeData formData={formData} nextStep={nextStep} handleChange={handleChange} />
             <div className="mt-6 text-right">
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext("education")}
+                onClick={() => handleNext(currentStep+1)}
               >
                 Next
               </button>
             </div>
           </div>
         );
-      case "education":
+      case 2:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <EducationData />
+            <EducationData formData={formData} skipStep={skipStep} nextStep={nextStep} BackStep={BackStep} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext("personal")}
+                onClick={() => handleNext(currentStep-1)}
               >
                 Previous
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext("experience")}
+                onClick={() => handleNext(currentStep+1)}
               >
                 Next
               </button>
             </div>
           </div>
         );
-      case "experience":
+      case 3:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Experience</h2>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="jobTitle" className="block text-sm font-medium text-gray-700">
-                  Job Title
-                </label>
-                <input
-                  id="jobTitle"
-                  placeholder="Software Engineer"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                  Company
-                </label>
-                <input
-                  id="company"
-                  placeholder="Example Corp"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
+            <ExperienceData formData={formData} setFormData={setFormData} BackStep={BackStep} skipStep={skipStep} nextStep={nextStep} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext("education")}
+                onClick={() => handleNext(currentStep-1)}
               >
                 Previous
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext("skills")}
+                onClick={() => handleNext(currentStep+1)}
               >
                 Next
               </button>
             </div>
           </div>
         );
-      case "skills":
+      case 4:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Skills</h2>
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="skills" className="block text-sm font-medium text-gray-700">
-                  Skills (comma-separated)
-                </label>
-                <input
-                  id="skills"
-                  placeholder="JavaScript, React, Tailwind"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
+            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext("experience")}
+                onClick={() => handleNext(currentStep-1)}
               >
                 Previous
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext("preview")}
+                onClick={() => handleNext(currentStep+1)}
               >
                 Next
               </button>
             </div>
           </div>
         );
-      case "preview":
+      case 5:
+        return (
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <div className="mt-6 flex justify-between">
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={() => handleNext(currentStep-1)}
+              >
+                Previous
+              </button>
+              <button
+                className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
+                onClick={() => handleNext(currentStep+1)}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        );
+      case 6:
+        return (
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <div className="mt-6 flex justify-between">
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={() => handleNext(currentStep-1)}
+              >
+                Previous
+              </button>
+              <button
+                className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
+                onClick={() => handleNext(currentStep+1)}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        );
+      case 7:
+        return (
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <div className="mt-6 flex justify-between">
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={() => handleNext(currentStep-1)}
+              >
+                Previous
+              </button>
+              <button
+                className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
+                onClick={() => handleNext(currentStep+1)}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        );
+      case 8:
+        return (
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <div className="mt-6 flex justify-between">
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={() => handleNext(currentStep-1)}
+              >
+                Previous
+              </button>
+              <button
+                className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
+                onClick={() => handleNext(currentStep+1)}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        );
+      case 9:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h2 className="text-2xl font-bold mb-4">Resume Preview</h2>
@@ -178,7 +226,7 @@ const Try = () => {
             <div className="mt-6 text-left">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext("skills")}
+                onClick={() => handleNext(currentStep-1)}
               >
                 Previous
               </button>
