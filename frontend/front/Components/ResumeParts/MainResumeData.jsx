@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MainResumeData = ({formData, nextStep, handleChange}) => {
+export const MainResumeData = ({formData, handleChange}) => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-6 text-center">
@@ -38,14 +38,7 @@ export const MainResumeData = ({formData, nextStep, handleChange}) => {
         onChange={handleChange}
         className="border p-2 mb-4 w-full rounded-lg"
       />
-      <div className="flex justify-between">
-        <button
-          onClick={nextStep}
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg"
-        >
-          Next
-        </button>
-      </div>
+
     </div>
   );
 }

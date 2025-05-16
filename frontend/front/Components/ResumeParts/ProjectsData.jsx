@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const ProjectsData = ({ formData, setFormData, skipStep, BackStep, nextStep }) => {
+export const ProjectsData = ({ formData, setFormData }) => {
     const [currentProject, setCurrentProject] = useState({
         title: "",
         projectUrl: "",
@@ -127,23 +127,6 @@ export const ProjectsData = ({ formData, setFormData, skipStep, BackStep, nextSt
             ))}
         </ul>
 
-        <div className="flex justify-between">
-            <button
-            onClick={BackStep}
-            className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg">
-            Back
-            </button>
-            <button
-            onClick={skipStep}
-            className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg">
-            Skip
-            </button>
-            <button
-            onClick={nextStep}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg">
-            Next
-            </button>
-        </div>
         </div>
     );
 }

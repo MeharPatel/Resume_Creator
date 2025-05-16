@@ -86,20 +86,6 @@ export const CustomSection = ({ BackStep, saveResumeData, formData, setFormData 
                 Add New Section
             </button>
             
-            <div className="flex justify-between">
-                <button
-                    onClick={BackStep}
-                    className="text-gray-600 border border-gray-300 px-6 py-2 rounded-lg"
-                >
-                    Back
-                </button>
-                <Link to='/resumepreview' 
-                    onClick={handleSave}
-                    className="bg-blue-600 text-white px-6 py-2 rounded-lg"
-                >
-                    Finish
-                </Link>
-            </div>
         </div>
     )
 }

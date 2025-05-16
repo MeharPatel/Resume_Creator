@@ -4,6 +4,10 @@ import { MainResumeData } from "../Components/ResumeParts/MainResumeData";
 import { EducationData } from "../Components/ResumeParts/EducationData";
 import { ExperienceData } from "../Components/ResumeParts/ExperienceData";
 import SkillsData from "../Components/ResumeParts/SkillsData";
+import { AchievementsData } from "../Components/ResumeParts/AchievementsData";
+import { ProjectsData } from "../Components/ResumeParts/ProjectsData";
+import { SocialLinksData } from "../Components/ResumeParts/SocialLinksData";
+import { CustomSection } from "../Components/ResumeParts/CustomSection";
 
 const steps = [
   { id: "personal", label: "Personal Info", index: 1 },
@@ -13,7 +17,7 @@ const steps = [
   { id: "achievements", label: "Achievements", index: 5 },
   { id: "project", label: "Projects", index: 6 },
   { id: "socials", label: "Social Accounts", index: 7 },
-  { id: "custom-section", label: "Custom Section", index: 8 },
+  { id: "custom-section", label: "Add-On Details", index: 8 },
 ];
 
 const Try = () => {
@@ -40,9 +44,9 @@ const Try = () => {
         customSections : []
       });
 
-      const nextStep = () => setStep((prev) => prev + 1);
-      const skipStep = () => setStep((prev) => prev + 1);
-      const BackStep = () => setStep((prev) => prev - 1);
+      const nextStep = () => setCurrentStep(currentStep + 1);
+      const skipStep = () => setCurrentStep(currentStep + 1);
+      const BackStep = () => setCurrentStep(currentStep - 1);
 
       const handleChange = (e) => {
         setFormData({
@@ -67,13 +71,12 @@ const Try = () => {
       case 1:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <MainResumeData formData={formData} nextStep={nextStep} handleChange={handleChange} />
+            <MainResumeData formData={formData} handleChange={handleChange} />
             <div className="mt-6 text-right">
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Education
               </button>
             </div>
           </div>
@@ -81,19 +84,22 @@ const Try = () => {
       case 2:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <EducationData formData={formData} skipStep={skipStep} nextStep={nextStep} BackStep={BackStep} setFormData={setFormData} />
+            <EducationData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Personal Info
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Experience
               </button>
             </div>
           </div>
@@ -101,19 +107,22 @@ const Try = () => {
       case 3:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <ExperienceData formData={formData} setFormData={setFormData} BackStep={BackStep} skipStep={skipStep} nextStep={nextStep} />
+            <ExperienceData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Education
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Skills
               </button>
             </div>
           </div>
@@ -121,19 +130,22 @@ const Try = () => {
       case 4:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <SkillsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Experience
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Achievements
               </button>
             </div>
           </div>
@@ -141,19 +153,22 @@ const Try = () => {
       case 5:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <AchievementsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Skills
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Projects
               </button>
             </div>
           </div>
@@ -161,19 +176,22 @@ const Try = () => {
       case 6:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <ProjectsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Achievements
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Social Accounts
               </button>
             </div>
           </div>
@@ -181,19 +199,22 @@ const Try = () => {
       case 7:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <SocialLinksData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Projects
+              </button>
+              <button
+                className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
+                onClick={skipStep}>
+                Previous: Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Next: Add-On Details
               </button>
             </div>
           </div>
@@ -201,19 +222,17 @@ const Try = () => {
       case 8:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} skipStep={skipStep} BackStep={BackStep} nextStep={nextStep} />
+            <CustomSection formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                onClick={() => handleNext(currentStep-1)}
-              >
-                Previous
+                onClick={BackStep}>
+                Previous: Social Accounts
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                onClick={() => handleNext(currentStep+1)}
-              >
-                Next
+                onClick={nextStep}>
+                Done: Save Data
               </button>
             </div>
           </div>
@@ -313,20 +332,12 @@ const Try = () => {
               <div className="flex justify-center gap-4">
                 <button
                   className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
-                  onClick={() => {
-                    const prevIndex = Math.max(0, currentStepIndex - 1);
-                    handleNext(steps[prevIndex].id);
-                  }}
-                >
+                  onClick={BackStep}>
                   Previous Step
                 </button>
                 <button
                   className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
-                  onClick={() => {
-                    const nextIndex = Math.min(steps.length - 1, currentStepIndex + 1);
-                    handleNext(steps[nextIndex].id);
-                  }}
-                >
+                  onClick={nextStep}>
                   Next Step
                 </button>
               </div>
