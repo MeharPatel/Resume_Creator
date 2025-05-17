@@ -26,8 +26,15 @@ const Try = () => {
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
+        profssional_title: "",
+        professional_description: "",
         email: "",
         phone: "",
+        address: "",
+        city: "",
+        state: "",
+        zip_code: "",
+        country: "",
         education: [],
         experience: [],
         skills: [],
@@ -286,7 +293,7 @@ const Try = () => {
                 <div 
                   key={step.id} 
                   className={`flex flex-col items-center cursor-pointer ${isActive ? "text-resume-primary" : "text-gray-400"}`}
-                  onClick={() => index <= currentStepIndex && handleNext(step.id)}
+                  onClick={() => index <= currentStepIndex && handleNext(step.index)}
                 >
                   <div 
                     className={`
