@@ -6,42 +6,122 @@ export const EducationData = ({ formData, setFormData}) => {
       <h2 className="text-2xl font-bold mb-6 text-center">Education</h2>
 
       {formData.education.map((edu, index) => (
-        <div 
-        key={index} 
-        className="mb-4">
-          <input
-            type="text"
-            placeholder="School / University"
-            value={edu.school}
-            onChange={(e) => {
-              const updatedEducation = [...formData.education];
-              updatedEducation[index].school = e.target.value;
-              setFormData({ ...formData, education: updatedEducation });
-            }}
-            className="border p-2 mb-2 w-full rounded-lg"
-          />
-          <input
-            type="text"
-            placeholder="Degree / Program"
-            value={edu.degree}
-            onChange={(e) => {
-              const updatedEducation = [...formData.education];
-              updatedEducation[index].degree = e.target.value;
-              setFormData({ ...formData, education: updatedEducation });
-            }}
-            className="border p-2 mb-2 w-full rounded-lg"
-          />
-          <input
-            type="text"
-            placeholder="Year"
-            value={edu.year}
-            onChange={(e) => {
-              const updatedEducation = [...formData.education];
-              updatedEducation[index].year = e.target.value;
-              setFormData({ ...formData, education: updatedEducation });
-            }}
-            className="border p-2 w-full rounded-lg"
-          />
+        <div key={index} className="mb-4">
+
+            <div>
+              <label htmlFor="school" className="block text-sm font-medium mb-1">
+                    School / University
+              </label>
+              <input
+                id='school'
+                type="text"
+                name="school"
+                placeholder="School Name"
+                value={edu.school}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].school = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="degree" className="block text-sm font-medium mb-1">
+                    Degree
+              </label>
+              <input
+                type="text"
+                id="degree"
+                name="degree"
+                placeholder="Degree"
+                value={edu.degree}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].degree = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="field_of_study" className="block text-sm font-medium mb-1">
+                      Field Of Study
+              </label>
+              <input
+                type="text"
+                id="field_of_study"
+                name="field_of_study"
+                placeholder="Field Of Study"
+                value={edu.field_of_study}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].field_of_study = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="start_date" className="block text-sm font-medium mb-1">
+                    Start Date
+              </label>
+              <input
+                type="month"
+                id="start_date"
+                name="start_date"
+                value={edu.degree}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].start_date = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="end_date" className="block text-sm font-medium mb-1">
+                      End Date (or Expectred)
+              </label>
+              <input
+                type="month"
+                id="end_date"
+                name="end_date"
+                value={edu.field_of_study}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].end_date = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="description" className="block text-sm font-medium mb-1">
+                    Description
+              </label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description"
+                value={edu.description}
+                onChange={(e) => {
+                  const updatedEducation = [...formData.education];
+                  updatedEducation[index].description = e.target.value;
+                  setFormData({ ...formData, education: updatedEducation });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+
         </div>
       ))}
 
@@ -51,7 +131,7 @@ export const EducationData = ({ formData, setFormData}) => {
             ...formData,
             education: [
               ...formData.education,
-              { school: "", degree: "", year: "" },
+              { school: "", degree: "", field_of_study: "", start_date: "", end_date: "", description: "" },
             ],
           })
         }

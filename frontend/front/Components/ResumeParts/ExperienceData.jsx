@@ -3,45 +3,122 @@ import React from 'react'
 export const ExperienceData = ({ formData, setFormData }) => {
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-6 text-center">Experience</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center">Work Experience</h2>
 
       {formData.experience.map((exp, index) => (
-        <div 
-        key={index} 
-        className="mb-4">
-          <input
-            type="text"
-            placeholder="Company / Organization"
-            value={exp.company}
-            onChange={(e) => {
-              const updatedExperience = [...formData.experience];
-              updatedExperience[index].company = e.target.value;
-              setFormData({ ...formData, experience: updatedExperience });
-            }}
-            className="border p-2 mb-2 w-full rounded-lg"
-          />
-          <input
-            type="text"
-            placeholder="Position / Role"
-            value={exp.position}
-            onChange={(e) => {
-              const updatedExperience = [...formData.experience];
-              updatedExperience[index].position = e.target.value;
-              setFormData({ ...formData, experience: updatedExperience });
-            }}
-            className="border p-2 mb-2 w-full rounded-lg"
-          />
-          <input
-            type="text"
-            placeholder="Duration (e.g., 2022-2024)"
-            value={exp.duration}
-            onChange={(e) => {
-              const updatedExperience = [...formData.experience];
-              updatedExperience[index].duration = e.target.value;
-              setFormData({ ...formData, experience: updatedExperience });
-            }}
-            className="border p-2 w-full rounded-lg"
-          />
+        <div key={index} className="mb-4">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium mb-1">
+                    Company
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="company"
+                value={exp.company}
+                onChange={(e) => {
+                  const updatedExperience = [...formData.experience];
+                  updatedExperience[index].company = e.target.value;
+                  setFormData({ ...formData, experience: updatedExperience });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="position" className="block text-sm font-medium mb-1">
+                      Position
+              </label>
+              <input
+                type="text"
+                id="position"
+                name="position"
+                placeholder="Position"
+                value={exp.position}
+                onChange={(e) => {
+                  const updatedExperience = [...formData.experience];
+                  updatedExperience[index].position = e.target.value;
+                  setFormData({ ...formData, experience: updatedExperience });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="start_date" className="block text-sm font-medium mb-1">
+                    Start Date
+              </label>
+              <input
+                type="month"
+                id="start_date"
+                name="start_date"
+                value={exp.start_date}
+                onChange={(e) => {
+                  const updatedExperience = [...formData.experience];
+                  updatedExperience[index].start_date = e.target.value;
+                  setFormData({ ...formData, experience: updatedExperience });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+            <div className="flex items-center mb-2">
+              <label htmlFor="end_date" className="block text-sm font-medium">
+                End Date
+              </label>
+              <div className="ml-auto flex items-center space-x-2">
+                <input
+                  type="checkbox" 
+                  id="currentJob"
+                  defaultChecked={exp.current}
+                  onChange={(e) => {
+                    const updatedExperience = [...formData.experience];
+                    updatedExperience[index].current = e.target.value;
+                    setFormData({ ...formData, experience: updatedExperience });
+                  }}
+                />
+                <label 
+                  htmlFor="currentJob" 
+                  className="text-xs text-gray-600 cursor-pointer">
+                  Currently working here
+                </label>
+              </div>
+            </div>
+              <input
+                type="month"
+                name="end_date"
+                value={exp.end_date}
+                onChange={(e) => {
+                  const updatedExperience = [...formData.experience];
+                  updatedExperience[index].end_date = e.target.value;
+                  setFormData({ ...formData, experience: updatedExperience });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="description" className="block text-sm font-medium mb-1">
+                    Description
+              </label>
+              <input
+                type="month"
+                name="description"
+                value={exp.start_date}
+                onChange={(e) => {
+                  const updatedExperience = [...formData.experience];
+                  updatedExperience[index].start_date = e.target.value;
+                  setFormData({ ...formData, experience: updatedExperience });
+                }}
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+
         </div>
       ))}
 
@@ -51,7 +128,7 @@ export const ExperienceData = ({ formData, setFormData }) => {
             ...formData,
             experience: [
               ...formData.experience,
-              { company: "", position: "", duration: "" },
+              { company: "", position: "", start_date: "", end_date: "", current: false, description: "" },
             ],
           })
         }

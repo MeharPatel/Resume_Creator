@@ -342,5 +342,11 @@
     font-family: 'Poppins';
 }
 
+#currentJob{
+  border: 1px solid gray;
+  height: 12px;
+  width: 12px;
+  border-radius: 2.5px;
+}
 
   
