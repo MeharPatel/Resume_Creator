@@ -137,7 +137,7 @@ const Try = () => {
       case 4:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} />
+            <SkillsData formData={formData} setFormData={setFormData} handleChange={handleChange} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"

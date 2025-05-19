@@ -9,11 +9,11 @@ export const EducationData = ({ formData, setFormData}) => {
         <div key={index} className="mb-4">
 
             <div>
-              <label htmlFor="school" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "school"} className="block text-sm font-medium mb-1">
                     School / University
               </label>
               <input
-                id='school'
+                id={index + "school"}
                 type="text"
                 name="school"
                 placeholder="School Name"
@@ -29,12 +29,12 @@ export const EducationData = ({ formData, setFormData}) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="degree" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "degree"} className="block text-sm font-medium mb-1">
                     Degree
               </label>
               <input
                 type="text"
-                id="degree"
+                id={index + "degree"}
                 name="degree"
                 placeholder="Degree"
                 value={edu.degree}
@@ -47,12 +47,12 @@ export const EducationData = ({ formData, setFormData}) => {
                 />
             </div>
             <div>
-              <label htmlFor="field_of_study" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "field_of_study"} className="block text-sm font-medium mb-1">
                       Field Of Study
               </label>
               <input
                 type="text"
-                id="field_of_study"
+                id={index + "field_of_study"}
                 name="field_of_study"
                 placeholder="Field Of Study"
                 value={edu.field_of_study}
@@ -68,12 +68,12 @@ export const EducationData = ({ formData, setFormData}) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="start_date" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "start_date"} className="block text-sm font-medium mb-1">
                     Start Date
               </label>
               <input
                 type="month"
-                id="start_date"
+                id={index + "start_date"}
                 name="start_date"
                 value={edu.degree}
                 onChange={(e) => {
@@ -85,12 +85,12 @@ export const EducationData = ({ formData, setFormData}) => {
                 />
             </div>
             <div>
-              <label htmlFor="end_date" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "end_date"} className="block text-sm font-medium mb-1">
                       End Date (or Expectred)
               </label>
               <input
                 type="month"
-                id="end_date"
+                id={index + "end_date"}
                 name="end_date"
                 value={edu.field_of_study}
                 onChange={(e) => {
@@ -104,12 +104,12 @@ export const EducationData = ({ formData, setFormData}) => {
             </div>
 
             <div>
-              <label htmlFor="description" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "description"} className="block text-sm font-medium mb-1">
                     Description
               </label>
               <input
                 type="text"
-                id="description"
+                id={index + "description"}
                 name="description"
                 placeholder="Description"
                 value={edu.description}

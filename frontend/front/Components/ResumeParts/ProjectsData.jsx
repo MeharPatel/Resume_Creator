@@ -12,65 +12,107 @@ export const ProjectsData = ({ formData, setFormData }) => {
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
 
-        <div className="mb-4">
-            <input
-            type="text"
-            placeholder="Project Title"
-            value={currentProject.title}
-            onChange={(e) =>
-                setCurrentProject({
-                ...currentProject,
-                title: e.target.value,
-                })
-            }
-            className="border p-2 w-full rounded mb-2" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="title" className="block text-sm font-medium mb-1">
+                    Project Title
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Project Title"
+                value={currentProject.title}
+                onChange={(e) =>
+                    setCurrentProject({
+                    ...currentProject,
+                    title: e.target.value,
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="project_url" className="block text-sm font-medium mb-1">
+                      Project Link
+              </label>
+              <input
+                type="text"
+                id="project_url"
+                name="project_url"
+                placeholder="http://your_project.app"
+                value={currentProject.projectUrl}
+                onChange={(e) =>
+                    setCurrentProject({
+                    ...currentProject,
+                    projectUrl: e.target.value,
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
 
-            <input
-            type="text"
-            placeholder="Project URL (optional)"
-            value={currentProject.projectUrl}
-            onChange={(e) =>
-                setCurrentProject({
-                ...currentProject,
-                projectUrl: e.target.value,
-                })
-            }
-            className="border p-2 w-full rounded mb-2" />
-
-            <input
-            type="text"
-            placeholder="GitHub Link (optional)"
-            value={currentProject.githubLink}
-            onChange={(e) =>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="github_link" className="block text-sm font-medium mb-1">
+                    Github_Link
+              </label>
+              <input
+                type="text"
+                id="github_link"
+                name="github_link"
+                placeholder="Github Link"
+                value={currentProject.githubLink}
+                onChange={(e) =>
                 setCurrentProject({
                 ...currentProject,
                 githubLink: e.target.value,
                 })
             }
-            className="border p-2 w-full rounded mb-2" />
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="project_file" className="block text-sm font-medium mb-1">
+                      Project File
+              </label>
+              <input
+                type="file"
+                id="project_file"
+                name="project_file"
+                onChange={(e) =>
+                    setCurrentProject({
+                    ...currentProject,
+                    image: e.target.files[0],
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
 
-            <input
-            type="file"
-            onChange={(e) =>
-                setCurrentProject({
-                ...currentProject,
-                image: e.target.files[0],
-                })
-            }
-            className="mb-2" />
+            <div>
+              <label htmlFor="description" className="block text-sm font-medium mb-1">
+                    Project Description
+              </label>
+              <input
+                type="text"
+                id="project_description"
+                name="project_description"
+                placeholder="Description"
+                value={currentProject.description}
+                onChange={(e) =>
+                    setCurrentProject({
+                    ...currentProject,
+                    description: e.target.value,
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
 
-            <textarea
-            placeholder="Project Description (optional)"
-            value={currentProject.description}
-            onChange={(e) =>
-                setCurrentProject({
-                ...currentProject,
-                description: e.target.value,
-                })
-            }
-            className="border p-2 w-full rounded mb-4 h-24" >
-            </textarea>
-
+        <div className="mb-4">
             <button
             onClick={() => {
                 if (currentProject.title.trim() !== "") {

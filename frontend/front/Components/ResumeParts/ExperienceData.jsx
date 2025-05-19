@@ -10,12 +10,12 @@ export const ExperienceData = ({ formData, setFormData }) => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="company" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "company"} className="block text-sm font-medium mb-1">
                     Company
               </label>
               <input
                 type="text"
-                id="company"
+                id={index + "company"}
                 name="company"
                 placeholder="company"
                 value={exp.company}
@@ -28,12 +28,12 @@ export const ExperienceData = ({ formData, setFormData }) => {
                 />
             </div>
             <div>
-              <label htmlFor="position" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "position"} className="block text-sm font-medium mb-1">
                       Position
               </label>
               <input
                 type="text"
-                id="position"
+                id={index + "position"}
                 name="position"
                 placeholder="Position"
                 value={exp.position}
@@ -49,12 +49,12 @@ export const ExperienceData = ({ formData, setFormData }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="start_date" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "start_date"} className="block text-sm font-medium mb-1">
                     Start Date
               </label>
               <input
                 type="month"
-                id="start_date"
+                id={index + "start_date"}
                 name="start_date"
                 value={exp.start_date}
                 onChange={(e) => {
@@ -67,13 +67,13 @@ export const ExperienceData = ({ formData, setFormData }) => {
             </div>
             <div>
             <div className="flex items-center mb-2">
-              <label htmlFor="end_date" className="block text-sm font-medium">
+              <label htmlFor={index + "end_date"} className="block text-sm font-medium">
                 End Date
               </label>
               <div className="ml-auto flex items-center space-x-2">
                 <input
                   type="checkbox" 
-                  id="currentJob"
+                  id={index + "currentJob"}
                   defaultChecked={exp.current}
                   onChange={(e) => {
                     const updatedExperience = [...formData.experience];
@@ -82,7 +82,7 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   }}
                 />
                 <label 
-                  htmlFor="currentJob" 
+                  htmlFor={index + "currentJob"} 
                   className="text-xs text-gray-600 cursor-pointer">
                   Currently working here
                 </label>
@@ -90,6 +90,7 @@ export const ExperienceData = ({ formData, setFormData }) => {
             </div>
               <input
                 type="month"
+                id={index + "end_date"}
                 name="end_date"
                 value={exp.end_date}
                 onChange={(e) => {
@@ -103,11 +104,12 @@ export const ExperienceData = ({ formData, setFormData }) => {
             </div>
 
             <div>
-              <label htmlFor="description" className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "description"} className="block text-sm font-medium mb-1">
                     Description
               </label>
               <input
-                type="month"
+                id={index + "description"}
+                type="text"
                 name="description"
                 value={exp.start_date}
                 onChange={(e) => {

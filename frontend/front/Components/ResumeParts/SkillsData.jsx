@@ -1,11 +1,27 @@
 import React, { useState } from 'react'
+import Slider from '../Slider';
+// import { Slider } from '../Slider';
 
-export default function SkillsData({ formData, setFormData }) {
+export default function SkillsData({ formData, setFormData, handleChange }) {
     const [currentSkill, setCurrentSkill] = useState();
 
     return (
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
+
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium mb-1">
+            Skill Name
+          </label>
+          <input
+            id="name"
+            name="name"
+            value={currentSkill}
+            onChange={handleChange}
+            placeholder="JavaScript"
+            required
+          />
+        </div>
 
         <div className="flex mb-4">
             <input
@@ -15,9 +31,18 @@ export default function SkillsData({ formData, setFormData }) {
             onChange={(e) => setCurrentSkill(e.target.value)}
             className="border p-2 flex-1 rounded-l-lg"
             />
+
+        <Slider
+            // value={proficiency}
+            // onValueChange={setProficiency}
+            min={1}
+            max={5}
+            step={1}
+          />
+
             <button
             onClick={() => {
-                if (currentSkill.trim() !== "") {
+                if (currentSkill.name.trim() !== "") {
                 setFormData({
                     ...formData,
                     skills: [...formData.skills, currentSkill.trim()],

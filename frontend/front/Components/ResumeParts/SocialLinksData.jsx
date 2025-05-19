@@ -9,8 +9,6 @@ export const SocialLinksData = ({ formData, setFormData }) => {
         { name: "Instagram", key: "instagram", icon: "logo-instagram" },
         { name: "Facebook", key: "facebook", icon: "logo-facebook" },
         { name: "Portfolio", key: "portfolio", icon: "at" },
-        { name: "Contact", key: "contact", icon: "contact" },
-        { name: "EmailId", key: "EmailId", icon: "mail" },
     ];
 
     return (
@@ -18,7 +16,9 @@ export const SocialLinksData = ({ formData, setFormData }) => {
         <h2 className="text-2xl font-bold mb-6 text-center">Social Accounts</h2>
 
         <div className="space-y-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {defaultSocials.map((social, index) => (
+
             <div key={index} className="flex items-center gap-4">
                 <ion-icon
                 name={social.icon}
@@ -40,6 +40,7 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                 className="border p-2 flex-1 rounded" />
             </div>
             ))}
+            </div>
         </div>
 
         <div className="mb-4 border-t pt-6">

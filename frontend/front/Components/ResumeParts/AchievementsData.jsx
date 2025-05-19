@@ -9,29 +9,46 @@ export const AchievementsData = ({ formData, setFormData }) => {
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Achievements</h2>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="achievement" className="block text-sm font-medium mb-1">
+                    Achievement Name
+              </label>
+              <input
+                type="text"
+                id="achievement"
+                name="achievement"
+                placeholder="Achievement Name"
+                value={currentAchievement.title}
+                onChange={(e) =>
+                    setCurrentAchievement({
+                    ...currentAchievement,
+                    title: e.target.value,
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="file" className="block text-sm font-medium mb-1">
+                      Files
+              </label>
+              <input
+                type="file"
+                id="file"
+                name="file"
+                onChange={(e) =>
+                    setCurrentAchievement({
+                    ...currentAchievement,
+                    file: e.target.files[0],
+                    })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
+
         <div className="mb-4">
-            <input
-            type="text"
-            placeholder="Achievement Title"
-            value={currentAchievement.title}
-            onChange={(e) =>
-                setCurrentAchievement({
-                ...currentAchievement,
-                title: e.target.value,
-                })
-            }
-            className="border p-2 w-full rounded mb-2"
-            />
-            <input
-            type="file"
-            onChange={(e) =>
-                setCurrentAchievement({
-                ...currentAchievement,
-                file: e.target.files[0],
-                })
-            }
-            className="mb-2"
-            />
             <button
             onClick={() => {
                 if (currentAchievement.title.trim() !== "") {
