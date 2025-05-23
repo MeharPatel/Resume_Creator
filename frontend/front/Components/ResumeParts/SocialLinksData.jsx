@@ -44,24 +44,42 @@ export const SocialLinksData = ({ formData, setFormData }) => {
         </div>
 
         <div className="mb-4 border-t pt-6">
-            <h3 className="text-lg font-semibold mb-4">Add Other Social Media</h3>
+            <h3 className="text-lg font-semibold mb-4">Want To Add More?</h3>
 
-            <input
-            type="text"
-            placeholder="Social Media Name"
-            value={currentSocial.name}
-            onChange={(e) =>
-                setCurrentSocial({ ...currentSocial, name: e.target.value })
-            }
-            className="border p-2 w-full rounded mb-2" /> 
-            <input
-            type="text"
-            placeholder="Social Media Link"
-            value={currentSocial.link}
-            onChange={(e) =>
-                setCurrentSocial({ ...currentSocial, link: e.target.value })
-            }
-            className="border p-2 w-full rounded mb-4" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    Social Media Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Social Media Name"
+                value={currentSocial.name}
+                onChange={(e) =>
+                    setCurrentSocial({ ...currentSocial, name: e.target.value })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+            </div>
+            <div>
+              <label htmlFor="link" className="block text-sm font-medium mb-1">
+                      Social Media Link
+              </label>
+              <input
+                type="text"
+                id="link"
+                name="link"
+                placeholder="Social Media Link"
+                value={currentSocial.link}
+                onChange={(e) =>
+                    setCurrentSocial({ ...currentSocial, link: e.target.value })
+                }
+                className="border p-2 mb-4 w-full rounded-lg"
+                />
+              </div>
+            </div>
 
             <button
             onClick={() => {

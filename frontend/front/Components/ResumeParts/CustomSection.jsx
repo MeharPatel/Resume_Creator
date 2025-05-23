@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const CustomSection = ({ BackStep, saveResumeData, formData, setFormData }) => {
+export const CustomSection = ({ formData, setFormData }) => {
     const [sections, setSections] = useState(formData.customSections || []);
     
     const addSection = () => {
@@ -49,24 +49,40 @@ export const CustomSection = ({ BackStep, saveResumeData, formData, setFormData 
 
             {sections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className="border p-4 rounded-md space-y-3">
+                 <div>
+                    <label htmlFor={sectionIndex + "name"} className="block text-sm font-medium mb-1">
+                            Section Name
+                    </label>
                     <input
                         type="text"
-                        placeholder="Section Name (e.g., Hobbies)"
+                        id={sectionIndex + "name"}
+                        name="name"
+                        placeholder="Section Name"
                         value={section.sectionName}
                         onChange={(e) => updateSectionName(sectionIndex, e.target.value)}
-                        className="w-full p-2 border rounded"
-                    />
+                        className="border p-2 mb-4 w-full rounded-lg"
+                        />
+                    </div>
 
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
                     {section.items.map((item, itemIndex) => (
+                        <div>
+                
+                        <label htmlFor={itemIndex + "item"} className="block text-sm font-medium mb-1">
+                                Item{itemIndex + 1} Name
+                        </label>
                         <input
-                            key={itemIndex}
                             type="text"
-                            placeholder={`Item ${itemIndex + 1}`}
+                            id={itemIndex + "item"}
+                            name="item"
+                            placeholder="Item Name"
                             value={item}
                             onChange={(e) => updateItem(sectionIndex, itemIndex, e.target.value)}
-                            className="w-full p-2 border rounded mt-2"
-                        />
+                            className="border p-2 mb-0 w-full rounded-lg"
+                            />
+                        </div>
                     ))}
+                        </div>
 
                     <button
                         type="button"
