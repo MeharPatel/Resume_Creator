@@ -38,11 +38,6 @@ export const CustomSection = ({ formData, setFormData }) => {
         }));
     };
 
-    const handleSave = () => {
-        updateFormData(sections);
-        saveResumeData();
-    };
-
     return (
         <div className="space-y-6">
             <h2 className="text-xl font-bold">📝 Add Custom Sections</h2>

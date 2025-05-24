@@ -75,7 +75,7 @@ export const EducationData = ({ formData, setFormData}) => {
                 type="month"
                 id={index + "start_date"}
                 name="start_date"
-                value={edu.degree}
+                value={edu.start_date}
                 onChange={(e) => {
                   const updatedEducation = [...formData.education];
                   updatedEducation[index].start_date = e.target.value;
@@ -92,7 +92,7 @@ export const EducationData = ({ formData, setFormData}) => {
                 type="month"
                 id={index + "end_date"}
                 name="end_date"
-                value={edu.field_of_study}
+                value={edu.end_date}
                 onChange={(e) => {
                   const updatedEducation = [...formData.education];
                   updatedEducation[index].end_date = e.target.value;

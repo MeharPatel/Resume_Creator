@@ -98,6 +98,7 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   updatedExperience[index].end_date = e.target.value;
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
+                disabled={exp.current}
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
               </div>
@@ -111,10 +112,10 @@ export const ExperienceData = ({ formData, setFormData }) => {
                 id={index + "description"}
                 type="text"
                 name="description"
-                value={exp.start_date}
+                value={exp.description}
                 onChange={(e) => {
                   const updatedExperience = [...formData.experience];
-                  updatedExperience[index].start_date = e.target.value;
+                  updatedExperience[index].description = e.target.value;
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
                 className="border p-2 mb-4 w-full rounded-lg"

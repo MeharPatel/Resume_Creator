@@ -4,7 +4,6 @@ import Navbar from '../Components/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Pages/Home'
 import NotFound from '../Pages/NotFound'
-import { ResumeQues } from '../Pages/ResumeQues'
 import { ResumePreviewPage } from '../Components/ResumePreviewPage'
 import Footer from '../Components/Footer'
 import Try from '../Pages/Try'
@@ -13,6 +12,7 @@ import ContactPage from '../Pages/ContactPage'
 import LoginPage from '../Pages/LoginPage'
 import RegisterPage from '../Pages/RegisterPage'
 import ForgotPasswordPage from '../Pages/ForgetPasswordPage'
+import ResumeQues from '../Pages/ResumeQues'
 
 const App = () => {
   return (
