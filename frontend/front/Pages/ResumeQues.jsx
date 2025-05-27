@@ -8,6 +8,7 @@ import { AchievementsData } from "../Components/ResumeParts/AchievementsData";
 import { ProjectsData } from "../Components/ResumeParts/ProjectsData";
 import { SocialLinksData } from "../Components/ResumeParts/SocialLinksData";
 import { CustomSection } from "../Components/ResumeParts/CustomSection";
+import { BACKEND_URL } from "../src/config";
 
 const steps = [
   { id: "personal", label: "Personal Info", index: 1 },
@@ -73,7 +74,7 @@ const ResumeQues = () => {
   };
 
   const saveResumeData = async () => {
-    const response = await fetch('http://localhost:3000/resumedata', {
+    const response = await fetch(`${BACKEND_URL}/resumedata`, {
       method : 'POST',
       headers : { 'Content-Type' : 'application/json' },
       body : JSON.stringify(formData)

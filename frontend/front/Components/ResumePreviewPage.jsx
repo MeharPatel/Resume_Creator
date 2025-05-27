@@ -6,48 +6,71 @@ export const ResumePreviewPage = () => {
   const [formData, setFormData] = useState({
   firstName: 'Mehar',
   lastName: 'Patel',
-  profssional_title: '',
-  professional_description: '',
-  email: 'sdfghjk@gmail.com',
-  phone: '23456789',
-  address: '',
-  city: '',
-  state: '',
-  zip_code: '',
-  country: '',
+  profssional_title: 'Backend Developer',
+  professional_description: 'Backend Developer for 1+ years',
+  email: 'csmeharpatel@gmail.com',
+  phone: '5987654321',
+  address: 'Nanpura',
+  city: 'Surat',
+  state: 'Gujarat',
+  zip_code: '395001',
+  country: 'India',
   education: [
     {
-      school: 'iyig',
-      degree: 'bfrrrrrrrrrrwe',
-      field_of_study: 'bvds',
-      start_date: '2023-05',
-      end_date: '2025-02',
-      description: 'rgefwdas'
+      school: 'RNGPIT',
+      degree: 'B.E.',
+      field_of_study: 'Computer Science & Engineering',    
+      start_date: '2020-08',
+      end_date: '2024-05',
+      description: 'Bachelor of Engineering'
+    },
+    {
+      school: "St. Xavier's High School",
+      degree: 'HSC',
+      field_of_study: 'HSC',
+      start_date: '2018-07',
+      end_date: '2020-05',
+      description: 'HSC with Science MPC'
+    },
+    {
+      school: 'Lourdes Convent School',
+      degree: 'SSC',
+      field_of_study: 'SSC',
+      start_date: '2017-05',
+      end_date: '2018-03',
+      description: 'SSC'
     }
   ],
   experience: [
     {
-      company: 'bfds',
-      position: 'dfghjk',
+      company: 'SRKAY Consulting Group',
+      position: 'Backend Developer',
       start_date: '2024-05',
       end_date: '',
       current: 'on',
-      description: 'gvhifhuhsikbdjjs'
+      description: 'Working as Backend Developer'
     }
   ],
-  skills: [],
-  achievements: [],
-  projects: [],
+  skills: ['Javascript', 'CSS', 'HTML', 'ReactJs', 'NodeJs'],
+  achievements: [ { title: 'Leetcode Solved 600+ Problems', file: null } ],
+  projects: [
+    {
+      title: 'Portfolio',
+      projectUrl: 'meharpatel.netlify.app',
+      githubLink: 'meharpatel.netlify.app',
+      image: null,
+      description: 'Portfolio Project'
+    }
+  ],
   socialLinks: {
-    github: 'sdfghj',
-    linkedin: '',
-    instagram: 'dfghj',
+    github: 'https://github.com/MeharPatel2512',
+    linkedin: 'https://github.com/MeharPatel2512',
+    instagram: 'https://github.com/MeharPatel',
     facebook: '',
-    portfolio: 'dfghj'
+    portfolio: 'meharpatel.netlify.app'
   },
   otherSocialLinks: [],
-  customSections: [ { sectionName: 'drfghu', items: ['sdfgh','sdfghj'] },
-                    { sectionName: 'rdfxyuhj', items: ['sdfgh','sdfghj'] } ]
+  customSections: [ { sectionName: 'Hobbies', items: ['Singing', 'Sketching'] } ]
 });
 
   const [selectedTemplate, setSelectedTemplate] = useState('professional'); // Default template
