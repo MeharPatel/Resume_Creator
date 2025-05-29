@@ -31,6 +31,8 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
       </div>
 
       {/* Resume Preview */}
+      <div className="flex flex-col lg:flex-row gap-6">
+
       <motion.div
         key={selectedTemplate}
         initial={{ opacity: 0, y: 10 }}
@@ -151,6 +153,8 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           </>
         )}
       </motion.div>
+      
+      </div>
 
       {/* Download Button */}
       <div className="flex justify-center mt-8">

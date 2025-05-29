@@ -77,6 +77,16 @@ export const ResumePreviewPage = () => {
 
   return (
     <div className='relative pt-32 pb-20 md:py-40 overflow-hidden'> 
+
+      <div className="mb-8 text-center">
+        <h2 className="text-2xl font-bold gradient-text mb-4">Preview</h2>
+        <p className="text-gray-600">
+          Here's a preview of your resume. You can go back to make changes.
+        </p>
+      </div>
+
+
+
       {/* Pass the selected template down */}
       <ResumePreview 
         formData={formData} 
