@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Slider from '../Slider';
+import { PencilIcon, XIcon } from 'lucide-react'
 // import { Slider } from '../Slider';
 
 export default function SkillsData({ formData, setFormData, handleChange }) {
@@ -23,7 +24,7 @@ export default function SkillsData({ formData, setFormData, handleChange }) {
           />
         </div>
 
-        <div className="flex mb-4">
+        <div className=" mb-4">
             <input
             type="text"
             placeholder="Enter a skill"
@@ -32,17 +33,17 @@ export default function SkillsData({ formData, setFormData, handleChange }) {
             className="border p-2 flex-1 rounded-l-lg"
             />
 
-        <Slider
-            // value={proficiency}
-            // onValueChange={setProficiency}
+        {/* <Slider
+            value={proficiency}
+            onValueChange={setProficiency}
             min={1}
             max={5}
             step={1}
-          />
+          /> */}
 
             <button
             onClick={() => {
-                if (currentSkill.name.trim() !== "") {
+                if (currentSkill.trim() !== "") {
                 setFormData({
                     ...formData,
                     skills: [...formData.skills, currentSkill.trim()],
@@ -58,11 +59,36 @@ export default function SkillsData({ formData, setFormData, handleChange }) {
 
         <div className="flex flex-wrap gap-2 mb-6">
             {formData.skills.map((skill, index) => (
-            <span
+            <div
                 key={index}
-                className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
-                {skill}
-            </span>
+                className="bg-gray-200 text-gray-700 px-3 py-1 rounded-xl">
+                <div>
+                
+                <h4 className="font-medium">{skill}</h4>
+                <span className="text-xs text-gray-600 ml-2">
+                  Beginner
+                </span>
+                </div>
+
+                <div className="flex gap-1">
+                    <button
+                      variant="ghost"
+                      size="icon"
+                      // onClick={() => handleEdit(skill)}
+                      className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                    >
+                      <PencilIcon className="h-3.5 w-3.5" />
+                    </button>
+                    <button
+                      variant="ghost"
+                      size="icon"
+                      // onClick={() => handleDelete(skill.id)}
+                      className="h-7 w-7 text-gray-500 hover:text-red-500"
+                    >
+                      <XIcon className="h-3.5 w-3.5" />
+                    </button>
+                  </div>
+            </div>
             ))}
         </div>
 
