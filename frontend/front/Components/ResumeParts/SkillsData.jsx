@@ -1,10 +1,22 @@
 import React, { useState } from 'react'
 import Slider from '../Slider';
 import { PencilIcon, XIcon } from 'lucide-react'
+import { toast } from "sonner";
 // import { Slider } from '../Slider';
 
 export default function SkillsData({ formData, setFormData, handleChange }) {
     const [currentSkill, setCurrentSkill] = useState();
+
+    const handleEditSkill = (index) => {
+      setCurrentSkill({ ...formData.skills[index], index });
+    };
+
+    const handleDeleteSkill = (index) => {
+      setFormData((prev) => ({
+        ...prev,
+        skills: prev.skills.filter((_, i) => i !== index),
+      }));
+    };
 
     return (
         <div>
@@ -74,7 +86,7 @@ export default function SkillsData({ formData, setFormData, handleChange }) {
                     <button
                       variant="ghost"
                       size="icon"
-                      // onClick={() => handleEdit(skill)}
+                      onClick={() => handleEdit(skill)}
                       className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                     >
                       <PencilIcon className="h-3.5 w-3.5" />
