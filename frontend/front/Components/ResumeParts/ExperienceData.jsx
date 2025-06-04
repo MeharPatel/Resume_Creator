@@ -1,13 +1,32 @@
 import React from 'react'
+import { XIcon } from 'lucide-react';
+import { toast } from "sonner";
 
 export const ExperienceData = ({ formData, setFormData }) => {
+
+  const handleDeleteExperience = (index) => {
+    setFormData((prev) => ({
+        ...prev,
+        experience: prev.experience.filter((_, i) => i !== index),
+    }));
+    toast.success('Education deleted successfully');
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-6 text-center">Work Experience</h2>
 
       {formData.experience.map((exp, index) => (
-        <div key={index} className="mb-4">
+        <div key={index} className="mb-4 p-5 exp-one">
           
+          <div className='flex justify-end'>
+            <button
+              onClick={() => handleDeleteExperience(index)}
+              className="h-7 w-7 text-gray-500 hover:text-red-500">
+                <XIcon className="h-3.5 w-3.5" />
+              </button>
+            </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor={index + "company"} className="block text-sm font-medium mb-1">
@@ -72,6 +91,7 @@ export const ExperienceData = ({ formData, setFormData }) => {
               </label>
               <div className="ml-auto flex items-center space-x-2">
                 <input
+                  className='cursor-pointer'
                   type="checkbox" 
                   id={index + "currentJob"}
                   defaultChecked={exp.current}

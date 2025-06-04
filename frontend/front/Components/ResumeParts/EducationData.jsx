@@ -1,13 +1,30 @@
 import React from 'react'
+import { XIcon } from 'lucide-react';
+import { toast } from "sonner";
 
-export const EducationData = ({ formData, setFormData}) => {
+export const EducationData = ({ formData, setFormData, handleChange}) => {
+
+  const handleDeleteEducation = (index) => {
+    setFormData((prev) => ({
+        ...prev,
+        education: prev.education.filter((_, i) => i !== index),
+    }));
+    toast.success('Education deleted successfully');
+  };
+
   return (
     <div>
       <h2 className="text-2xl font-bold mb-6 text-center">Education</h2>
 
       {formData.education.map((edu, index) => (
-        <div key={index} className="mb-4">
-
+        <div key={index} className="mb-4 edu-one p-4">
+            <div className='flex justify-end'>
+            <button
+              onClick={() => handleDeleteEducation(index)}
+              className="h-7 w-7 text-gray-500 hover:text-red-500">
+                <XIcon className="h-3.5 w-3.5" />
+              </button>
+            </div>
             <div>
               <label htmlFor={index + "school"} className="block text-sm font-medium mb-1">
                     School / University

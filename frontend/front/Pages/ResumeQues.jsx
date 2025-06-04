@@ -106,7 +106,7 @@ const ResumeQues = () => {
       case 2:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <EducationData formData={formData} setFormData={setFormData} />
+            <EducationData formData={formData} setFormData={setFormData} handleChange={handleChange} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
@@ -152,7 +152,7 @@ const ResumeQues = () => {
       case 4:
         return (
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <SkillsData formData={formData} setFormData={setFormData} handleChange={handleChange} />
+            <SkillsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"

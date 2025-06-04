@@ -1,109 +1,154 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Slider from '../Slider';
-import { PencilIcon, XIcon } from 'lucide-react'
+import { PencilIcon, XIcon } from 'lucide-react';
 import { toast } from "sonner";
-// import { Slider } from '../Slider';
 
-export default function SkillsData({ formData, setFormData, handleChange }) {
-    const [currentSkill, setCurrentSkill] = useState();
+export default function SkillsData({ formData, setFormData }) {
+    const [currentSkill, setCurrentSkill] = useState({ name: "", level: 1 });
+    const [editIndex, setEditIndex] = useState(null);
+    const [sliderValue, setSliderValue] = useState([1]); // Fix: Track slider value separately
+
+    // Map level to stage name
+    const levelToStage = (level) => {
+        switch (level) {
+            case 1: return "Beginner";
+            case 2: return "Intermediate";
+            case 3: return "Proficient";
+            case 4: return "Advanced";
+            case 5: return "Expert";
+            default: return "Beginner";
+        }
+    };
 
     const handleEditSkill = (index) => {
-      setCurrentSkill({ ...formData.skills[index], index });
+        setCurrentSkill(formData.skills[index]);
+        setSliderValue([formData.skills[index].level]); // Fix: Set slider value
+        setEditIndex(index);
     };
 
     const handleDeleteSkill = (index) => {
-      setFormData((prev) => ({
-        ...prev,
-        skills: prev.skills.filter((_, i) => i !== index),
-      }));
+        setFormData((prev) => ({
+            ...prev,
+            skills: prev.skills.filter((_, i) => i !== index),
+        }));
+        if (editIndex === index) {
+            setCurrentSkill({ name: "", level: 1 });
+            setSliderValue([1]); 
+            setEditIndex(null);
+        }
+        toast.success("Skill deleted successfully");
+    };
+
+    const handleSaveSkill = () => {
+        if (!currentSkill.name.trim()) {
+            toast.error("Skill name is required");
+            return;
+        }
+        const newSkill = { name: currentSkill.name.trim(), level: sliderValue[0] }; 
+
+        if (editIndex !== null) {
+            setFormData((prev) => ({
+                ...prev,
+                skills: prev.skills.map((skill, i) => (i === editIndex ? newSkill : skill)),
+            }));
+            toast.success("Skill updated successfully");
+            setEditIndex(null);
+        } else {
+            setFormData((prev) => ({
+                ...prev,
+                skills: [...prev.skills, newSkill],
+            }));
+            toast.success("Skill added successfully");
+        }
+        setCurrentSkill({ name: "", level: 1 });
+        setSliderValue([1]); // Fix: Reset slider value
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setCurrentSkill((prev) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSliderChange = (value) => {
+        setSliderValue(value);
+        setCurrentSkill((prev) => ({ ...prev, level: value[0] }));
     };
 
     return (
         <div>
-        <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
 
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-1">
-            Skill Name
-          </label>
-          <input
-            id="name"
-            name="name"
-            value={currentSkill}
-            onChange={handleChange}
-            placeholder="JavaScript"
-            required
-          />
-        </div>
-
-        <div className=" mb-4">
-            <input
-            type="text"
-            placeholder="Enter a skill"
-            value={currentSkill}
-            onChange={(e) => setCurrentSkill(e.target.value)}
-            className="border p-2 flex-1 rounded-l-lg"
-            />
-
-        {/* <Slider
-            value={proficiency}
-            onValueChange={setProficiency}
-            min={1}
-            max={5}
-            step={1}
-          /> */}
-
-            <button
-            onClick={() => {
-                if (currentSkill.trim() !== "") {
-                setFormData({
-                    ...formData,
-                    skills: [...formData.skills, currentSkill.trim()],
-                });
-                setCurrentSkill(""); // clear the input
-                }
-            }}
-            className="bg-green-500 text-white px-4 py-2 rounded-r-lg"
-            >
-            Add Skill
-            </button>
-        </div>
-
-        <div className="flex flex-wrap gap-2 mb-6">
-            {formData.skills.map((skill, index) => (
-            <div
-                key={index}
-                className="bg-gray-200 text-gray-700 px-3 py-1 rounded-xl">
-                <div>
-                
-                <h4 className="font-medium">{skill}</h4>
-                <span className="text-xs text-gray-600 ml-2">
-                  Beginner
-                </span>
-                </div>
-
-                <div className="flex gap-1">
-                    <button
-                      variant="ghost"
-                      size="icon"
-                      onClick={() => handleEdit(skill)}
-                      className="h-7 w-7 text-gray-500 hover:text-resume-primary"
-                    >
-                      <PencilIcon className="h-3.5 w-3.5" />
-                    </button>
-                    <button
-                      variant="ghost"
-                      size="icon"
-                      // onClick={() => handleDelete(skill.id)}
-                      className="h-7 w-7 text-gray-500 hover:text-red-500"
-                    >
-                      <XIcon className="h-3.5 w-3.5" />
-                    </button>
-                  </div>
+            <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    Skill Name
+                </label>
+                <input
+                    id="name"
+                    name="name"
+                    value={currentSkill.name}
+                    onChange={handleInputChange}
+                    placeholder="JavaScript"
+                    required
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
             </div>
-            ))}
-        </div>
 
+            <div className="mb-4 mt-5">
+                <label htmlFor="level" className="block text-sm font-medium mb-1">
+                    Proficiency Level ({levelToStage(sliderValue[0])}) 
+                </label>
+                <Slider
+                    value={sliderValue} // Fix: Use sliderValue
+                    onValueChange={handleSliderChange}
+                    min={1}
+                    max={5}
+                    step={1}
+                    className="mt-2"
+                />
+                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>Beginner</span>
+                    <span>Intermediate</span>
+                    <span>Proficient</span>
+                    <span>Advanced</span>
+                    <span>Expert</span>
+                </div>
+                <button
+                    onClick={handleSaveSkill}
+                    className="primary-button text-white px-4 py-2 rounded-md mt-4"
+                >
+                    {editIndex !== null ? "Update Skill" : "Add Skill"}
+                </button>
+            </div>
+
+            <div className="flex flex-wrap gap-2 mb-6">
+                {formData.skills.map((skill, index) => (
+                    <div
+                        key={index}
+                        className="bg-gray-200 text-gray-700 px-3 py-1 rounded-xl flex items-center justify-between"
+                    >
+                        <div>
+                            <h4 className="font-medium">{skill.name}</h4>
+                            <span className="text-xs text-gray-600 ml-2">
+                                {levelToStage(skill.level)}
+                            </span>
+                        </div>
+                        <div className="flex gap-1">
+                            <button
+                                onClick={() => handleEditSkill(index)}
+                                className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                            >
+                                <PencilIcon className="h-3.5 w-3.5" />
+                            </button>
+                            <button
+                                onClick={() => handleDeleteSkill(index)}
+                                className="h-7 w-7 text-gray-500 hover:text-red-500"
+                            >
+                                <XIcon className="h-3.5 w-3.5" />
+                            </button>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
