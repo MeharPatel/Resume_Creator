@@ -231,7 +231,7 @@ const ResumeQues = () => {
               <button
                 className="border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-100"
                 onClick={skipStep}>
-                Previous: Skip This Step
+                Skip This Step
               </button>
               <button
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"

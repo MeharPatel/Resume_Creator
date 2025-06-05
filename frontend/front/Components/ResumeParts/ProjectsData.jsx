@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { PencilIcon, XIcon } from 'lucide-react';
+import { toast } from "sonner";
 
 export const ProjectsData = ({ formData, setFormData }) => {
     const [currentProject, setCurrentProject] = useState({
@@ -12,7 +14,7 @@ export const ProjectsData = ({ formData, setFormData }) => {
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
             <div>
               <label htmlFor="title" className="block text-sm font-medium mb-1">
                     Project Title
@@ -32,7 +34,11 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
             </div>
-            <div>
+            
+            {/* </div> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
               <label htmlFor="project_url" className="block text-sm font-medium mb-1">
                       Project Link
               </label>
@@ -51,9 +57,6 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
               </div>
-            </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="github_link" className="block text-sm font-medium mb-1">
                     Github_Link
@@ -73,23 +76,6 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
             </div>
-            <div>
-              <label htmlFor="project_file" className="block text-sm font-medium mb-1">
-                      Project File
-              </label>
-              <input
-                type="file"
-                id="project_file"
-                name="project_file"
-                onChange={(e) =>
-                    setCurrentProject({
-                    ...currentProject,
-                    image: e.target.files[0],
-                    })
-                }
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-              </div>
             </div>
 
             <div>
@@ -136,10 +122,9 @@ export const ProjectsData = ({ formData, setFormData }) => {
 
         <ul className="mb-6">
             {formData.projects.map((proj, index) => (
-            <li
-                key={index}
-                className="bg-gray-100 p-3 rounded mb-2 flex flex-col gap-1"
-            >
+                <div className='bg-gray-100 p-3 rounded mb-2 flex justify-between'>
+            <li key={index}
+                className="flex flex-col gap-1">
                 <span className="font-semibold">{proj.title}</span>
                 {proj.projectUrl && (
                 <a
@@ -166,6 +151,21 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 <p className="text-xs text-gray-500">{proj.image.name}</p>
                 )}
             </li>
+            <div className="flex gap-1">
+                <button
+                    // onClick={() => handleEditSkill(index)}
+                    className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                >
+                    <PencilIcon className="h-3.5 w-3.5" />
+                </button>
+                <button
+                    // onClick={() => handleDeleteSkill(index)}
+                    className="h-7 w-7 text-gray-500 hover:text-red-500"
+                >
+                    <XIcon className="h-3.5 w-3.5" />
+                </button>
+            </div>
+            </div>
             ))}
         </ul>
 

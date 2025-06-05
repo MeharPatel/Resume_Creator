@@ -4,8 +4,7 @@ import { toast } from "sonner";
 
 export const AchievementsData = ({ formData, setFormData }) => {
     const [currentAchievement, setCurrentAchievement] = useState({
-        title: "",
-        file: null,
+        title: ""
     });
     const [editIndex, setEditIndex] = useState(null);
 
@@ -20,34 +19,35 @@ export const AchievementsData = ({ formData, setFormData }) => {
             achievements: prev.achievements.filter((_, i) => i !== index),
         }));
         if (editIndex === index) {
-            setCurrentAchievement({ name: "", level: 1 });
+            setCurrentAchievement({ title: "" });
             setEditIndex(null);
         }
         toast.success("Achievement deleted successfully");
     };
 
     const handleSaveAchievements = () => {
-        if (!currentAchievement.name.trim()) {
-            toast.error("Skill name is required");
+        if (!currentAchievement.title.trim()) {
+            toast.error("Achievement title is required");
             return;
         }
-        const newAchievement = { title: "", file: null }; 
 
         if (editIndex !== null) {
             setFormData((prev) => ({
                 ...prev,
-                skills: prev.skills.map((skill, i) => (i === editIndex ? newAchievement : skill)),
+                achievements: prev.achievements.map((achievement, i) => (i === editIndex ? currentAchievement : achievement)),
             }));
             toast.success("Skill updated successfully");
             setEditIndex(null);
         } else {
             setFormData((prev) => ({
                 ...prev,
-                skills: [...prev.skills, newAchievement],
+                achievements: [...prev.achievements, currentAchievement],
             }));
-            toast.success("Skill added successfully");
+            console.log(currentAchievement);
+            
+            toast.success("Achievements added successfully");
         }
-        setCurrentAchievement({ name: "", level: 1 });
+        setCurrentAchievement({ title: "" });
     };
 
     const handleInputChange = (e) => {
@@ -59,54 +59,30 @@ export const AchievementsData = ({ formData, setFormData }) => {
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Achievements</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
             <div>
               <label htmlFor="achievement" className="block text-sm font-medium mb-1">
                     Achievement Name
               </label>
               <input
                 type="text"
-                id="achievement"
-                name="achievement"
-                placeholder="Achievement Name"
+                id="title"
+                name="title"
                 value={currentAchievement.title}
                 onChange={handleInputChange}
+                placeholder="Achievement Name"
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
             </div>
-            <div>
-              <label htmlFor="file" className="block text-sm font-medium mb-1">
-                      Files
-              </label>
-              <input
-                type="file"
-                id="file"
-                name="file"
-                onChange={(e) =>
-                    setCurrentAchievement({
-                    ...currentAchievement,
-                    file: e.target.files[0],
-                    })
-                }
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-              </div>
-            </div>
+      
+            {/* </div> */}
 
         <div className="mb-4">
             <button
-            onClick={() => {
-                if (currentAchievement.title.trim() !== "") {
-                setFormData({
-                    ...formData,
-                    achievements: [...formData.achievements, currentAchievement],
-                });
-                setCurrentAchievement({ title: "", file: null });
-                }
-            }}
+            onClick={handleSaveAchievements}
             className="bg-green-500 text-white px-4 py-2 rounded-lg"
             >
-            Add Achievement
+            {editIndex !== null ? "Update Achievement" : "Add Achievement"}
             </button>
         </div>
 
@@ -122,13 +98,13 @@ export const AchievementsData = ({ formData, setFormData }) => {
                 )}
                 <div className="flex gap-1">
                             <button
-                                // onClick={() => handleEditSkill(index)}
+                                onClick={() => handleEditAchievement(index)}
                                 className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                             >
                                 <PencilIcon className="h-3.5 w-3.5" />
                             </button>
                             <button
-                                // onClick={() => handleDeleteSkill(index)}
+                                onClick={() => handleDeleteAchievement(index)}
                                 className="h-7 w-7 text-gray-500 hover:text-red-500"
                             >
                                 <XIcon className="h-3.5 w-3.5" />
