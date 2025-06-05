@@ -40,7 +40,7 @@ const Navbar = () => {
           : "bg-transparent py-4"
       }`}
     >
-      <div className="container mx-auto px-4 w-full">
+      <div className="container mx-auto px-4 py-2 w-full">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link

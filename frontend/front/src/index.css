@@ -70,12 +70,15 @@
   }
   
   /* Container styles */
-  .container {
+  /* .container {
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     max-width: 100%;
-  }
+  } */
   @media (min-width: 1536px) {
     .container {
       max-width: 1400px;
