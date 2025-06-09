@@ -6,15 +6,58 @@ export const ProjectsData = ({ formData, setFormData }) => {
     const [currentProject, setCurrentProject] = useState({
         title: "",
         projectUrl: "",
-        githubLink: "",
-        image: null,
         description: "",
     });
+    const [editIndex, setEditIndex] = useState(null);
+    
+    const handleEditProject = (index) => {
+        setCurrentProject(formData.projects[index]);
+        setEditIndex(index);
+    };
+
+    const handleDeleteProject = (index) => {
+            setFormData((prev) => ({
+                ...prev,
+                projects: prev.projects.filter((_, i) => i !== index),
+            }));
+            if (editIndex === index) {
+                setCurrentProject({ title: "", projectUrl: "", description: ""});
+                setEditIndex(null);
+            }
+            toast.success("Project deleted successfully");
+        };
+
+        const handleSaveProject = () => {
+            
+                if (!currentProject.title.trim()) {
+                    toast.error("Project name is required");
+                    return;
+                }
+                const newProject = { title: currentProject.title.trim(), projectUrl: currentProject.projectUrl.trim(), description: currentProject.description.trim() }; 
+                
+        
+                if (editIndex !== null) {
+                    setFormData((prev) => ({
+                        ...prev,
+                        projects: prev.projects.map((project, i) => (i === editIndex ? newProject : project)),
+                    }));
+                    toast.success("Project updated successfully");
+                    setEditIndex(null);
+                } else {
+                    setFormData((prev) => ({
+                        ...prev,
+                        projects: [...prev.projects, newProject],
+                    }));
+                    toast.success("Project added successfully");
+                }
+                setCurrentProject({ title: "", projectUrl: "", description: "" });
+            };
+
     return (
         <div>
         <h2 className="text-2xl font-bold mb-6 text-center">Projects</h2>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="title" className="block text-sm font-medium mb-1">
                     Project Title
@@ -35,9 +78,7 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 />
             </div>
             
-            {/* </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
               <label htmlFor="project_url" className="block text-sm font-medium mb-1">
                       Project Link
@@ -57,25 +98,6 @@ export const ProjectsData = ({ formData, setFormData }) => {
                 className="border p-2 mb-4 w-full rounded-lg"
                 />
               </div>
-            <div>
-              <label htmlFor="github_link" className="block text-sm font-medium mb-1">
-                    Github_Link
-              </label>
-              <input
-                type="text"
-                id="github_link"
-                name="github_link"
-                placeholder="Github Link"
-                value={currentProject.githubLink}
-                onChange={(e) =>
-                setCurrentProject({
-                ...currentProject,
-                githubLink: e.target.value,
-                })
-            }
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-            </div>
             </div>
 
             <div>
@@ -100,23 +122,9 @@ export const ProjectsData = ({ formData, setFormData }) => {
 
         <div className="mb-4">
             <button
-            onClick={() => {
-                if (currentProject.title.trim() !== "") {
-                setFormData({
-                    ...formData,
-                    projects: [...formData.projects, currentProject],
-                });
-                setCurrentProject({
-                    title: "",
-                    projectUrl: "",
-                    githubLink: "",
-                    image: null,
-                    description: "",
-                });
-                }
-            }}
+            onClick = {handleSaveProject}
             className="bg-green-500 text-white px-4 py-2 rounded-lg" >
-            Add Project
+            {editIndex !== null ? "Update Project" : "Add Project"}
             </button>
         </div>
 
@@ -132,34 +140,22 @@ export const ProjectsData = ({ formData, setFormData }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 text-sm" >
-                    Live Site
-                </a>
-                )}
-                {proj.githubLink && (
-                <a
-                    href={proj.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 text-sm" >
-                    GitHub
+                    Live Site ({proj.projectUrl})
                 </a>
                 )}
                 {proj.description && (
                 <p className="text-sm text-gray-700">{proj.description}</p>
                 )}
-                {proj.image && (
-                <p className="text-xs text-gray-500">{proj.image.name}</p>
-                )}
             </li>
             <div className="flex gap-1">
                 <button
-                    // onClick={() => handleEditSkill(index)}
+                    onClick={() => handleEditProject(index)}
                     className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                 >
                     <PencilIcon className="h-3.5 w-3.5" />
                 </button>
                 <button
-                    // onClick={() => handleDeleteSkill(index)}
+                    onClick={() => handleDeleteProject(index)}
                     className="h-7 w-7 text-gray-500 hover:text-red-500"
                 >
                     <XIcon className="h-3.5 w-3.5" />

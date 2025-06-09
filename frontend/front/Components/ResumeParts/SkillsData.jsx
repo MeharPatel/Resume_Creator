@@ -98,7 +98,7 @@ export default function SkillsData({ formData, setFormData }) {
                     Proficiency Level ({levelToStage(sliderValue[0])}) 
                 </label>
                 <Slider
-                    value={sliderValue} // Fix: Use sliderValue
+                    value={sliderValue} 
                     onValueChange={handleSliderChange}
                     min={1}
                     max={5}

@@ -2,7 +2,7 @@ import React from 'react'
 import { XIcon } from 'lucide-react';
 import { toast } from "sonner";
 
-export const EducationData = ({ formData, setFormData, handleChange}) => {
+export const EducationData = ({ formData, setFormData}) => {
 
   const handleDeleteEducation = (index) => {
     setFormData((prev) => ({

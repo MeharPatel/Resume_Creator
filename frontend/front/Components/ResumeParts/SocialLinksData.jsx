@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { PencilIcon, XIcon } from 'lucide-react';
+import { toast } from "sonner";
 
 export const SocialLinksData = ({ formData, setFormData }) => {
     const [currentSocial, setCurrentSocial] = useState({ name: "", link: "" });
+    const [editIndex, setEditIndex] = useState(null);
 
     const defaultSocials = [
         { name: "GitHub", key: "github", icon: "logo-github" },
@@ -10,6 +13,49 @@ export const SocialLinksData = ({ formData, setFormData }) => {
         { name: "Facebook", key: "facebook", icon: "logo-facebook" },
         { name: "Portfolio", key: "portfolio", icon: "at" },
     ];
+
+    const handleEditSocial = (index) => {
+        setCurrentSocial(formData.otherSocialLinks[index]);
+        setEditIndex(index);
+    };
+
+    const handleDeleteSocial = (index) => {
+            setFormData((prev) => ({
+                ...prev,
+                otherSocialLinks: prev.otherSocialLinks.filter((_, i) => i !== index),
+            }));
+            if (editIndex === index) {
+                setCurrentSocial({ name: "", link: "" });
+                setEditIndex(null);
+            }
+            toast.success("Project deleted successfully");
+        };
+
+        const handleSaveSocial = () => {
+            if (!currentSocial.name.trim()) {
+                toast.error("Social Media name is required");
+                return;
+            }
+            const newSocial = { name: currentSocial.name.trim(), link: currentSocial.link.trim() }; 
+            
+    
+            if (editIndex !== null) {
+                setFormData((prev) => ({
+                    ...prev,
+                    otherSocialLinks: prev.otherSocialLinks.map((social, i) => (i === editIndex ? newSocial : social)),
+                }));
+                toast.success("Social Media updated successfully");
+                setEditIndex(null);
+            } else {
+                setFormData((prev) => ({
+                    ...prev,
+                    otherSocialLinks: [...prev.otherSocialLinks, newSocial],
+                }));
+                toast.success("Social Media added successfully");
+            }
+            setCurrentSocial({ name: "", link: "" });
+        };
+
 
     return (
         <div>
@@ -82,24 +128,33 @@ export const SocialLinksData = ({ formData, setFormData }) => {
             </div>
 
             <button
-            onClick={() => {
-                if (currentSocial.name.trim() && currentSocial.link.trim()) {
-                setFormData({
-                    ...formData,
-                    otherSocialLinks: [...formData.otherSocialLinks, currentSocial],
-                });
-                setCurrentSocial({ name: "", link: "" });
-                }
-            }}
+            onClick={handleSaveSocial}
             className="bg-green-500 text-white px-4 py-2 rounded-lg">
-            Add Social Media
+                {editIndex !== null ? "Update Social Media" : "Add Social Media"}
             </button>
 
             <ul className="mt-4">
             {formData.otherSocialLinks.map((social, index) => (
+            <div className='bg-gray-100 p-3 rounded mb-2 flex justify-between'>
+
                 <li key={index} className="text-sm text-gray-700 mb-1">
-                {social.name}: {social.link}
+                <span className='font-semibold text-gray-900'>{social.name}</span>: {social.link}
                 </li>
+                <div className="flex gap-1">
+                <button
+                    onClick={() => handleEditSocial(index)}
+                    className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                >
+                    <PencilIcon className="h-3.5 w-3.5" />
+                </button>
+                <button
+                    onClick={() => handleDeleteSocial(index)}
+                    className="h-7 w-7 text-gray-500 hover:text-red-500"
+                >
+                    <XIcon className="h-3.5 w-3.5" />
+                </button>
+            </div>
+            </div>
             ))}
             </ul>
         </div>
