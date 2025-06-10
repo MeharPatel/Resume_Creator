@@ -138,6 +138,7 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
     });
     const [currentItem, setCurrentItem] = useState('');
     const [editItemIndex, setEditItemIndex] = useState(null);
+    const [editSectionIndex, setEditSectionIndex] = useState(null);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -186,25 +187,46 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
     };
 
     const handleSaveSection = () => {
-        if (!currentSection.title.trim() || currentSection.items.length === 0) {
-            toast.error('Title and at least one item are required');
+                
+        if (!currentSection.title.trim()) {
+            toast.error("Section name is required");
             return;
         }
-        const newSection = {
-            title: currentSection.title.trim(),
-            items: currentSection.items,
-        };
-        handleChange(null, 'customSections', [...formData.customSections, newSection]);
-        setCurrentSection({ title: '', items: [] });
-        setCurrentItem('');
-        setEditItemIndex(null);
-        toast.success('Section added successfully');
-    };
+        const newSection = { title: currentSection.title.trim(), items: [...currentSection.items] }; 
+        
 
-    const handleDeleteSection = (sectionIndex) => {
-        const newCustomSections = formData.customSections.filter((_, i) => i !== sectionIndex);
-        handleChange(null, 'customSections', newCustomSections);
-        toast.success('Section deleted successfully');
+        if (editSectionIndex !== null) {
+            setFormData((prev) => ({
+                ...prev,
+                customSections: prev.customSections.map((section, i) => (i === editSectionIndex ? newSection : section)),
+            }));
+            toast.success("Section updated successfully");
+            setEditSectionIndex(null);
+            } else {
+                setFormData((prev) => ({
+                    ...prev,
+                    customSections: [...prev.customSections, newSection],
+                }));
+                toast.success("Section added successfully");
+            }
+            setCurrentSection({ title: "", items: [] });
+        };
+
+    const handleDeleteSection = (index) => {
+                setFormData((prev) => ({
+                    ...prev,
+                    customSections: prev.customSections.filter((_, i) => i !== index),
+                }));
+                if (editSectionIndex === index) {
+                    setCurrentSection({ title: "", items: [] });
+                    setEditSectionIndex(null);
+                }
+                toast.success("Section deleted successfully");
+            };
+
+    const handleEditSection = (index) => {
+        setCurrentSection(formData.customSections[index]);
+        setEditSectionIndex(index);
     };
 
     return (
@@ -277,7 +299,7 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                     onClick={handleSaveSection}
                     className="primary-button text-white px-4 py-2 rounded-md mb-4"
                 >
-                    <PlusIcon className="h-4 w-4 inline mr-1" /> Add Section
+                    <PlusIcon className="h-4 w-4 inline mr-1" /> {editSectionIndex !== null ? "Update Section" : "Add Section"} 
                 </button>
             </div>
 
@@ -297,6 +319,7 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                         </div>
                         <div className="flex gap-1">
                             <button
+                            onClick={() => handleEditSection(index)}
                                 className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                             >
                                 <PencilIcon className="h-3.5 w-3.5" />
