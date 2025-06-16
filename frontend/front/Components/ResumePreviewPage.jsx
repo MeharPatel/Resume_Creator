@@ -22,7 +22,7 @@ export const ResumePreviewPage = () => {
       field_of_study: 'Computer Science & Engineering',    
       start_date: '2020-08',
       end_date: '2024-05',
-      description: 'Bachelor of Engineering'
+      description: 'Bachelor of Engineering with ml'
     },
     {
       school: "St. Xavier's High School",
@@ -51,8 +51,8 @@ export const ResumePreviewPage = () => {
       description: 'Working as Backend Developer'
     }
   ],
-  skills: ['Javascript', 'CSS', 'HTML', 'ReactJs', 'NodeJs'],
-  achievements: [ { title: 'Leetcode Solved 600+ Problems', file: null } ],
+  skills: [{name : 'Javascript', level : 'Beginner'} , { name : 'CSS', level : ""} , {name : 'HTML', level : '' } , { name : 'ReactJs', level : ''} , {name : 'NodeJs', level: ''}],
+  achievements: [ { title: 'Leetcode Solved 600+ Problems' } ,{ title : 'Heyyyyooooooooo'}],
   projects: [
     {
       title: 'Portfolio',

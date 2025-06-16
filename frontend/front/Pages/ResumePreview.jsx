@@ -97,9 +97,9 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             <h2 className={template.sectionTitle}>Education</h2>
             {formData.education.map((edu, index) => (
               <div key={index} className="mb-4">
-                <h3 className={template.itemTitle}>{edu.institution}</h3>
+                <h3 className={template.itemTitle}>{edu.degree} ({edu.field_of_study})</h3>
                 <p className={template.itemSubtitle}>
-                  {edu.degree} | {edu.startYear} - {edu.endYear}
+                  {edu.school} | {edu.start_date}  -  {edu.end_date}
                 </p>
                 {edu.description && (
                   <p className={template.itemDescription}>{edu.description}</p>
@@ -117,7 +117,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
               <div key={index} className="mb-4">
                 <h3 className={template.itemTitle}>{exp.company}</h3>
                 <p className={template.itemSubtitle}>
-                  {exp.position} | {exp.startDate} - {exp.endDate}
+                  {exp.position} | {exp.start_date} - {exp.end_date ? exp.end_date : 'Present'}
                 </p>
                 <p className={template.itemDescription}>{exp.description}</p>
               </div>
@@ -125,7 +125,33 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           </>
         )}
 
-        {/* Custom Sections */}
+        {/* Skills */}
+        {formData.skills.length > 0 && (
+          <>
+            <h2 className={template.sectionTitle}>Skills</h2>
+            <div className="flex flex-wrap gap-2">
+              {formData.skills.map((skill, index) => (
+                <span key={index} className="bg-gray-200 px-3 py-1 rounded-sm text-sm">
+                  {skill.name} - {skill.level}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Achievements */}
+        {formData.achievements.length > 0 && (
+          <>
+            <h2 className={template.sectionTitle}>Achievements</h2>
+            {formData.achievements.map((achievement, index) => (
+              <div key={index} className="mb-1">
+                <h3 className={template.itemSubtitle}>{achievement.title}</h3>
+              </div>
+            ))}
+          </>
+        )}
+
+      {/* Custom Sections */}
         {formData.customSections.map((section, sectionIndex) => (
           <div key={sectionIndex} className={template.customSection}>
             <h2 className={template.sectionTitle}>{section.sectionName}</h2>
@@ -139,19 +165,6 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           </div>
         ))}
 
-        {/* Skills */}
-        {formData.skills.length > 0 && (
-          <>
-            <h2 className={template.sectionTitle}>Skills</h2>
-            <div className="flex flex-wrap gap-2">
-              {formData.skills.map((skill, index) => (
-                <span key={index} className="bg-gray-200 px-3 py-1 rounded-full text-sm">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </>
-        )}
       </motion.div>
       
       </div>
