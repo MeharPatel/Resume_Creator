@@ -6,7 +6,7 @@ export const ResumePreviewPage = () => {
   const [formData, setFormData] = useState({
   firstName: 'Mehar',
   lastName: 'Patel',
-  profssional_title: 'Backend Developer',
+  professional_title: 'Backend Developer',
   professional_description: 'Backend Developer for 1+ years',
   email: 'csmeharpatel@gmail.com',
   phone: '5987654321',
@@ -29,16 +29,14 @@ export const ResumePreviewPage = () => {
       degree: 'HSC',
       field_of_study: 'HSC',
       start_date: '2018-07',
-      end_date: '2020-05',
-      description: 'HSC with Science MPC'
+      end_date: '2020-05'
     },
     {
       school: 'Lourdes Convent School',
       degree: 'SSC',
       field_of_study: 'SSC',
       start_date: '2017-05',
-      end_date: '2018-03',
-      description: 'SSC'
+      end_date: '2018-03'
     }
   ],
   experience: [

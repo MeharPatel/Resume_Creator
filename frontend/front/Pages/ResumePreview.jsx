@@ -1,6 +1,7 @@
 import { templates } from '../src/util/templates';
 import { usePDF } from 'react-to-pdf';
 import { motion } from 'framer-motion';
+import { HomeIcon, BriefcaseBusiness, AtSign, Phone, GraduationCap, Building2, Award } from 'lucide-react'
 
 export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate }) => {
   const { toPDF, targetRef } = usePDF({
@@ -80,15 +81,25 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           ) : (
             /* Regular text for other templates */
             <>
-              {formData.firstName} {formData.lastName}
+              {formData.firstName} {formData.lastName} 
             </>
           )}
         </h1>
         
         {/* Contact Info */}
         <div className={template.contact}>
-          {formData.email && <span>{formData.email} | </span>}
-          {formData.phone && <span>{formData.phone}</span>}
+        <div className='flex'>
+          <AtSign className='h-4 w-4 me-2 mt-0.5' /> {formData.email && <span> {formData.email} | </span>} <Phone className='h-4 w-4 mx-2 mt-0.5' /> {formData.phone && <span>{formData.phone}</span>}
+        </div>
+        </div>
+
+        {/* Personal Info */}
+        <div className='flex'>
+          <BriefcaseBusiness className='h-4 w-4 me-2 mt-0.5' /><p className={template.itemSubtitle}> {formData.professional_title} | {formData.professional_description} </p>
+        </div>
+
+        <div className='flex'>
+          <HomeIcon className='h-4 w-4 me-2 mt-0.5' /> <p className={template.itemSubtitle}>{formData.address}, {formData.city}, {formData.state}, {formData.country} - {formData.zip_code} </p>
         </div>
 
         {/* Education */}
@@ -96,8 +107,11 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           <>
             <h2 className={template.sectionTitle}>Education</h2>
             {formData.education.map((edu, index) => (
-              <div key={index} className="mb-4">
+              <div key={index} className="mb-4 ">
+                <div className='flex'>
+                <GraduationCap className='h-5 w-5 me-3 mt-1' />
                 <h3 className={template.itemTitle}>{edu.degree} ({edu.field_of_study})</h3>
+                </div>
                 <p className={template.itemSubtitle}>
                   {edu.school} | {edu.start_date}  -  {edu.end_date}
                 </p>
@@ -115,7 +129,10 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             <h2 className={template.sectionTitle}>Experience</h2>
             {formData.experience.map((exp, index) => (
               <div key={index} className="mb-4">
+              <div className='flex'>
+                <Building2 className='h-4 w-4 me-3 mt-1' />
                 <h3 className={template.itemTitle}>{exp.company}</h3>
+              </div>
                 <p className={template.itemSubtitle}>
                   {exp.position} | {exp.start_date} - {exp.end_date ? exp.end_date : 'Present'}
                 </p>
@@ -144,7 +161,8 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           <>
             <h2 className={template.sectionTitle}>Achievements</h2>
             {formData.achievements.map((achievement, index) => (
-              <div key={index} className="mb-1">
+              <div key={index} className="mb-1 flex">
+                <Award className='h-4 w-4 me-3 mt-1' />
                 <h3 className={template.itemSubtitle}>{achievement.title}</h3>
               </div>
             ))}
@@ -155,13 +173,13 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         {formData.customSections.map((section, sectionIndex) => (
           <div key={sectionIndex} className={template.customSection}>
             <h2 className={template.sectionTitle}>{section.sectionName}</h2>
-            <ul className="list-disc pl-5">
+            <div>
               {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="mb-1">
+                <span key={itemIndex} className="bg-gray-200 px-3 py-1 rounded-sm text-sm me-2">
                   {item}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
 

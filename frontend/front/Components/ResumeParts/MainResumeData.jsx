@@ -38,15 +38,15 @@ export const MainResumeData = ({formData, handleChange}) => {
         </div>
 
         <div>
-          <label htmlFor="profssional_title" className="block text-sm font-medium mb-1">
+          <label htmlFor="professional_title" className="block text-sm font-medium mb-1">
                   Professional Title <span className="text-red-500">*</span>
           </label>
           <input
-            id='profssional_title'
+            id='professional_title'
             type="text"
-            name="profssional_title"
+            name="professional_title"
             placeholder="Professional Title"
-            value={formData.profssional_title}
+            value={formData.professional_title}
             onChange={handleChange}
             className="border p-2 mb-4 w-full rounded-lg"
             />
