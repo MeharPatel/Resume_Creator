@@ -32,7 +32,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
       </div>
 
       {/* Resume Preview */}
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
 
       <motion.div
         key={selectedTemplate}
@@ -40,8 +40,9 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         ref={targetRef}
-        className={template.container}
+        className={template.resume_container}
       >
+        <div className='a4_content'>
         {/* Name */}
         {/* <h1 className={template.name}>
           {formData.firstName} {formData.lastName}
@@ -89,17 +90,17 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         {/* Contact Info */}
         <div className={template.contact}>
         <div className='flex'>
-          <AtSign className='h-4 w-4 me-2 mt-0.5' /> {formData.email && <span> {formData.email} | </span>} <Phone className='h-4 w-4 mx-2 mt-0.5' /> {formData.phone && <span>{formData.phone}</span>}
+          <AtSign className='h-4 w-4 me-2 mt-1' /> {formData.email && <span> {formData.email} | </span>} <Phone className='h-4 w-4 mx-2 mb-0' /> {formData.phone && <span>{formData.phone}</span>}
         </div>
         </div>
 
         {/* Personal Info */}
         <div className='flex'>
-          <BriefcaseBusiness className='h-4 w-4 me-2 mt-0.5' /><p className={template.itemSubtitle}> {formData.professional_title} | {formData.professional_description} </p>
+          <BriefcaseBusiness className='h-4 w-4 me-2 pt-0.5' /><p className={template.itemSubtitle}> {formData.professional_title} | {formData.professional_description} </p>
         </div>
 
         <div className='flex'>
-          <HomeIcon className='h-4 w-4 me-2 mt-0.5' /> <p className={template.itemSubtitle}>{formData.address}, {formData.city}, {formData.state}, {formData.country} - {formData.zip_code} </p>
+          <HomeIcon className='h-4 w-4 me-2 pt-0.5' /> <p className={template.itemSubtitle}>{formData.address}, {formData.city}, {formData.state}, {formData.country} - {formData.zip_code} </p>
         </div>
 
         {/* Education */}
@@ -109,7 +110,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             {formData.education.map((edu, index) => (
               <div key={index} className="mb-4 ">
                 <div className='flex'>
-                <GraduationCap className='h-5 w-5 me-3 mt-1' />
+                <GraduationCap className='h-5 w-5 me-3 pt-1' />
                 <h3 className={template.itemTitle}>{edu.degree} ({edu.field_of_study})</h3>
                 </div>
                 <p className={template.itemSubtitle}>
@@ -130,7 +131,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             {formData.experience.map((exp, index) => (
               <div key={index} className="mb-4">
               <div className='flex'>
-                <Building2 className='h-4 w-4 me-3 mt-1' />
+                <Building2 className='h-5 w-5 me-3 pt-1' />
                 <h3 className={template.itemTitle}>{exp.company}</h3>
               </div>
                 <p className={template.itemSubtitle}>
@@ -162,7 +163,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             <h2 className={template.sectionTitle}>Achievements</h2>
             {formData.achievements.map((achievement, index) => (
               <div key={index} className="mb-1 flex">
-                <Award className='h-4 w-4 me-3 mt-1' />
+                <Award className='h-5 w-5 me-3 pt-1' />
                 <h3 className={template.itemSubtitle}>{achievement.title}</h3>
               </div>
             ))}
@@ -183,6 +184,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
           </div>
         ))}
 
+        </div>
       </motion.div>
       
       </div>
