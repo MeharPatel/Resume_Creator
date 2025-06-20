@@ -10,27 +10,27 @@ export const templates = {
         customSection: "mt-4 w-100"
     },
     modern: {
+        resume_container: "bg-white a4_page",
         name: "text-4xl font-bold text-blue-700 mb-2",
         contact: "text-sm text-blue-600 mb-6",
         sectionTitle: "text-2xl font-bold mt-8 mb-4 text-blue-700",
         itemTitle: "text-lg font-medium text-gray-900",
         itemSubtitle: "text-sm text-blue-600 font-medium",
         itemDescription: "text-sm text-gray-700 mt-2 leading-relaxed",
-        customSection: "mt-6 pl-4 border-l-4 border-blue-200",
-        resume_container: "bg-white p-8 max-w-2xl mx-auto"
+        customSection: "mt-6 pl-4 border-l-4 border-blue-200"
     },
     creative: {
+        resume_container: "bg-white border-l-8 border-purple-500 a4_page",
         name: "text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500",
         contact: "text-sm text-gray-500 mb-6",
         sectionTitle: "text-xl font-bold mt-8 mb-3 text-purple-700 uppercase tracking-wider",
         itemTitle: "text-lg font-bold text-gray-900",
         itemSubtitle: "text-sm text-pink-600 font-medium",
         itemDescription: "text-sm text-gray-700 mt-2 pl-4 border-l-2 border-purple-200",
-        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
-        resume_container: "bg-white p-6 max-w-2xl mx-auto border-l-8 border-purple-500"
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg"
     },
     nordic: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border border-gray-100 shadow-sm",
+        resume_container: "bg-white border border-gray-100 shadow-sm a4_page",
         name: "text-3xl font-light text-gray-800 mb-1 tracking-wide",
         contact: "text-sm text-gray-500 mb-6",
         sectionTitle: "text-lg font-medium text-gray-700 uppercase tracking-widest border-b border-gray-100 pb-2 mb-3",
@@ -41,7 +41,7 @@ export const templates = {
         accentColor: "text-gray-800"
     },
     darkTech: {
-        resume_container: "bg-gray-900 p-8 max-w-2xl mx-auto text-gray-100",
+        resume_container: "bg-gray-900 text-gray-100 a4_page",
         name: "text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 text-ellipsis",
         contact: "text-blue-300 text-sm mb-6",
         sectionTitle: "text-xl font-mono text-blue-400 border-b border-blue-800 pb-1 mb-3",
@@ -52,7 +52,7 @@ export const templates = {
         accentColor: "text-blue-400"
     },
     vintage: {
-        resume_container: "bg-amber-50 p-8 max-w-2xl mx-auto border-l-4 border-amber-300",
+        resume_container: "bg-amber-50 border-l-4 border-amber-300 a4_page",
         name: "text-4xl font-serif text-amber-900 mb-2",
         contact: "text-amber-700 text-sm italic mb-6",
         sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-200 pb-1 mb-3",
@@ -63,7 +63,7 @@ export const templates = {
         accentColor: "text-amber-700"
     },
     neon: {
-        resume_container: "bg-black p-8 max-w-2xl mx-auto border border-purple-500/20",
+        resume_container: "bg-black border border-purple-500/20 a4_page",
         name: "text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400",
         contact: "text-purple-300 text-xs tracking-widest mb-8",
         sectionTitle: "text-2xl font-bold text-pink-400 uppercase tracking-wider mb-4",
@@ -74,7 +74,7 @@ export const templates = {
         accentColor: "text-pink-400"
     },
     material: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto shadow-md rounded-lg",
+        resume_container: "bg-white shadow-md rounded-lg a4_page",
         name: "text-4xl font-medium text-gray-800 mb-2",
         contact: "text-blue-600 text-sm mb-8",
         sectionTitle: "text-xl font-medium text-blue-700 bg-blue-50 px-3 py-2 rounded-lg mb-3",
@@ -85,7 +85,7 @@ export const templates = {
         accentColor: "text-blue-600"
     },
     glass: {
-        resume_container: "bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-lg",
+        resume_container: "bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg a4_page",
         name: "text-4xl font-bold text-white",
         contact: "text-blue-100/80 text-sm mb-6",
         sectionTitle: "text-xl font-semibold text-white border-b border-white/20 pb-2 mb-3",
@@ -94,7 +94,7 @@ export const templates = {
         itemDescription: "text-white/80 text-sm mt-1"
     },
     brutalist: {
-        resume_container: "bg-yellow-100 p-6 border-4 border-black",
+        resume_container: "bg-yellow-100 border-4 border-black a4_page",
         name: "text-5xl font-black tracking-tight text-black mb-2",
         contact: "text-black/70 text-sm uppercase mb-8",
         sectionTitle: "text-2xl font-extrabold underline underline-offset-4 mb-4",
@@ -103,7 +103,7 @@ export const templates = {
         itemDescription: "text-black/80 text-sm mt-2 leading-tight"
     },
     cyberpunk: {
-        resume_container: "bg-black p-6 border-2 border-pink-500",
+        resume_container: "bg-black border-2 border-pink-500 a4_page",
         name: "text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-400",
         contact: "text-green-400 text-xs font-mono mb-8",
         sectionTitle: "text-xl font-bold text-pink-500 border-b border-pink-500/30 pb-1 mb-3",
@@ -112,7 +112,7 @@ export const templates = {
         itemDescription: "text-gray-300 text-sm mt-1"
     },
     vintagePaper: {
-        resume_container: "bg-amber-50 p-8 border-l-8 border-amber-700 shadow-inner",
+        resume_container: "bg-amber-50 border-l-8 border-amber-700 shadow-inner a4_page",
         name: "text-4xl font-serif text-amber-900 mb-2",
         contact: "text-amber-700/80 text-sm italic mb-8",
         sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-200 pb-1 mb-3",
@@ -121,7 +121,7 @@ export const templates = {
         itemDescription: "text-amber-800/80 text-sm mt-1 leading-relaxed"
     },
     biophilic: {
-        resume_container: "bg-white p-8 border-2 border-green-700/10 rounded-lg",
+        resume_container: "bg-white border-2 border-green-700/10 rounded-lg a4_page",
         name: "text-4xl font-bold text-green-800",
         contact: "text-green-600/80 text-sm mb-6",
         sectionTitle: "text-xl font-semibold text-green-700 border-b border-green-200 pb-2 mb-3",
@@ -130,7 +130,7 @@ export const templates = {
         itemDescription: "text-green-800/80 text-sm mt-1"
     },
     minimalist: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border border-gray-200",
+        resume_container: "bg-white border border-gray-200 a4_page",
         name: "text-3xl font-semibold text-gray-900 mb-3",
         contact: "text-sm text-gray-500 mb-6",
         sectionTitle: "text-lg font-medium text-gray-800 border-b border-gray-200 pb-2 mb-4",
@@ -141,7 +141,7 @@ export const templates = {
         accentColor: "text-gray-800"
     },
     retroTech: {
-        resume_container: "bg-teal-50 p-8 max-w-2xl mx-auto border-4 border-teal-700",
+        resume_container: "bg-teal-50 border-4 border-teal-700 a4_page",
         name: "text-4xl font-mono text-teal-900 mb-2 tracking-tight",
         contact: "text-sm text-orange-600 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-teal-800 border-b-2 border-orange-400 pb-2 mb-3",
@@ -152,7 +152,7 @@ export const templates = {
         accentColor: "text-orange-600"
     },
     elegant: {
-        resume_container: "bg-gray-50 p-8 max-w-2xl mx-auto border-l-4 border-gold-600",
+        resume_container: "bg-gray-50 border-l-4 border-gold-600 a4_page",
         name: "text-4xl font-serif text-gray-900 mb-2",
         contact: "text-sm text-gray-600 italic mb-6",
         sectionTitle: "text-xl font-serif text-gray-800 border-b border-gold-200 pb-2 mb-3",
@@ -163,7 +163,7 @@ export const templates = {
         accentColor: "text-gold-600"
     },
     futuristic: {
-        resume_container: "bg-gray-950 p-8 max-w-2xl mx-auto border border-cyan-500/30",
+        resume_container: "bg-gray-950 border border-cyan-500/30 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500",
         contact: "text-sm text-cyan-300 font-mono mb-6",
         sectionTitle: "text-xl font-bold text-cyan-400 border-b border-cyan-700/50 pb-2 mb-3",
@@ -174,7 +174,7 @@ export const templates = {
         accentColor: "text-cyan-400"
     },
     artDeco: {
-        resume_container: "bg-navy-50 p-8 max-w-2xl mx-auto border-t-8 border-navy-700",
+        resume_container: "bg-navy-50 border-t-8 border-navy-700 a4_page",
         name: "text-4xl font-serif text-navy-900 mb-2 tracking-wide",
         contact: "text-sm text-navy-600 mb-6",
         sectionTitle: "text-xl font-serif text-navy-800 border-b-2 border-gold-400 pb-2 mb-3",
@@ -185,7 +185,7 @@ export const templates = {
         accentColor: "text-gold-500"
     },
     pastelDream: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border border-pink-100 shadow-sm rounded-lg",
+        resume_container: "bg-white border border-pink-100 shadow-sm rounded-lg a4_page",
         name: "text-4xl font-semibold text-pink-600 mb-2",
         contact: "text-sm text-purple-500 mb-6",
         sectionTitle: "text-xl font-medium text-purple-600 border-b border-pink-200 pb-2 mb-3",
@@ -196,7 +196,7 @@ export const templates = {
         accentColor: "text-purple-600"
     },
     monochromeBold: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border-4 border-black",
+        resume_container: "bg-white border-4 border-black a4_page",
         name: "text-4xl font-extrabold text-black mb-2 tracking-tight",
         contact: "text-sm text-gray-700 mb-6",
         sectionTitle: "text-xl font-bold text-black border-b-2 border-gray-900 pb-2 mb-3",
@@ -207,7 +207,7 @@ export const templates = {
         accentColor: "text-black"
     },
     oceanBreeze: {
-        resume_container: "bg-blue-50 p-8 max-w-2xl mx-auto border-l-4 border-teal-400",
+        resume_container: "bg-blue-50 border-l-4 border-teal-400 a4_page",
         name: "text-4xl font-bold text-teal-700 mb-2",
         contact: "text-sm text-blue-600 mb-6",
         sectionTitle: "text-xl font-semibold text-teal-600 border-b border-blue-200 pb-2 mb-3",
@@ -218,7 +218,7 @@ export const templates = {
         accentColor: "text-teal-600"
     },
     steampunk: {
-        resume_container: "bg-amber-100 p-8 max-w-2xl mx-auto border-2 border-bronze-600",
+        resume_container: "bg-amber-100 border-2 border-bronze-600 a4_page",
         name: "text-4xl font-serif text-bronze-800 mb-2 tracking-wide",
         contact: "text-sm text-amber-600 font-mono mb-6",
         sectionTitle: "text-xl font-serif text-bronze-700 border-b border-amber-300 pb-2 mb-3",
@@ -229,7 +229,7 @@ export const templates = {
         accentColor: "text-bronze-600"
     },
     popArt: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border-4 border-yellow-400",
+        resume_container: "bg-white border-4 border-yellow-400 a4_page",
         name: "text-4xl font-extrabold text-red-600 mb-2 tracking-tight",
         contact: "text-sm text-blue-600 uppercase mb-6",
         sectionTitle: "text-xl font-bold text-yellow-600 border-b-2 border-red-400 pb-2 mb-3",
@@ -240,7 +240,7 @@ export const templates = {
         accentColor: "text-red-600"
     },
     zenGarden: {
-        resume_container: "bg-gray-50 p-8 max-w-2xl mx-auto border border-green-200 rounded-lg",
+        resume_container: "bg-gray-50 border border-green-200 rounded-lg a4_page",
         name: "text-4xl font-semibold text-green-800 mb-2",
         contact: "text-sm text-gray-600 mb-6",
         sectionTitle: "text-xl font-medium text-green-700 border-b border-green-100 pb-2 mb-3",
@@ -251,7 +251,7 @@ export const templates = {
         accentColor: "text-green-700"
     },
     cosmicGlow: {
-        resume_container: "bg-black p-8 max-w-2xl mx-auto border border-indigo-500/30",
+        resume_container: "bg-black border border-indigo-500/30 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500",
         contact: "text-sm text-indigo-300 font-mono mb-6",
         sectionTitle: "text-xl font-bold text-violet-400 border-b border-indigo-700/50 pb-2 mb-3",
@@ -262,7 +262,7 @@ export const templates = {
         accentColor: "text-violet-400"
     },
     classicParchment: {
-        resume_container: "bg-amber-100 p-8 max-w-2xl mx-auto border-2 border-amber-600 shadow-inner",
+        resume_container: "bg-amber-100 border-2 border-amber-600 shadow-inner a4_page",
         name: "text-4xl font-serif text-amber-900 mb-2 tracking-wide",
         contact: "text-sm text-amber-700 italic mb-6",
         sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-300 pb-2 mb-3",
@@ -273,7 +273,7 @@ export const templates = {
         accentColor: "text-amber-700"
     },
     vibrantCitrus: {
-        resume_container: "bg-orange-50 p-8 max-w-2xl mx-auto border-l-4 border-lime-400",
+        resume_container: "bg-orange-50 border-l-4 border-lime-400 a4_page",
         name: "text-4xl font-bold text-orange-600 mb-2",
         contact: "text-sm text-lime-600 mb-6",
         sectionTitle: "text-xl font-semibold text-orange-600 border-b border-lime-200 pb-2 mb-3",
@@ -284,7 +284,7 @@ export const templates = {
         accentColor: "text-orange-600"
     },
     industrialForge: {
-        resume_container: "bg-gray-100 p-8 max-w-2xl mx-auto border-2 border-red-600",
+        resume_container: "bg-gray-100 border-2 border-red-600 a4_page",
         name: "text-4xl font-bold text-gray-800 mb-2 tracking-tight",
         contact: "text-sm text-red-600 font-mono mb-6",
         sectionTitle: "text-xl font-semibold text-gray-700 border-b border-red-300 pb-2 mb-3",
@@ -295,7 +295,7 @@ export const templates = {
         accentColor: "text-red-600"
     },
     floralElegance: {
-        resume_container: "bg-cream-50 p-8 max-w-2xl mx-auto border border-pink-200 rounded-lg",
+        resume_container: "bg-cream-50 border border-pink-200 rounded-lg a4_page",
         name: "text-4xl font-serif text-pink-700 mb-2",
         contact: "text-sm text-pink-500 mb-6",
         sectionTitle: "text-xl font-medium text-pink-600 border-b border-pink-100 pb-2 mb-3",
@@ -306,7 +306,7 @@ export const templates = {
         accentColor: "text-pink-600"
     },
     holoTech: {
-        resume_container: "bg-gray-900 p-8 max-w-2xl mx-auto border border-teal-500/20",
+        resume_container: "bg-gray-900 border border-teal-500/20 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500",
         contact: "text-sm text-teal-300 font-mono mb-6",
         sectionTitle: "text-xl font-bold text-teal-400 border-b border-teal-700/50 pb-2 mb-3",
@@ -317,7 +317,7 @@ export const templates = {
         accentColor: "text-teal-400"
     },
     gothic: {
-        resume_container: "bg-gray-900 p-8 max-w-2xl mx-auto border-2 border-gray-700 shadow-lg",
+        resume_container: "bg-gray-900 border-2 border-gray-700 shadow-lg a4_page",
         name: "text-4xl font-serif text-white mb-2 tracking-wide",
         contact: "text-sm text-gray-400 italic mb-6",
         sectionTitle: "text-xl font-serif text-gray-300 border-b border-gray-600 pb-2 mb-3",
@@ -328,7 +328,7 @@ export const templates = {
         accentColor: "text-gray-300"
     },
     retroArcade: {
-        resume_container: "bg-black p-8 max-w-2xl mx-auto border-4 border-red-500",
+        resume_container: "bg-black border-4 border-red-500 a4_page",
         name: "text-4xl font-mono text-blue-400 mb-2 tracking-tight",
         contact: "text-sm text-red-400 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-blue-400 border-b-2 border-red-500 pb-2 mb-3",
@@ -339,7 +339,7 @@ export const templates = {
         accentColor: "text-blue-400"
     },
     midnightBloom: {
-        resume_container: "bg-blue-950 p-8 max-w-2xl mx-auto border-l-4 border-blue-400",
+        resume_container: "bg-blue-950 border-l-4 border-blue-400 a4_page",
         name: "text-4xl font-serif text-blue-200 mb-2",
         contact: "text-sm text-blue-300 mb-6",
         sectionTitle: "text-xl font-serif text-blue-200 border-b border-blue-600 pb-2 mb-3",
@@ -350,7 +350,7 @@ export const templates = {
         accentColor: "text-blue-200"
     },
     tropicalVibe: {
-        resume_container: "bg-green-50 p-8 max-w-2xl mx-auto border border-yellow-300 rounded-lg",
+        resume_container: "bg-green-50 border border-yellow-300 rounded-lg a4_page",
         name: "text-4xl font-bold text-green-700 mb-2",
         contact: "text-sm text-yellow-600 mb-6",
         sectionTitle: "text-xl font-semibold text-green-600 border-b border-yellow-200 pb-2 mb-3",
@@ -361,7 +361,7 @@ export const templates = {
         accentColor: "text-green-600"
     },
     baroqueOpulence: {
-        resume_container: "bg-cream-50 p-8 max-w-2xl mx-auto border-t-4 border-gold-600",
+        resume_container: "bg-cream-50 border-t-4 border-gold-600 a4_page",
         name: "text-4xl font-serif text-gray-900 mb-2 tracking-wide",
         contact: "text-sm text-gold-600 italic mb-6",
         sectionTitle: "text-xl font-serif text-gray-800 border-b border-gold-300 pb-2 mb-3",
@@ -372,7 +372,7 @@ export const templates = {
         accentColor: "text-gold-600"
     },
     neoMinimal: {
-        resume_container: "bg-white p-8 max-w-2xl mx-auto border border-gray-100",
+        resume_container: "bg-white border border-gray-100 a4_page",
         name: "text-3xl font-semibold text-gray-900 mb-3",
         contact: "text-sm text-gray-500 mb-6",
         sectionTitle: "text-lg font-medium text-indigo-600 border-b border-gray-200 pb-2 mb-3",
@@ -383,7 +383,7 @@ export const templates = {
         accentColor: "text-indigo-600"
     },
     purpleMajesty: {
-        resume_container: "bg-purple-50 p-8 max-w-2xl mx-auto border-l-4 border-purple-600 rounded-lg",
+        resume_container: "bg-purple-50 border-l-4 border-purple-600 rounded-lg a4_page",
         name: "text-4xl font-bold text-purple-800 mb-2",
         contact: "text-sm text-purple-500 mb-6",
         sectionTitle: "text-xl font-semibold text-purple-700 border-b border-purple-200 pb-2 mb-3",
@@ -394,7 +394,7 @@ export const templates = {
         accentColor: "text-purple-700"
     },
     vintageTypewriter: {
-        resume_container: "bg-gray-100 p-8 max-w-2xl mx-auto border-2 border-gray-600",
+        resume_container: "bg-gray-100 border-2 border-gray-600 a4_page",
         name: "text-4xl font-mono text-gray-800 mb-2 tracking-tight",
         contact: "text-sm text-gray-500 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-gray-700 border-b border-gray-400 pb-2 mb-3",
@@ -405,7 +405,7 @@ export const templates = {
         accentColor: "text-gray-700"
     },
     auroraGlow: {
-        resume_container: "bg-gray-900 p-8 max-w-2xl mx-auto border border-teal-500/30",
+        resume_container: "bg-gray-900 border border-teal-500/30 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-400",
         contact: "text-sm text-teal-300 mb-6",
         sectionTitle: "text-xl font-bold text-purple-400 border-b border-teal-600/50 pb-2 mb-3",
@@ -416,7 +416,7 @@ export const templates = {
         accentColor: "text-purple-400"
     },
     artNouveau: {
-        resume_container: "bg-green-50 p-8 max-w-2xl mx-auto border-t-4 border-gold-500",
+        resume_container: "bg-green-50 border-t-4 border-gold-500 a4_page",
         name: "text-4xl font-serif text-green-800 mb-2 tracking-wide",
         contact: "text-sm text-gold-600 mb-6",
         sectionTitle: "text-xl font-serif text-green-700 border-b border-gold-200 pb-2 mb-3",
@@ -427,7 +427,7 @@ export const templates = {
         accentColor: "text-green-700"
     },
     cyberGrid: {
-        resume_container: "bg-black p-8 max-w-2xl mx-auto border-2 border-green-500/50",
+        resume_container: "bg-black border-2 border-green-500/50 a4_page",
         name: "text-4xl font-mono text-green-400 mb-2 tracking-tight",
         contact: "text-sm text-blue-400 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-green-400 border-b border-blue-500/50 pb-2 mb-3",
@@ -438,7 +438,7 @@ export const templates = {
         accentColor: "text-green-400"
     },
     gradientPulse: {
-        resume_container: "bg-gradient-to-br from-purple-600 to-teal-500 p-8 max-w-2xl mx-auto rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-400/50",
+        resume_container: "bg-gradient-to-br from-purple-600 to-teal-500 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-400/50 a4_page",
         name: "text-4xl font-extrabold text-white mb-2 tracking-wide",
         contact: "text-sm text-teal-200 mb-6",
         sectionTitle: "text-xl font-bold text-white border-b border-teal-400/50 pb-2 mb-3 hover:scale-105 transition-transform duration-200",
@@ -449,7 +449,7 @@ export const templates = {
         accentColor: "text-teal-400"
     },
     cosmicWave: {
-        resume_container: "bg-gradient-to-r from-blue-900 to-pink-800 p-8 max-w-2xl mx-auto rounded-lg shadow-md backdrop-blur-sm border border-pink-400/30",
+        resume_container: "bg-gradient-to-r from-blue-900 to-pink-800 rounded-lg shadow-md backdrop-blur-sm border border-pink-400/30 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-blue-400 mb-2",
         contact: "text-sm text-pink-300 mb-6",
         sectionTitle: "text-xl font-bold text-white border-b border-pink-400/50 pb-2 mb-3",
@@ -460,7 +460,7 @@ export const templates = {
         accentColor: "text-pink-400"
     },
     neonHorizon: {
-        resume_container: "bg-gradient-to-t from-orange-600 to-cyan-600 p-8 max-w-2xl mx-auto rounded-xl border-2 border-cyan-400 shadow-lg hover:shadow-cyan-400/50 transition-shadow duration-300",
+        resume_container: "bg-gradient-to-t from-orange-600 to-cyan-600 rounded-xl border-2 border-cyan-400 shadow-lg hover:shadow-cyan-400/50 transition-shadow duration-300 a4_page",
         name: "text-4xl font-extrabold text-white mb-2 tracking-tight",
         contact: "text-sm text-cyan-300 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-cyan-300 border-b border-orange-400/50 pb-2 mb-3 hover:scale-105 transition-transform duration-200",
@@ -471,7 +471,7 @@ export const templates = {
         accentColor: "text-cyan-300"
     },
     twilightSpark: {
-        resume_container: "bg-gradient-to-br from-indigo-900 to-violet-700 p-8 max-w-2xl mx-auto rounded-lg shadow-lg border border-violet-400/40",
+        resume_container: "bg-gradient-to-br from-indigo-900 to-violet-700 rounded-lg shadow-lg border border-violet-400/40 a4_page",
         name: "text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400 mb-2",
         contact: "text-sm text-violet-300 mb-6",
         sectionTitle: "text-xl font-bold text-violet-200 border-b border-indigo-400/50 pb-2 mb-3 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-gradient-to-r after:from-violet-400 after:to-indigo-400 after:w-0 after:transition-all after:duration-300 hover:after:w-full",
@@ -482,7 +482,7 @@ export const templates = {
         accentColor: "text-violet-400"
     },
     solarFlare: {
-        resume_container: "bg-gradient-to-r from-red-600 to-yellow-500 p-8 max-w-2xl mx-auto rounded-xl shadow-lg hover:shadow-yellow-400/50 transition-shadow duration-300 border border-yellow-400/40",
+        resume_container: "bg-gradient-to-r from-red-600 to-yellow-500 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition-shadow duration-300 border border-yellow-400/40 a4_page",
         name: "text-4xl font-extrabold text-white mb-2 tracking-wide",
         contact: "text-sm text-yellow-300 mb-6",
         sectionTitle: "text-xl font-bold text-white border-b border-yellow-400/50 pb-2 mb-3 hover:text-yellow-200 transition-colors duration-200",

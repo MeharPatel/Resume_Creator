@@ -88,19 +88,19 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         </h1>
         
         {/* Contact Info */}
-        <div className={template.contact}>
+        <div className={template.itemSubtitle}>
         <div className='flex'>
-          <AtSign className='h-4 w-4 me-2 mt-1' /> {formData.email && <span> {formData.email} | </span>} <Phone className='h-4 w-4 mx-2 mb-0' /> {formData.phone && <span>{formData.phone}</span>}
+          <span className='h-4 w-4 me-2 mt-2'><AtSign className='h-full w-full' /></span> {formData.email && <span> {formData.email} | </span>} <span className='h-4 w-4 mx-2 mt-2'><Phone className='h-full w-full' /> </span> {formData.phone && <span>{formData.phone}</span>}
         </div>
         </div>
 
         {/* Personal Info */}
         <div className='flex'>
-          <BriefcaseBusiness className='h-4 w-4 me-2 pt-0.5' /><p className={template.itemSubtitle}> {formData.professional_title} | {formData.professional_description} </p>
+          <span className='h-4 w-4 me-2 mt-2'><BriefcaseBusiness className='h-full w-full' /></span><p className={template.itemSubtitle}> {formData.professional_title} | {formData.professional_description} </p>
         </div>
 
         <div className='flex'>
-          <HomeIcon className='h-4 w-4 me-2 pt-0.5' /> <p className={template.itemSubtitle}>{formData.address}, {formData.city}, {formData.state}, {formData.country} - {formData.zip_code} </p>
+          <span className='h-4 w-4 me-2 mt-2'><HomeIcon className='h-full w-full' /></span> <p className={template.itemSubtitle}>{formData.address}, {formData.city}, {formData.state}, {formData.country} - {formData.zip_code} </p>
         </div>
 
         {/* Education */}
@@ -110,7 +110,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             {formData.education.map((edu, index) => (
               <div key={index} className="mb-4 ">
                 <div className='flex'>
-                <GraduationCap className='h-5 w-5 me-3 pt-1' />
+                <span className='h-5 w-5 me-2 mt-3'><GraduationCap className='h-full w-full' /></span>
                 <h3 className={template.itemTitle}>{edu.degree} ({edu.field_of_study})</h3>
                 </div>
                 <p className={template.itemSubtitle}>
@@ -131,7 +131,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             {formData.experience.map((exp, index) => (
               <div key={index} className="mb-4">
               <div className='flex'>
-                <Building2 className='h-5 w-5 me-3 pt-1' />
+                <span className='h-5 w-5 me-2 mt-3'><Building2 className='h-full w-full' /></span>
                 <h3 className={template.itemTitle}>{exp.company}</h3>
               </div>
                 <p className={template.itemSubtitle}>
@@ -149,8 +149,8 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             <h2 className={template.sectionTitle}>Skills</h2>
             <div className="flex flex-wrap gap-2">
               {formData.skills.map((skill, index) => (
-                <span key={index} className="bg-gray-200 px-3 py-1 rounded-sm text-sm">
-                  {skill.name} - {skill.level}
+                <span key={index} className="bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm">
+                  <span>{skill.name} - {skill.level} </span>
                 </span>
               ))}
             </div>
@@ -163,7 +163,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
             <h2 className={template.sectionTitle}>Achievements</h2>
             {formData.achievements.map((achievement, index) => (
               <div key={index} className="mb-1 flex">
-                <Award className='h-5 w-5 me-3 pt-1' />
+                <span className='h-4 w-4 me-2 mt-2'><Award className='h-full w-full' /></span>
                 <h3 className={template.itemSubtitle}>{achievement.title}</h3>
               </div>
             ))}
@@ -174,10 +174,10 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
         {formData.customSections.map((section, sectionIndex) => (
           <div key={sectionIndex} className={template.customSection}>
             <h2 className={template.sectionTitle}>{section.sectionName}</h2>
-            <div>
+            <div className='flex flex-wrap gap-2'>
               {section.items.map((item, itemIndex) => (
-                <span key={itemIndex} className="bg-gray-200 px-3 py-1 rounded-sm text-sm me-2">
-                  {item}
+                <span key={itemIndex} className="bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm">
+                  <span>{item}</span>
                 </span>
               ))}
             </div>
