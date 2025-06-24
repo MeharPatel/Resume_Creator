@@ -3,11 +3,15 @@ export const templates = {
         resume_container: "bg-white shadow-sm a4_page",
         name: "text-3xl font-bold text-gray-800 mb-2 w-100",
         contact: "text-sm text-gray-600 mb-4 w-100",
-        sectionTitle: "text-xl font-bold w-100 mt-6 mb-3 text-gray-800 border-b border-gray-300 pb-4",
+        sectionTitle: "text-xl font-bold w-100 mb-3 text-gray-800 border-b border-gray-300 pb-4",
         itemTitle: "text-lg font-semibold w-100 text-gray-800",
         itemSubtitle: "text-sm text-gray-600 w-100 italic",
         itemDescription: "text-sm text-gray-700 w-100 mt-1",
-        customSection: "mt-4 w-100"
+        customSection: "w-100",
+        customSectionTitle: "text-xl font-bold w-100 mb-3 text-gray-800 border-b border-gray-300 pb-4",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-gray-900"
     },
     modern: {
         resume_container: "bg-white a4_page",
@@ -17,28 +21,40 @@ export const templates = {
         itemTitle: "text-lg font-medium text-gray-900",
         itemSubtitle: "text-sm text-blue-600 font-medium",
         itemDescription: "text-sm text-gray-700 mt-2 leading-relaxed",
-        customSection: "mt-6 pl-4 border-l-4 border-blue-200"
+        customSection: "mt-6 pl-4 border-l-4 border-blue-500",
+        customSectionTitle: "text-2xl font-bold mb-4 text-blue-700",
+        customSectionItems: "bg-blue-500 text-gray-100 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-blue-500 text-gray-100 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     creative: {
-        resume_container: "bg-white border-l-8 border-purple-500 a4_page",
-        name: "text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500",
+        resume_container: "bg-white border-l-8 border-purple-500 a4_page -pr-8",
+        name: "text-4xl text-purple-600 font-bold mb-2",
         contact: "text-sm text-gray-500 mb-6",
         sectionTitle: "text-xl font-bold mt-8 mb-3 text-purple-700 uppercase tracking-wider",
         itemTitle: "text-lg font-bold text-gray-900",
         itemSubtitle: "text-sm text-pink-600 font-medium",
-        itemDescription: "text-sm text-gray-700 mt-2 pl-4 border-l-2 border-purple-200",
-        customSection: "mt-6 bg-gray-50 p-4 rounded-lg"
+        itemDescription: "text-sm text-gray-700 mt-1",
+        customSection: "bg-pink-50 p-4 mt-2 rounded-lg",
+        customSectionTitle: "text-xl font-bold mb-3 text-purple-700 uppercase tracking-wider",
+        customSectionItems: "bg-purple-200 font-medium px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-purple-200 text-gray-700 font-medium px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-purple-600"
     },
     nordic: {
         resume_container: "bg-white border border-gray-100 shadow-sm a4_page",
-        name: "text-3xl font-light text-gray-800 mb-1 tracking-wide",
+        name: "text-3xl font-medium text-gray-800 mb-1 tracking-wide",
         contact: "text-sm text-gray-500 mb-6",
-        sectionTitle: "text-lg font-medium text-gray-700 uppercase tracking-widest border-b border-gray-100 pb-2 mb-3",
+        sectionTitle: "text-lg font-medium mt-4 text-gray-700 uppercase tracking-widest border-b border-gray-200 pb-2 mb-3",
         itemTitle: "text-base font-normal text-gray-900",
         itemSubtitle: "text-xs text-gray-500 italic",
         itemDescription: "text-sm text-gray-600 mt-1 leading-snug",
-        customSection: "mt-4 pl-2 border-l-2 border-gray-200",
-        accentColor: "text-gray-800"
+        customSection: "mt-4 pl-2",
+        customSectionTitle: "text-lg font-medium text-gray-700 uppercase tracking-widest border-b border-gray-200 pb-2 mb-3",
+        customSectionItems: "pl-1 pr-3 pt-0 pb-3 flex justify-center items-center text-sm border-l-4 border-gray-300 rounded-lg",
+        accentColor: "text-gray-800",
+        skill: "pl-1 pr-3 pt-0 pb-3 flex justify-center items-center text-sm border-l-4 border-gray-300 rounded-lg",
+        custom_icons: "w-full h-full text-gray-800"
     },
     darkTech: {
         resume_container: "bg-gray-900 text-gray-100 a4_page",
@@ -49,7 +65,10 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-300 font-mono",
         itemDescription: "text-gray-300 mt-2 text-sm",
         customSection: "mt-6 bg-gray-800 p-3 rounded",
-        accentColor: "text-blue-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-blue-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-gray-100"
     },
     vintage: {
         resume_container: "bg-amber-50 border-l-4 border-amber-300 a4_page",
@@ -60,7 +79,10 @@ export const templates = {
         itemSubtitle: "text-sm text-amber-600",
         itemDescription: "text-amber-800 mt-1 text-sm leading-relaxed",
         customSection: "mt-4 pl-4 border-l border-amber-200",
-        accentColor: "text-amber-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-amber-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     neon: {
         resume_container: "bg-black border border-purple-500/20 a4_page",
@@ -71,7 +93,10 @@ export const templates = {
         itemSubtitle: "text-sm text-purple-300",
         itemDescription: "text-gray-300 mt-2 text-sm",
         customSection: "mt-6 bg-gray-900/50 p-4 rounded-lg border border-purple-500/10",
-        accentColor: "text-pink-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-pink-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     material: {
         resume_container: "bg-white shadow-md rounded-lg a4_page",
@@ -82,16 +107,23 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-600",
         itemDescription: "text-gray-600 mt-1 text-sm",
         customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
-        accentColor: "text-blue-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-blue-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     glass: {
-        resume_container: "bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg a4_page",
-        name: "text-4xl font-bold text-white",
+        resume_container: "bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg a4_page",
+        name: "text-4xl font-bold text-gray-300",
         contact: "text-blue-100/80 text-sm mb-6",
         sectionTitle: "text-xl font-semibold text-white border-b border-white/20 pb-2 mb-3",
         itemTitle: "text-lg font-medium text-white",
         itemSubtitle: "text-blue-100/70 text-sm",
-        itemDescription: "text-white/80 text-sm mt-1"
+        itemDescription: "text-white/80 text-sm mt-1",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     brutalist: {
         resume_container: "bg-yellow-100 border-4 border-black a4_page",
@@ -100,7 +132,11 @@ export const templates = {
         sectionTitle: "text-2xl font-extrabold underline underline-offset-4 mb-4",
         itemTitle: "text-xl font-bold text-black",
         itemSubtitle: "text-black/60 text-sm font-mono",
-        itemDescription: "text-black/80 text-sm mt-2 leading-tight"
+        itemDescription: "text-black/80 text-sm mt-2 leading-tight",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     cyberpunk: {
         resume_container: "bg-black border-2 border-pink-500 a4_page",
@@ -109,7 +145,11 @@ export const templates = {
         sectionTitle: "text-xl font-bold text-pink-500 border-b border-pink-500/30 pb-1 mb-3",
         itemTitle: "text-lg font-bold text-white",
         itemSubtitle: "text-blue-400 text-xs font-mono",
-        itemDescription: "text-gray-300 text-sm mt-1"
+        itemDescription: "text-gray-300 text-sm mt-1",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     vintagePaper: {
         resume_container: "bg-amber-50 border-l-8 border-amber-700 shadow-inner a4_page",
@@ -118,7 +158,11 @@ export const templates = {
         sectionTitle: "text-xl font-serif text-amber-800 border-b border-amber-200 pb-1 mb-3",
         itemTitle: "text-lg font-serif text-amber-900",
         itemSubtitle: "text-amber-700/70 text-sm",
-        itemDescription: "text-amber-800/80 text-sm mt-1 leading-relaxed"
+        itemDescription: "text-amber-800/80 text-sm mt-1 leading-relaxed",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     biophilic: {
         resume_container: "bg-white border-2 border-green-700/10 rounded-lg a4_page",
@@ -127,7 +171,11 @@ export const templates = {
         sectionTitle: "text-xl font-semibold text-green-700 border-b border-green-200 pb-2 mb-3",
         itemTitle: "text-lg font-medium text-green-900",
         itemSubtitle: "text-green-600 text-sm",
-        itemDescription: "text-green-800/80 text-sm mt-1"
+        itemDescription: "text-green-800/80 text-sm mt-1",
+        customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     minimalist: {
         resume_container: "bg-white border border-gray-200 a4_page",
@@ -138,7 +186,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gray-600",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6",
-        accentColor: "text-gray-800"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gray-800",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     retroTech: {
         resume_container: "bg-teal-50 border-4 border-teal-700 a4_page",
@@ -149,7 +200,10 @@ export const templates = {
         itemSubtitle: "text-sm text-orange-500 font-mono",
         itemDescription: "text-sm text-teal-800 mt-1",
         customSection: "mt-6 bg-teal-100/50 p-4 rounded",
-        accentColor: "text-orange-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-orange-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     elegant: {
         resume_container: "bg-gray-50 border-l-4 border-gold-600 a4_page",
@@ -160,7 +214,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gold-600",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 pl-4 border-l-2 border-gold-200",
-        accentColor: "text-gold-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gold-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     futuristic: {
         resume_container: "bg-gray-950 border border-cyan-500/30 a4_page",
@@ -171,7 +228,10 @@ export const templates = {
         itemSubtitle: "text-sm text-cyan-300 font-mono",
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-900/70 p-4 rounded-lg border border-cyan-500/10",
-        accentColor: "text-cyan-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-cyan-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     artDeco: {
         resume_container: "bg-navy-50 border-t-8 border-navy-700 a4_page",
@@ -182,7 +242,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gold-500 font-medium",
         itemDescription: "text-sm text-navy-700 mt-1",
         customSection: "mt-6 bg-navy-100/30 p-4 rounded",
-        accentColor: "text-gold-500"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gold-500",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     pastelDream: {
         resume_container: "bg-white border border-pink-100 shadow-sm rounded-lg a4_page",
@@ -193,7 +256,10 @@ export const templates = {
         itemSubtitle: "text-sm text-pink-500",
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-pink-50 p-4 rounded-md",
-        accentColor: "text-purple-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-purple-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     monochromeBold: {
         resume_container: "bg-white border-4 border-black a4_page",
@@ -204,7 +270,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gray-600 font-medium",
         itemDescription: "text-sm text-gray-800 mt-1",
         customSection: "mt-6 border-t-2 border-gray-900 pt-4",
-        accentColor: "text-black"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-black",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     oceanBreeze: {
         resume_container: "bg-blue-50 border-l-4 border-teal-400 a4_page",
@@ -215,7 +284,10 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-500",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-blue-100/30 p-4 rounded",
-        accentColor: "text-teal-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-teal-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     steampunk: {
         resume_container: "bg-amber-100 border-2 border-bronze-600 a4_page",
@@ -226,7 +298,10 @@ export const templates = {
         itemSubtitle: "text-sm text-amber-500 font-mono",
         itemDescription: "text-sm text-amber-700 mt-1",
         customSection: "mt-6 bg-amber-200/50 p-4 rounded",
-        accentColor: "text-bronze-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-bronze-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     popArt: {
         resume_container: "bg-white border-4 border-yellow-400 a4_page",
@@ -237,7 +312,10 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-500 font-bold",
         itemDescription: "text-sm text-gray-800 mt-1",
         customSection: "mt-6 bg-yellow-100 p-4 rounded-lg",
-        accentColor: "text-red-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-red-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     zenGarden: {
         resume_container: "bg-gray-50 border border-green-200 rounded-lg a4_page",
@@ -248,7 +326,10 @@ export const templates = {
         itemSubtitle: "text-sm text-green-600",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-green-50/50 p-4 rounded",
-        accentColor: "text-green-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-green-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     cosmicGlow: {
         resume_container: "bg-black border border-indigo-500/30 a4_page",
@@ -259,7 +340,10 @@ export const templates = {
         itemSubtitle: "text-sm text-indigo-300 font-mono",
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-900/80 p-4 rounded-lg border border-indigo-500/20",
-        accentColor: "text-violet-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-violet-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     classicParchment: {
         resume_container: "bg-amber-100 border-2 border-amber-600 shadow-inner a4_page",
@@ -270,7 +354,10 @@ export const templates = {
         itemSubtitle: "text-sm text-amber-600",
         itemDescription: "text-sm text-amber-800 mt-1 leading-relaxed",
         customSection: "mt-6 bg-amber-200/50 p-4 rounded",
-        accentColor: "text-amber-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-amber-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     vibrantCitrus: {
         resume_container: "bg-orange-50 border-l-4 border-lime-400 a4_page",
@@ -281,7 +368,10 @@ export const templates = {
         itemSubtitle: "text-sm text-lime-500",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-lime-100/30 p-4 rounded",
-        accentColor: "text-orange-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-orange-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     industrialForge: {
         resume_container: "bg-gray-100 border-2 border-red-600 a4_page",
@@ -292,7 +382,10 @@ export const templates = {
         itemSubtitle: "text-sm text-red-500 font-mono",
         itemDescription: "text-sm text-gray-700 mt-1",
         customSection: "mt-6 bg-gray-200/50 p-4 rounded",
-        accentColor: "text-red-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-red-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     floralElegance: {
         resume_container: "bg-cream-50 border border-pink-200 rounded-lg a4_page",
@@ -303,7 +396,10 @@ export const templates = {
         itemSubtitle: "text-sm text-pink-500",
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-pink-50/50 p-4 rounded",
-        accentColor: "text-pink-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-pink-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     holoTech: {
         resume_container: "bg-gray-900 border border-teal-500/20 a4_page",
@@ -314,10 +410,13 @@ export const templates = {
         itemSubtitle: "text-sm text-teal-300 font-mono",
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-teal-500/10",
-        accentColor: "text-teal-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-teal-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     gothic: {
-        resume_container: "bg-gray-900 border-2 border-gray-700 shadow-lg a4_page",
+        resume_container: "bg-gray-900 border-gray-700 shadow-lg a4_page",
         name: "text-4xl font-serif text-white mb-2 tracking-wide",
         contact: "text-sm text-gray-400 italic mb-6",
         sectionTitle: "text-xl font-serif text-gray-300 border-b border-gray-600 pb-2 mb-3",
@@ -325,10 +424,13 @@ export const templates = {
         itemSubtitle: "text-sm text-gray-500 font-serif",
         itemDescription: "text-sm text-gray-400 mt-1 leading-relaxed",
         customSection: "mt-6 bg-gray-800 p-4 rounded border border-gray-700/50",
-        accentColor: "text-gray-300"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gray-300",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     retroArcade: {
-        resume_container: "bg-black border-4 border-red-500 a4_page",
+        resume_container: "bg-black border border-red-500 a4_page",
         name: "text-4xl font-mono text-blue-400 mb-2 tracking-tight",
         contact: "text-sm text-red-400 font-mono mb-6",
         sectionTitle: "text-xl font-mono text-blue-400 border-b-2 border-red-500 pb-2 mb-3",
@@ -336,7 +438,10 @@ export const templates = {
         itemSubtitle: "text-sm text-red-400 font-mono",
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-900 p-4 rounded border border-blue-500/20",
-        accentColor: "text-blue-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-blue-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     midnightBloom: {
         resume_container: "bg-blue-950 border-l-4 border-blue-400 a4_page",
@@ -347,7 +452,10 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-300",
         itemDescription: "text-sm text-gray-300 mt-1 leading-relaxed",
         customSection: "mt-6 bg-blue-900/50 p-4 rounded",
-        accentColor: "text-blue-200"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-blue-200",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     tropicalVibe: {
         resume_container: "bg-green-50 border border-yellow-300 rounded-lg a4_page",
@@ -358,7 +466,10 @@ export const templates = {
         itemSubtitle: "text-sm text-yellow-500",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-yellow-100/30 p-4 rounded",
-        accentColor: "text-green-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-green-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     baroqueOpulence: {
         resume_container: "bg-cream-50 border-t-4 border-gold-600 a4_page",
@@ -369,7 +480,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gold-500",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-cream-100/50 p-4 rounded",
-        accentColor: "text-gold-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gold-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     neoMinimal: {
         resume_container: "bg-white border border-gray-100 a4_page",
@@ -380,7 +494,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gray-600",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6",
-        accentColor: "text-indigo-600"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-indigo-600",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     purpleMajesty: {
         resume_container: "bg-purple-50 border-l-4 border-purple-600 rounded-lg a4_page",
@@ -391,7 +508,10 @@ export const templates = {
         itemSubtitle: "text-sm text-purple-600",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-purple-100/30 p-4 rounded",
-        accentColor: "text-purple-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-purple-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     vintageTypewriter: {
         resume_container: "bg-gray-100 border-2 border-gray-600 a4_page",
@@ -402,7 +522,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gray-500 font-mono",
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-gray-200/50 p-4 rounded",
-        accentColor: "text-gray-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-gray-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     auroraGlow: {
         resume_container: "bg-gray-900 border border-teal-500/30 a4_page",
@@ -413,7 +536,10 @@ export const templates = {
         itemSubtitle: "text-sm text-teal-300",
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-purple-500/20",
-        accentColor: "text-purple-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-purple-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     artNouveau: {
         resume_container: "bg-green-50 border-t-4 border-gold-500 a4_page",
@@ -424,7 +550,10 @@ export const templates = {
         itemSubtitle: "text-sm text-gold-500",
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-green-100/30 p-4 rounded",
-        accentColor: "text-green-700"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-green-700",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     cyberGrid: {
         resume_container: "bg-black border-2 border-green-500/50 a4_page",
@@ -435,7 +564,10 @@ export const templates = {
         itemSubtitle: "text-sm text-blue-400 font-mono",
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-900/80 p-4 rounded border border-green-500/20",
-        accentColor: "text-green-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-green-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     gradientPulse: {
         resume_container: "bg-gradient-to-br from-purple-600 to-teal-500 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-400/50 a4_page",
@@ -446,7 +578,10 @@ export const templates = {
         itemSubtitle: "text-sm text-teal-300",
         itemDescription: "text-sm text-gray-200 mt-1 leading-relaxed",
         customSection: "mt-6 bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-teal-400/30",
-        accentColor: "text-teal-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-teal-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     cosmicWave: {
         resume_container: "bg-gradient-to-r from-blue-900 to-pink-800 rounded-lg shadow-md backdrop-blur-sm border border-pink-400/30 a4_page",
@@ -457,7 +592,10 @@ export const templates = {
         itemSubtitle: "text-sm text-pink-300",
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-pink-900/20 backdrop-blur-md p-4 rounded-lg shadow-sm",
-        accentColor: "text-pink-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-pink-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     neonHorizon: {
         resume_container: "bg-gradient-to-t from-orange-600 to-cyan-600 rounded-xl border-2 border-cyan-400 shadow-lg hover:shadow-cyan-400/50 transition-shadow duration-300 a4_page",
@@ -468,7 +606,10 @@ export const templates = {
         itemSubtitle: "text-sm text-orange-300 font-mono",
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-cyan-900/30 p-4 rounded-lg border border-orange-400/20",
-        accentColor: "text-cyan-300"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-cyan-300",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     twilightSpark: {
         resume_container: "bg-gradient-to-br from-indigo-900 to-violet-700 rounded-lg shadow-lg border border-violet-400/40 a4_page",
@@ -479,7 +620,10 @@ export const templates = {
         itemSubtitle: "text-sm text-indigo-300",
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-violet-900/20 p-4 rounded-lg border border-indigo-400/30",
-        accentColor: "text-violet-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-violet-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     },
     solarFlare: {
         resume_container: "bg-gradient-to-r from-red-600 to-yellow-500 rounded-xl shadow-lg hover:shadow-yellow-400/50 transition-shadow duration-300 border border-yellow-400/40 a4_page",
@@ -490,6 +634,9 @@ export const templates = {
         itemSubtitle: "text-sm text-red-300",
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-yellow-900/20 backdrop-blur-sm p-4 rounded-lg border border-red-400/30",
-        accentColor: "text-yellow-400"
+        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        accentColor: "text-yellow-400",
+        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        custom_icons: "w-full h-full text-blue-700"
     }
 }

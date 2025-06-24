@@ -68,7 +68,7 @@
     /* Border radius (example value, adjust as needed) */
     --radius: 0.5rem;
   }
-  
+
   /* Container styles */
   /* .container {
     margin-left: auto;
@@ -84,7 +84,7 @@
       max-width: 1400px;
     }
   }
-  
+
   /* Custom font families */
   .font-poppins {
     font-family: 'Poppins', sans-serif;
@@ -92,7 +92,7 @@
   .font-inter {
     font-family: 'Inter', sans-serif;
   }
-  
+
   /* Custom border radius utilities */
   .rounded-lg {
     border-radius: var(--radius);
@@ -103,7 +103,7 @@
   .rounded-sm {
     border-radius: calc(var(--radius) - 4px);
   }
-  
+
   /* Custom keyframes */
   @keyframes accordion-down {
     from {
@@ -169,7 +169,7 @@
       transform: translateY(-10px);
     }
   }
-  
+
   /* Custom animation utilities */
   .animate-accordion-down {
     animation: accordion-down 0.2s ease-out;
@@ -192,7 +192,7 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   /* Custom color utilities */
   .border-custom {
     border-color: var(--border);
@@ -357,13 +357,94 @@
   border-radius: 8px;
 }
 
+.icons{
+  color: var(--custom_icons);
+}
+/* height: 296.5mm; */
+/* 
 .a4_page{
   width: 210mm;
-  /* height: 297mm; */
+  box-sizing: border-box;
+  padding: 10mm;
+  display: grid;
+  grid-row: 100mm;
 }
 
-.a4_content{
-  width: 190mm;
-  height: 276mm;
-  margin: 10mm;
+.break-after{
+  margin-bottom: 10mm;
+  break-after: auto;
 }
+
+.pdf-container {
+  box-sizing: border-box;
+  min-height: 297mm; 
+  width: 210mm; 
+  background: white;
+  position: relative;
+} */
+
+/* src/styles/pdf.css */
+.pdf-container {
+  box-sizing: border-box;
+  min-height: 297mm; /* A4 height */
+  width: 210mm; /* A4 width */
+  padding: 10mm;
+  background: white;
+  position: relative;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}
+
+section {
+  margin-bottom: 10mm;
+  break-after: auto;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+@media print {
+  .pdf-container {
+    /* margin: 0; */
+    padding: 30mm;
+    width: 210mm;
+    height: auto;
+  }
+  body {
+    margin: 0;
+  }
+  section {
+    margin-bottom: 50mm;
+  }
+}
+
+/* Remove invalid class */
+.a4_page {
+  width: 210mm;
+  box-sizing: border-box;
+  padding: 10mm;
+}
+
+
+
+/* .no-break {
+  page-break-inside: avoid;
+}
+
+h2, h3 {
+  page-break-after: avoid;
+} */
+/* 
+@media print {
+  .pdf-container {
+    margin: 0;
+    width: 210mm;
+    height: auto;
+  }
+  body {
+    margin: 0;
+  }
+} */

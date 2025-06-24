@@ -55,20 +55,19 @@ export const ResumePreviewPage = () => {
     {
       title: 'Portfolio',
       projectUrl: 'meharpatel.netlify.app',
-      githubLink: 'meharpatel.netlify.app',
-      image: null,
       description: 'Portfolio Project'
     }
   ],
   socialLinks: {
     github: 'https://github.com/MeharPatel2512',
-    linkedin: 'https://github.com/MeharPatel2512',
-    instagram: 'https://github.com/MeharPatel',
+    linkedin: 'https://linkedin.com/MeharPatel2512',
+    instagram: 'https://instagram.com/MeharPatel',
     facebook: '',
     portfolio: 'meharpatel.netlify.app'
   },
   otherSocialLinks: [],
-  customSections: [ { sectionName: 'Hobbies', items: ['Singing', 'Sketching'] } ]
+  customSections: [ { sectionName: 'Hobbies', items: ['Singing', 'Sketching'] },
+                    { sectionName: 'Something', items: ['Item1', 'Item2'] } ]
 });
 
   const [selectedTemplate, setSelectedTemplate] = useState('professional'); // Default template
