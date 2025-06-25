@@ -1,3 +1,3 @@
 [build]
-  command = "npm install --force && npm run build"
+  command = "npm run prebuild && npm run build"
   publish = "dist"
