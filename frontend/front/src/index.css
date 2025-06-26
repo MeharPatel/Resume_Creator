@@ -425,10 +425,8 @@ h1, h2, h3 {
 .a4_page {
   width: 210mm;
   box-sizing: border-box;
-  padding: 10mm;
+  /* padding: 10mm; */
 }
-
-
 
 /* .no-break {
   page-break-inside: avoid;
@@ -448,3 +446,63 @@ h2, h3 {
     margin: 0;
   }
 } */
+
+
+
+
+
+/* src/styles/pdf.css */
+.pdf-container {
+  box-sizing: border-box;
+  min-height: 297mm; /* A4 height */
+  width: 210mm; /* A4 width */
+  /* padding: 15mm 10mm; Consistent top/bottom and left/right padding */
+  background: white;
+  position: relative;
+  break-inside: avoid;
+}
+
+.no-break {
+  page-break-inside: avoid;
+}
+
+.keep-together {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+}
+
+section {
+  /* margin-bottom: 10mm; */
+  break-inside: avoid;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+}
+
+@media print {
+  .pdf-container {
+    margin: 0;
+    /* padding: 15mm 10mm; */
+    width: 210mm;
+    height: auto;
+    break-inside: avoid;
+  }
+  body {
+    margin: 0;
+  }
+  .no-break {
+    page-break-inside: avoid;
+  }
+  .keep-together {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: block;
+  }
+  section {
+    /* margin-bottom: 10mm; */
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
