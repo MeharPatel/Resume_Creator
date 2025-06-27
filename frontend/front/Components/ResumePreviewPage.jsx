@@ -47,11 +47,24 @@ export const ResumePreviewPage = () => {
       end_date: '',
       current: 'on',
       description: 'Working as Backend Developer'
+    },
+    {
+      company: 'SRKAY Consulting Group',
+      position: 'Backend Developer',
+      start_date: '2024-05',
+      end_date: '',
+      current: 'on',
+      description: 'Working as Backend Developer'
     }
   ],
-  skills: [{name : 'Javascript', level : 'Beginner'} , { name : 'CSS', level : ""} , {name : 'HTML', level : '' } , { name : 'ReactJs', level : ''} , {name : 'NodeJs', level: ''}],
+  skills: [{name : 'Javascript', level : 'Beginner'} , { name : 'CSS', level : "rdtfyg"} , {name : 'HTML', level : 'gftydrtyfugi' } , { name : 'ReactJs', level : 'yutryrtsdfgfui'} , {name : 'NodeJs', level: 'trfugijygutf'}, {name : 'Javascript', level : 'Beginner'} , { name : 'CSS', level : "rdtfyg"} , {name : 'HTML', level : 'gftydrtyfugi' } , { name : 'ReactJs', level : 'yutryrtsdfgfui'} , {name : 'NodeJs', level: 'trfugijygutf'}, {name : 'Javascript', level : 'Beginner'} , { name : 'CSS', level : "rdtfyg"} , {name : 'HTML', level : 'gftydrtyfugi' } , { name : 'ReactJs', level : 'yutryrtsdfgfui'} , {name : 'NodeJs', level: 'trfugijygutf'}],
   achievements: [ { title: 'Leetcode Solved 600+ Problems' } ,{ title : 'Heyyyyooooooooo'}],
   projects: [
+    {
+      title: 'Portfolio',
+      projectUrl: 'meharpatel.netlify.app',
+      description: 'Portfolio Project'
+    },
     {
       title: 'Portfolio',
       projectUrl: 'meharpatel.netlify.app',
@@ -65,7 +78,7 @@ export const ResumePreviewPage = () => {
     facebook: '',
     portfolio: 'meharpatel.netlify.app'
   },
-  otherSocialLinks: [],
+  otherSocialLinks: [{name: "Some1", link: "liguebdsvgftfrdftgyuh"}, {name: "Som2", link: "uyrsdfxgcyutfghiyfg"}],
   customSections: [ { sectionName: 'Hobbies', items: ['Singing', 'Sketching'] },
                     { sectionName: 'Something', items: ['Item1', 'Item2'] } ]
 });
