@@ -208,7 +208,7 @@ export const ResumePreview = ({ formData, selectedTemplate, setSelectedTemplate 
                 </div>
               )}
               {formData.otherSocialLinks.map((soc, index) => (
-                <div key={index} className={`${template.customSection} break-after`}>
+                <div key={index} className={`${template.custom_icons} break-after`}>
                   <span className={template.itemSubtitle}>{soc.name}</span> {" "}
                   <span className={template.itemSubtitle}>{soc.link}</span>
                 </div>
