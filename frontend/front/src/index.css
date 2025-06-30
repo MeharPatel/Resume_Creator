@@ -1,12 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
-
-.font-times-new-roman{
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
-
-
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins|Montserrat"); */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Fira Sans');
 
 /* Resume Preview Themes */
 
@@ -401,3 +394,15 @@ section {
     margin: 0;
   }
 } 
+
+.times_new_roman{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.Montserrat{
+  font-family: "Fira Sans", sans-serif;
+}
+
+.Manufacturing_Consent{
+  font-family: "Quantico", sans-serif;
+}
