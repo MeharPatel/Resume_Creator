@@ -1,5 +1,5 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins|Montserrat"); */
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Fira Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Fira Sans|Play');
 
 /* Resume Preview Themes */
 
@@ -363,7 +363,6 @@
   /* grid-row: 100mm; */
 }
 
-
 .keep-together {
   page-break-inside: avoid;
   break-inside: avoid;
@@ -380,6 +379,9 @@ section {
 }
 
 @media print {
+  page{
+    background-color: initial;
+  }
   .keep-together {
     page-break-inside: avoid;
     break-inside: avoid;
@@ -400,9 +402,12 @@ section {
 }
 
 .Montserrat{
+  font-family: "Montserrat", sans-serif;
+}
+.Fira_sans{
   font-family: "Fira Sans", sans-serif;
 }
-
-.Manufacturing_Consent{
-  font-family: "Quantico", sans-serif;
+.Play{
+  font-family: "Play", sans-serif;
 }
+

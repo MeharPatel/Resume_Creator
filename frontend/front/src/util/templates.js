@@ -42,32 +42,33 @@ export const templates = {
         custom_icons: "w-full h-full text-purple-600"
     },
     nordic: {
-        resume_container: "bg-white border border-gray-100 shadow-sm a4_page Montserrat",
+        resume_container: "bg-white border border-gray-100 shadow-sm a4_page Play",
         name: "text-3xl font-medium text-gray-800 mb-1 tracking-wide",
         contact: "text-sm text-gray-500 mb-4",
         sectionTitle: "text-lg font-medium mb-3 text-gray-700 uppercase tracking-widest border-b border-gray-200 pb-2",
         itemTitle: "text-base font-normal text-gray-900",
         itemSubtitle: "text-xs text-gray-500 font-medium",
         itemDescription: "text-sm text-gray-600 mt-1 leading-snug italic",
-        customSection: "mt-4 pl-2",
+        customSection: "mt-2",
         customSectionTitle: "text-lg font-medium text-gray-700 uppercase tracking-widest border-b border-gray-200 pb-2 mb-3",
         customSectionItems: "px-3 pt-0 pb-3 flex justify-center items-center text-sm border border-gray-300 rounded-lg",
-        accentColor: "text-gray-800",
+        // accentColor: "text-gray-800",
         skill: "px-3 pt-0 pb-3 flex justify-center items-center text-sm border border-gray-300 rounded-lg",
         custom_icons: "w-full h-full text-gray-800"
     },
     darkTech: {
         resume_container: "bg-gray-900 text-gray-100 a4_page",
-        name: "text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400 text-ellipsis",
-        contact: "text-blue-300 text-sm mb-6",
-        sectionTitle: "text-xl font-mono text-blue-400 border-b border-blue-800 pb-1 mb-3",
+        // backgroundColor: "bg-gray-900",
+        name: "text-4xl font-bold text-blue-400 mb-1",
+        contact: "text-blue-300 text-sm mb-4",
+        sectionTitle: "text-xl font-mono text-blue-400 border-b border-blue-800 pb-1 mb-3 font-bold",
         itemTitle: "text-lg font-semibold text-white",
         itemSubtitle: "text-sm text-blue-300 font-mono",
-        itemDescription: "text-gray-300 mt-2 text-sm",
-        customSection: "mt-6 bg-gray-800 p-3 rounded",
-        customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-blue-400",
-        skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
+        itemDescription: "text-gray-300 mt-1 text-sm",
+        customSection: "mt-2 rounded-lg",
+        // accentColor: "text-blue-400",
+        customSectionItems: "border-b-2 border-l-2 border-gray-400 px-3 pt-0 pb-3 flex justify-center items-center rounded-lg text-sm mt-2",
+        skill: "border-b-2 border-l-2 border-gray-400 px-3 pt-0 pb-3 flex justify-center items-center rounded-lg text-sm",
         custom_icons: "w-full h-full text-gray-100"
     },
     vintage: {
@@ -80,7 +81,7 @@ export const templates = {
         itemDescription: "text-amber-800 mt-1 text-sm leading-relaxed",
         customSection: "mt-4 pl-4 border-l border-amber-200",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-amber-700",
+        // accentColor: "text-amber-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -94,7 +95,7 @@ export const templates = {
         itemDescription: "text-gray-300 mt-2 text-sm",
         customSection: "mt-6 bg-gray-900/50 p-4 rounded-lg border border-purple-500/10",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-pink-400",
+        // accentColor: "text-pink-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -108,7 +109,7 @@ export const templates = {
         itemDescription: "text-gray-600 mt-1 text-sm",
         customSection: "mt-6 bg-gray-50 p-4 rounded-lg",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-blue-600",
+        // accentColor: "text-blue-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -187,7 +188,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gray-800",
+        // accentColor: "text-gray-800",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -201,7 +202,7 @@ export const templates = {
         itemDescription: "text-sm text-teal-800 mt-1",
         customSection: "mt-6 bg-teal-100/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-orange-600",
+        // accentColor: "text-orange-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -215,7 +216,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 pl-4 border-l-2 border-gold-200",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gold-600",
+        // accentColor: "text-gold-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -229,7 +230,7 @@ export const templates = {
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-900/70 p-4 rounded-lg border border-cyan-500/10",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-cyan-400",
+        // accentColor: "text-cyan-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -243,7 +244,7 @@ export const templates = {
         itemDescription: "text-sm text-navy-700 mt-1",
         customSection: "mt-6 bg-navy-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gold-500",
+        // accentColor: "text-gold-500",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -257,7 +258,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-pink-50 p-4 rounded-md",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-purple-600",
+        // accentColor: "text-purple-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -271,7 +272,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-800 mt-1",
         customSection: "mt-6 border-t-2 border-gray-900 pt-4",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-black",
+        // accentColor: "text-black",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -285,7 +286,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-blue-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-teal-600",
+        // accentColor: "text-teal-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -299,7 +300,7 @@ export const templates = {
         itemDescription: "text-sm text-amber-700 mt-1",
         customSection: "mt-6 bg-amber-200/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-bronze-600",
+        // accentColor: "text-bronze-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -313,7 +314,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-800 mt-1",
         customSection: "mt-6 bg-yellow-100 p-4 rounded-lg",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-red-600",
+        // accentColor: "text-red-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -327,7 +328,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-green-50/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-green-700",
+        // accentColor: "text-green-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -341,7 +342,7 @@ export const templates = {
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-900/80 p-4 rounded-lg border border-indigo-500/20",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-violet-400",
+        // accentColor: "text-violet-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -355,7 +356,7 @@ export const templates = {
         itemDescription: "text-sm text-amber-800 mt-1 leading-relaxed",
         customSection: "mt-6 bg-amber-200/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-amber-700",
+        // accentColor: "text-amber-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -369,7 +370,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-lime-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-orange-600",
+        // accentColor: "text-orange-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -383,7 +384,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1",
         customSection: "mt-6 bg-gray-200/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-red-600",
+        // accentColor: "text-red-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -397,7 +398,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-pink-50/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-pink-600",
+        // accentColor: "text-pink-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -411,7 +412,7 @@ export const templates = {
         itemDescription: "text-gray-300 text-sm mt-1",
         customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-teal-500/10",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-teal-400",
+        // accentColor: "text-teal-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -425,7 +426,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-400 mt-1 leading-relaxed",
         customSection: "mt-6 bg-gray-800 p-4 rounded border border-gray-700/50",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gray-300",
+        // accentColor: "text-gray-300",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -439,7 +440,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-900 p-4 rounded border border-blue-500/20",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-blue-400",
+        // accentColor: "text-blue-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -453,7 +454,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-300 mt-1 leading-relaxed",
         customSection: "mt-6 bg-blue-900/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-blue-200",
+        // accentColor: "text-blue-200",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -467,7 +468,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-yellow-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-green-600",
+        // accentColor: "text-green-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -481,7 +482,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-cream-100/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gold-600",
+        // accentColor: "text-gold-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -495,7 +496,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-indigo-600",
+        // accentColor: "text-indigo-600",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -509,7 +510,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-purple-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-purple-700",
+        // accentColor: "text-purple-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -523,7 +524,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-600 mt-1 leading-relaxed",
         customSection: "mt-6 bg-gray-200/50 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-gray-700",
+        // accentColor: "text-gray-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -537,7 +538,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-800/70 p-4 rounded-lg border border-purple-500/20",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-purple-400",
+        // accentColor: "text-purple-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -551,7 +552,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-700 mt-1 leading-relaxed",
         customSection: "mt-6 bg-green-100/30 p-4 rounded",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-green-700",
+        // accentColor: "text-green-700",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -565,7 +566,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-300 mt-1",
         customSection: "mt-6 bg-gray-900/80 p-4 rounded border border-green-500/20",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-green-400",
+        // accentColor: "text-green-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -579,7 +580,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-200 mt-1 leading-relaxed",
         customSection: "mt-6 bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-teal-400/30",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-teal-400",
+        // accentColor: "text-teal-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -593,7 +594,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-pink-900/20 backdrop-blur-md p-4 rounded-lg shadow-sm",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-pink-400",
+        // accentColor: "text-pink-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -607,7 +608,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-cyan-900/30 p-4 rounded-lg border border-orange-400/20",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-cyan-300",
+        // accentColor: "text-cyan-300",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -621,7 +622,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-violet-900/20 p-4 rounded-lg border border-indigo-400/30",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-violet-400",
+        // accentColor: "text-violet-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     },
@@ -635,7 +636,7 @@ export const templates = {
         itemDescription: "text-sm text-gray-200 mt-1",
         customSection: "mt-6 bg-yellow-900/20 backdrop-blur-sm p-4 rounded-lg border border-red-400/30",
         customSectionItems: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
-        accentColor: "text-yellow-400",
+        // accentColor: "text-yellow-400",
         skill: "bg-gray-200 px-3 pt-0 pb-3 flex justify-center items-center rounded-sm text-sm",
         custom_icons: "w-full h-full text-blue-700"
     }
