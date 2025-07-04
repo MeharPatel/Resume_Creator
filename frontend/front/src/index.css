@@ -357,8 +357,17 @@
 .a4_page{
   /* height: 297mm; */
   width: 210mm;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   padding: 0mm 15mm 10mm 15mm;
+  display: grid;
+  /* grid-row: 100mm; */
+}
+
+.a4_page_single{
+  /* height: 297mm; */
+  width: 210mm;
+  box-sizing: border-box;
+  padding: 15mm 15mm 10mm 15mm;
   display: grid;
   /* grid-row: 100mm; */
 }
