@@ -1,6 +1,7 @@
 import React from 'react'
 import { XIcon } from 'lucide-react';
 import { toast } from "sonner";
+import { Plus } from 'lucide-react';
 
 export const EducationData = ({ formData, setFormData}) => {
 
@@ -22,11 +23,11 @@ export const EducationData = ({ formData, setFormData}) => {
             <button
               onClick={() => handleDeleteEducation(index)}
               className="h-7 w-7 text-gray-500 hover:text-red-500">
-                <XIcon className="h-3.5 w-3.5" />
+                <XIcon className="h-3.5 w-3.5 x-item-icon" />
               </button>
             </div>
             <div>
-              <label htmlFor={index + "school"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "school"} className="resume-input-label block text-sm font-medium mb-1">
                     School / University
               </label>
               <input
@@ -40,13 +41,13 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].school = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
             </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor={index + "degree"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "degree"} className="resume-input-label block text-sm font-medium mb-1">
                     Degree
               </label>
               <input
@@ -60,11 +61,11 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].degree = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
             </div>
             <div>
-              <label htmlFor={index + "field_of_study"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "field_of_study"} className="resume-input-label block text-sm font-medium mb-1">
                       Field Of Study
               </label>
               <input
@@ -78,14 +79,14 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].field_of_study = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
               </div>
             </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor={index + "start_date"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "start_date"} className="resume-input-label block text-sm font-medium mb-1">
                     Start Date
               </label>
               <input
@@ -98,11 +99,11 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].start_date = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
             </div>
             <div>
-              <label htmlFor={index + "end_date"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "end_date"} className="resume-input-label block text-sm font-medium mb-1">
                       End Date (or Expectred)
               </label>
               <input
@@ -115,13 +116,13 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].end_date = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor={index + "description"} className="block text-sm font-medium mb-1">
+              <label htmlFor={index + "description"} className="resume-input-label block text-sm font-medium mb-1">
                     Description
               </label>
               <input
@@ -135,14 +136,14 @@ export const EducationData = ({ formData, setFormData}) => {
                   updatedEducation[index].description = e.target.value;
                   setFormData({ ...formData, education: updatedEducation });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="border p-2 mb-4 w-full rounded-lg resume-input"
                 />
             </div>
 
         </div>
       ))}
 
-      <button
+      <button type="button" className="flex add_btn"
         onClick={() =>
           setFormData({
             ...formData,
@@ -152,9 +153,13 @@ export const EducationData = ({ formData, setFormData}) => {
             ],
           })
         }
-        className="bg-green-500 text-white px-4 py-2 mb-6 rounded-lg"
-      >
-        + Add Another
+        >
+        <span className="add_text flex items-center justify-center">
+          <span className="m-2 add_btn_text_part"> Add Education </span>
+        </span>
+        <span className="add_plus p-1 flex items-center justify-center">
+            <Plus className="h-8 w-8" />
+        </span>
       </button>
 
     </div>

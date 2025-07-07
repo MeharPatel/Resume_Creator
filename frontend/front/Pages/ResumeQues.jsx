@@ -11,14 +11,14 @@ import { CustomSection } from "../Components/ResumeParts/CustomSection";
 import { BACKEND_URL } from "../src/config";
 
 const steps = [
-  { id: "personal", label: "Personal Info", index: 1 },
+  { id: "personal", label: "Personal", index: 1 },
   { id: "education", label: "Education", index: 2 },
   { id: "experience", label: "Experience", index: 3 },
   { id: "skills", label: "Skills", index: 4 },
-  { id: "achievements", label: "Achievements", index: 5 },
+  { id: "achievements", label: "Achieve.", index: 5 },
   { id: "project", label: "Projects", index: 6 },
-  { id: "socials", label: "Social Accounts", index: 7 },
-  { id: "custom-section", label: "Add-On Details", index: 8 },
+  { id: "socials", label: "Socials", index: 7 },
+  { id: "custom-section", label: "Add-Ons", index: 8 },
 ];
 
 const ResumeQues = () => {
@@ -94,7 +94,7 @@ const ResumeQues = () => {
     switch (currentStep) {
       case 1:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-xl">
             <MainResumeData formData={formData} handleChange={handleChange} />
             <div className="mt-6 text-right">
               <button
@@ -107,7 +107,7 @@ const ResumeQues = () => {
         );
       case 2:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <EducationData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -130,7 +130,7 @@ const ResumeQues = () => {
         );
       case 3:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <ExperienceData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -153,7 +153,7 @@ const ResumeQues = () => {
         );
       case 4:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <SkillsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -176,7 +176,7 @@ const ResumeQues = () => {
         );
       case 5:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <AchievementsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -199,7 +199,7 @@ const ResumeQues = () => {
         );
       case 6:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <ProjectsData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -222,7 +222,7 @@ const ResumeQues = () => {
         );
       case 7:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <SocialLinksData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -245,7 +245,7 @@ const ResumeQues = () => {
         );
       case 8:
         return (
-          <div className="bg-white p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md">
             <CustomSection formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -267,12 +267,12 @@ const ResumeQues = () => {
   };
 
   return (
-    <div className="pt-28 pb-16 bg-gray-50 min-h-screen">
+    <div className="pt-28 pb-16 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-2">
           Resume Builder
         </h1>
-        <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
+        <p className="text-center mb-12 max-w-xl mx-auto">
           Create your professional resume in minutes with our easy-to-use builder. 
           Fill out each section and preview your resume before downloading.
         </p>
@@ -301,10 +301,10 @@ const ResumeQues = () => {
                     className={`
                       h-8 w-8 rounded-full flex items-center justify-center 
                       ${isCurrentStep 
-                        ? "bg-resume-primary text-white"
+                        ? "bg-resume-primary text-gray-50"
                         : isActive
-                          ? "border-2 border-resume-primary text-resume-primary"
-                          : "border-2 border-gray-300 text-gray-400"
+                          ? "border-2 border-resume-primary bg-gray-300"
+                          : "border-2 border-gray-400"
                       }
                     `}
                   >
@@ -320,9 +320,9 @@ const ResumeQues = () => {
             })}
             
             {/* Connecting line */}
-            <div className="absolute top-4 left-0 right-0 h-0.5 bg-gray-200 -z-10 transform -translate-y-1/2">
+            <div className="absolute top-4 left-0 right-0 h-0.5 -z-10 transform -translate-y-1/2">
               <div 
-                className="h-full bg-resume-primary transition-all duration-300" 
+                className="h-full transition-all duration-300" 
                 style={{ width: `${progress}%` }}
               ></div>
             </div>

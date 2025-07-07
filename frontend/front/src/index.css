@@ -3,25 +3,6 @@
 
 /* Resume Preview Themes */
 
-/* .cream-50 { background-color: #FFF8F0; }
-.cream-100 { background-color: #FFF1E6; }
-.bronze-600 { background-color: #8B4513; }
-.bronze-700 { background-color: #7B3F00; }
-.bronze-800 { background-color: #6B3600; }
-.navy-50 { background-color: #F0F5FF; }
-.navy-100 { background-color: #E6EFFF; }
-.navy-600 { background-color: #2563EB; }
-.navy-700 { background-color: #1E40AF; }
-.navy-800 { background-color: #1E3A8A; }
-.navy-900 { background-color: #1E2A78; }
-.gold-200 { background-color: #FDE68A; }
-.gold-300 { background-color: #FCD34D; }
-.gold-400 { background-color: #FBBF24; }
-.gold-500 { background-color: #F59E0B; }
-.gold-600 { background-color: #D97706; } */
-
-
-
 /* Custom CSS variables for colors and border radius */
 :root {
     /* Placeholder variables (define actual HSL values in your app) */
@@ -57,9 +38,62 @@
     --resume-secondary: #7E69AB;
     --resume-tertiary: #6E59A5;
     --resume-dark: #1A1F2C;
-    --resume-light: #D6BCFA;
+    --resume-light: #eddfff;
+    --text-color: #5100bb;
+    --home-first-bg1: rgba(238, 226, 255, 0.3);
+    --home-first-bg2: rgba(35, 0, 80, 0.3);
+    --home-dot: rgb(211, 211, 211);
     /* Border radius (example value, adjust as needed) */
     --radius: 0.5rem;
+    --home-mid-sections-bg: white;
+    --link-text-color: #0097dd;
+    --add_btn1: #8d00df;
+    --add_btn2: #6c00b4;
+    --add_btn_text: #ffffff;
+    --que_parts_bg: rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark{
+    --resume-light: #5100bb;
+    --text-color: #eddfff;
+    --home-first-bg1: #5100bb;
+    --home-first-bg2: #eddfff;
+    --home-dot: rgb(214, 214, 214);
+    --home-mid-sections-bg: rgba(0, 0, 0, 1);
+    --link-text-color: #b8f1ff;
+    --add_btn1: #d386ff;
+    --add_btn2: #e6c0ff;
+    --add_btn_text: #000000;
+    --que_parts_bg: rgba(255, 255, 255, 0.2);
+  }
+  
+  body{
+    background-color: var(--resume-light);
+    color: var(--text-color);
+  }
+
+  .navbar{
+
+  }
+
+  .home-first-bg{
+    background-image: linear-gradient(180deg, var(--home-first-bg1), var(--home-first-bg2));
+  }
+
+  .home-some-dot{
+    background-color: var(--home-dot);
+  }
+
+  .home-mid-sections{
+    background-color: var(--home-mid-sections-bg);
+  }
+
+  .footer-link{
+    color: var(--text-color);
+  }
+
+  .footer-link:hover{
+    color: var(--link-text-color);
   }
 
   /* Container styles */
@@ -86,17 +120,40 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* Custom border radius utilities */
-  .rounded-lg {
-    border-radius: var(--radius);
+  .add_plus{
+    width: 2.5em;
+    transition: all 0.5s;
+    color: var(--add_btn_text);
+    background-color: var(--add_btn2);
   }
-  .rounded-md {
-    border-radius: calc(var(--radius) - 2px);
+  
+  .add_text{
+    height: 2.5em;
+    width: 10em;
+    overflow: hidden;
+    transition: all 0.5s;
+    color: var(--add_btn_text);
+    background-color: var(--add_btn1);
   }
-  .rounded-sm {
-    border-radius: calc(var(--radius) - 4px);
+  
+  .add_btn:hover .add_plus{
+    width: 12.5em;
+    margin-left: -10em;
   }
 
+  .add_btn_text_part{
+    transition: all 0.5s;
+  }
+  
+  .add_btn:hover .add_btn_text_part{
+    color: var(--add_btn_text);
+    transform: translateX(-10em);
+  }
+
+  .resume_que_parts{
+    background-color: var(--que_parts_bg);
+  }
+  
   /* Custom keyframes */
   @keyframes accordion-down {
     from {
@@ -346,8 +403,12 @@
 }
 
 .edu-one, .exp-one{
-  border: solid 1px rgba(78, 13, 255, 0.3);
+  border: solid 1px var(--text-color);
   border-radius: 8px;
+}
+
+.x-item-icon{
+  color: var(--text-color);
 }
 
 .icons{

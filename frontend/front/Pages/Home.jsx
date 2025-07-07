@@ -7,12 +7,12 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:py-40 overflow-hidden">
         {/* Background pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-50 opacity-70 -z-10"></div>
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent -z-10"></div>
+        <div className="home-first-bg absolute inset-0 -z-10"></div>
+        {/* <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent -z-10"></div> */}
         
         {/* Animated shapes */}
-        <div className="absolute top-1/4 left-10 w-64 h-64 bg-resume-primary/5 rounded-full animate-float -z-10"></div>
-        <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-resume-secondary/5 rounded-full animate-float -z-10" style={{ animationDelay: '1s' }}></div>
+        {/* <div className="absolute top-1/4 left-10 w-64 h-64 bg-resume-primary/5 rounded-full animate-float -z-10"></div> */}
+        {/* <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-resume-secondary/5 rounded-full animate-float -z-10" style={{ animationDelay: '1s' }}></div> */}
 
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -21,13 +21,13 @@ const Home = () => {
                 Create Stunning <span className="gradient-text">Resumes</span> That Get You Hired
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 max-w-lg">
+              <p className="text-xl mb-8 max-w-lg">
                 Build professional resumes in minutes with our easy-to-use builder. 
                 Stand out from the competition and land your dream job faster.
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link to="/builder">
+                <Link to="/resumecreator">
                   <button className="primary-button text-lg">
                     Create Your Resume
                   </button>
@@ -39,18 +39,18 @@ const Home = () => {
                 </Link>
               </div>
               
-              <div className="mt-8 flex items-center space-x-2 text-sm text-gray-500">
-                <span className="inline-flex items-center justify-center bg-green-100 text-green-600 p-1 rounded-full">
+              <div className="mt-8 flex items-center space-x-2 text-sm">
+                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full">
                   <CheckIcon className="h-3 w-3" />
                 </span>
                 <span>No credit card required</span>
                 
-                <span className="inline-flex items-center justify-center bg-green-100 text-green-600 p-1 rounded-full ml-4">
+                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full ml-4">
                   <CheckIcon className="h-3 w-3" />
                 </span>
                 <span>ATS-friendly templates</span>
                 
-                <span className="inline-flex items-center justify-center bg-green-100 text-green-600 p-1 rounded-full ml-4">
+                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full ml-4">
                   <CheckIcon className="h-3 w-3" />
                 </span>
                 <span>Unlimited downloads</span>
@@ -70,7 +70,7 @@ const Home = () => {
                   </div>
                   <div className="ml-3">
                     <p className="text-sm font-semibold">ATS-Optimized</p>
-                    <p className="text-xs text-gray-500">Pass through application tracking systems</p>
+                    <p className="text-xs ">Pass through application tracking systems</p>
                   </div>
                 </div>
               </div>
@@ -88,13 +88,13 @@ const Home = () => {
       </section>
       
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 home-mid-sections">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Create Professional Resumes in <span className="gradient-text">Minutes</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl max-w-2xl mx-auto">
               Our intuitive builder makes it easy to create a resume that helps you stand out and gets you noticed by employers.
             </p>
           </div>
@@ -109,7 +109,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Easy Step-by-Step Process</h3>
-                <p className="text-gray-600">
+                <p>
                   Our guided form takes you through each section of your resume, making it simple to add your information.
                 </p>
               </div>
@@ -124,7 +124,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Professional Templates</h3>
-                <p className="text-gray-600">
+                <p>
                   Choose from multiple professionally designed themes that are proven to catch recruiters' attention.
                 </p>
               </div>
@@ -139,7 +139,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Instant PDF Download</h3>
-                <p className="text-gray-600">
+                <p>
                   Export your polished resume as a professional PDF file ready to be sent to employers.
                 </p>
               </div>
@@ -155,7 +155,7 @@ const Home = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Professional <span className="gradient-text">Resume Templates</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl max-w-2xl mx-auto">
               Choose from our collection of professionally designed templates that are optimized for applicant tracking systems.
             </p>
           </div>
@@ -221,13 +221,13 @@ const Home = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 home-mid-sections">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               What Our Users <span className="gradient-text">Are Saying</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl max-w-2xl mx-auto">
               Join thousands of job seekers who have successfully landed interviews using our resume builder.
             </p>
           </div>
@@ -237,15 +237,15 @@ const Home = () => {
             <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in">
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="h-10 w-10 rounded-full bg-resume-primary/20 flex items-center justify-center text-resume-primary mr-4">
+                  <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
                     "
                   </div>
                   <div>
                     <h3 className="font-semibold">Sarah J.</h3>
-                    <p className="text-sm text-gray-500">Marketing Manager</p>
+                    <p className="text-sm">Marketing Manager</p>
                   </div>
                 </div>
-                <p className="text-gray-600">
+                <p>
                   "I applied to 3 jobs with my new resume and got invited to interview for all of them! The templates are beautiful and so easy to customize."
                 </p>
               </div>
@@ -255,15 +255,15 @@ const Home = () => {
             <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="h-10 w-10 rounded-full bg-resume-primary/20 flex items-center justify-center text-resume-primary mr-4">
+                  <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
                     "
                   </div>
                   <div>
                     <h3 className="font-semibold">Michael T.</h3>
-                    <p className="text-sm text-gray-500">Software Engineer</p>
+                    <p className="text-sm">Software Engineer</p>
                   </div>
                 </div>
-                <p className="text-gray-600">
+                <p>
                   "The step-by-step process made it so easy to create a professional resume. I landed my dream job within 2 weeks of using VibeResume!"
                 </p>
               </div>
@@ -273,15 +273,15 @@ const Home = () => {
             <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="h-10 w-10 rounded-full bg-resume-primary/20 flex items-center justify-center text-resume-primary mr-4">
+                  <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
                     "
                   </div>
                   <div>
                     <h3 className="font-semibold">Alex R.</h3>
-                    <p className="text-sm text-gray-500">Recent Graduate</p>
+                    <p className="text-sm">Recent Graduate</p>
                   </div>
                 </div>
-                <p className="text-gray-600">
+                <p>
                   "As a recent graduate with limited experience, I was worried about my resume. VibeResume helped me highlight my skills and I got a job offer within a month!"
                 </p>
               </div>
@@ -296,20 +296,20 @@ const Home = () => {
         
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Create a Winning Resume?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl mb-8">
               Join thousands of job seekers who have successfully landed their dream jobs with our professional resume builder.
             </p>
             
             <Link to="/builder">
-              <button className="bg-white text-resume-primary hover:bg-gray-100 font-semibold py-3 px-8 text-lg rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
+              <button className="bg-white hover:bg-gray-100 font-semibold py-3 px-8 text-lg rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
                 Get Started for Free
               </button>
             </Link>
             
-            <p className="mt-6 text-sm text-white/70">
+            <p className="mt-6 text-sm">
               No credit card required. Create and download your professional resume in minutes.
             </p>
           </div>
