@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from '../Slider';
-import { PencilIcon, XIcon } from 'lucide-react';
+import { PencilIcon, XIcon, Plus, Check } from 'lucide-react';
 import { toast } from "sonner";
 
 export default function SkillsData({ formData, setFormData }) {
@@ -79,7 +79,7 @@ export default function SkillsData({ formData, setFormData }) {
             <h2 className="text-2xl font-bold mb-6 text-center">Skills</h2>
 
             <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                <label htmlFor="name" className="resume-input-label block text-sm font-medium mb-1">
                     Skill Name
                 </label>
                 <input
@@ -89,12 +89,12 @@ export default function SkillsData({ formData, setFormData }) {
                     onChange={handleInputChange}
                     placeholder="JavaScript"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="resume-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
             </div>
 
             <div className="mb-4 mt-5">
-                <label htmlFor="level" className="block text-sm font-medium mb-1">
+                <label htmlFor="level" className="resume-input-label block text-sm font-medium mb-1">
                     Proficiency Level ({levelToStage(sliderValue[0])}) 
                 </label>
                 <Slider
@@ -105,19 +105,26 @@ export default function SkillsData({ formData, setFormData }) {
                     step={1}
                     className="mt-2"
                 />
-                <div className="flex justify-between text-xs text-gray-500 mt-1">
+                <div className="flex justify-between text-xs resume-input-label mt-1">
                     <span>Beginner</span>
                     <span>Intermediate</span>
                     <span>Proficient</span>
                     <span>Advanced</span>
                     <span>Expert</span>
                 </div>
-                <button
-                    onClick={handleSaveSkill}
-                    className="primary-button text-white px-4 py-2 rounded-md mt-4"
-                >
-                    {editIndex !== null ? "Update Skill" : "Add Skill"}
-                </button>
+
+                <div className='mt-4 '>
+                    <button type="button" className="add_btn flex"
+                        onClick={handleSaveSkill}
+                        >
+                        <span className="add_text flex items-center justify-center">
+                          <span className="m-2 add_btn_text_part"> {editIndex !== null ? "Update Skill" : "Add Skill"} </span>
+                        </span>
+                        <span className="add_plus p-1 flex items-center justify-center">
+                            { editIndex !== null ? <Check className='h-8 w-8' /> : <Plus className="h-8 w-8" /> }
+                        </span>
+                      </button>
+                </div>
             </div>
 
             <div className="flex flex-wrap gap-2 mb-6">
@@ -126,24 +133,24 @@ export default function SkillsData({ formData, setFormData }) {
                         key={index}
                         className="bg-gray-200 text-gray-700 px-3 py-1 rounded-xl flex items-center justify-between"
                     >
-                        <div>
+                        <div className='px-2'>
                             <h4 className="font-medium">{skill.name}</h4>
-                            <span className="text-xs text-gray-600 ml-2">
+                            <span className="text-xs text-gray-600 mx-2">
                                 {levelToStage(skill.level)}
                             </span>
                         </div>
                         <div className="flex gap-1">
                             <button
                                 onClick={() => handleEditSkill(index)}
-                                className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                                className="h-7 w-7"
                             >
-                                <PencilIcon className="h-3.5 w-3.5" />
+                                <PencilIcon className="h-3.5 w-3.5 pencil-icon" />
                             </button>
                             <button
                                 onClick={() => handleDeleteSkill(index)}
-                                className="h-7 w-7 text-gray-500 hover:text-red-500"
+                                className="h-7 w-7 hover:text-red-500"
                             >
-                                <XIcon className="h-3.5 w-3.5" />
+                                <XIcon className="h-3.5 w-3.5 x-item-icon" />
                             </button>
                         </div>
                     </div>

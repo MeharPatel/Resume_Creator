@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PencilIcon, XIcon } from 'lucide-react';
+import { PencilIcon, XIcon, Plus, Check } from 'lucide-react';
 import { toast } from "sonner";
 
 export const SocialLinksData = ({ formData, setFormData }) => {
@@ -69,7 +69,7 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                 <ion-icon
                 name={social.icon}
                 alt={social.name}
-                className="w-8 h-8" />
+                className="resume-input-label w-8 h-8" />
                 <input
                 type="text"
                 placeholder={`Your ${social.name} link`}
@@ -83,7 +83,7 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                     },
                     })
                 }
-                className="border p-2 flex-1 rounded" />
+                className="resume-input border p-2 flex-1 rounded" />
             </div>
             ))}
             </div>
@@ -94,7 +94,7 @@ export const SocialLinksData = ({ formData, setFormData }) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-1">
+              <label htmlFor="name" className="resume-input-label block text-sm font-medium mb-1">
                     Social Media Name
               </label>
               <input
@@ -106,11 +106,11 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                 onChange={(e) =>
                     setCurrentSocial({ ...currentSocial, name: e.target.value })
                 }
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
                 />
             </div>
             <div>
-              <label htmlFor="link" className="block text-sm font-medium mb-1">
+              <label htmlFor="link" className="resume-input-label block text-sm font-medium mb-1">
                       Social Media Link
               </label>
               <input
@@ -122,16 +122,25 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                 onChange={(e) =>
                     setCurrentSocial({ ...currentSocial, link: e.target.value })
                 }
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
                 />
               </div>
             </div>
 
-            <button
-            onClick={handleSaveSocial}
-            className="bg-green-500 text-white px-4 py-2 rounded-lg">
-                {editIndex !== null ? "Update Social Media" : "Add Social Media"}
-            </button>
+            <div className='mt-4'>
+                <button type="button" className="flex add_btn"
+                    onClick={handleSaveSocial}
+                    >
+                    <span className="add_text flex items-center justify-center">
+                    <span className="m-2 add_btn_text_part"> 
+                        {editIndex !== null ? "Update Social" : "Add Social"}
+                    </span>
+                    </span>
+                    <span className="add_plus p-1 flex items-center justify-center">
+                        {editIndex !== null ? <Check className="h-8 w-8" /> : <Plus className="h-8 w-8" />}
+                    </span>
+                </button>
+            </div>
 
             <ul className="mt-4">
             {formData.otherSocialLinks.map((social, index) => (
@@ -145,13 +154,13 @@ export const SocialLinksData = ({ formData, setFormData }) => {
                     onClick={() => handleEditSocial(index)}
                     className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                 >
-                    <PencilIcon className="h-3.5 w-3.5" />
+                    <PencilIcon className="h-3.5 w-3.5 pencil-icon" />
                 </button>
                 <button
                     onClick={() => handleDeleteSocial(index)}
                     className="h-7 w-7 text-gray-500 hover:text-red-500"
                 >
-                    <XIcon className="h-3.5 w-3.5" />
+                    <XIcon className="h-3.5 w-3.5 x-item-icon" />
                 </button>
             </div>
             </div>

@@ -8,7 +8,7 @@ export const MainResumeData = ({formData, handleChange}) => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="firstName" className="block text-sm font-medium mb-1">
+          <label htmlFor="firstName" className="resume-input-label block text-sm font-medium mb-1">
                 First Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -18,11 +18,11 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="First Name"
             value={formData.firstName}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="border p-2 mb-4 w-full rounded-lg resume-input"
             />
         </div>
         <div>
-          <label htmlFor="lastName" className="block text-sm font-medium mb-1">
+          <label htmlFor="lastName" className="resume-input-label block text-sm font-medium mb-1">
                   Last Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -32,13 +32,13 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Last Name"
             value={formData.lastName}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
           </div>
         </div>
 
         <div>
-          <label htmlFor="professional_title" className="block text-sm font-medium mb-1">
+          <label htmlFor="professional_title" className="resume-input-label block text-sm font-medium mb-1">
                   Professional Title <span className="text-red-500">*</span>
           </label>
           <input
@@ -48,12 +48,12 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Professional Title"
             value={formData.professional_title}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
         </div>
 
         <div>
-          <label htmlFor="professional_description" className="block text-sm font-medium mb-1">
+          <label htmlFor="professional_description" className="resume-input-label block text-sm font-medium mb-1">
                   Professional Description
           </label>
           <input
@@ -63,13 +63,13 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Professional Description"
             value={formData.professional_description}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-1">
+          <label htmlFor="email" className="resume-input-label block text-sm font-medium mb-1">
                 Email <span className="text-red-500">*</span>
           </label>
           <input
@@ -79,11 +79,11 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium mb-1">
+          <label htmlFor="phone" className="resume-input-label block text-sm font-medium mb-1">
                   Phone <span className="text-red-500">*</span>
           </label>
           <input
@@ -93,14 +93,14 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Phone"
             value={formData.phone}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="address" className="block text-sm font-medium mb-1">
+          <label htmlFor="address" className="resume-input-label block text-sm font-medium mb-1">
                 Address
           </label>
           <input
@@ -110,11 +110,11 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Address"
             value={formData.address}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
         </div>
         <div>
-          <label htmlFor="city" className="block text-sm font-medium mb-1">
+          <label htmlFor="city" className="resume-input-label block text-sm font-medium mb-1">
               City
           </label>
           <input
@@ -124,14 +124,14 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="City"
             value={formData.city}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
-          <label htmlFor="state" className="block text-sm font-medium mb-1">
+          <label htmlFor="state" className="resume-input-label block text-sm font-medium mb-1">
                 State
           </label>
           <input
@@ -141,11 +141,11 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="State"
             value={formData.state}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
         </div>
         <div>
-          <label htmlFor="zip_code" className="block text-sm font-medium mb-1">
+          <label htmlFor="zip_code" className="resume-input-label block text-sm font-medium mb-1">
                   Zip Code
           </label>
           <input
@@ -155,11 +155,11 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Zip Code"
             value={formData.zip_code}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
           </div>
         <div>
-          <label htmlFor="country" className="block text-sm font-medium mb-1">
+          <label htmlFor="country" className="resume-input-label block text-sm font-medium mb-1">
                   Country
           </label>
           <input
@@ -169,7 +169,7 @@ export const MainResumeData = ({formData, handleChange}) => {
             placeholder="Country"
             value={formData.country}
             onChange={handleChange}
-            className="border p-2 mb-4 w-full rounded-lg"
+            className="resume-input border p-2 mb-4 w-full rounded-lg"
             />
           </div>
         </div>

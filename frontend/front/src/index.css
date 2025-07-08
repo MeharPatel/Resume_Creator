@@ -38,8 +38,10 @@
     --resume-secondary: #7E69AB;
     --resume-tertiary: #6E59A5;
     --resume-dark: #1A1F2C;
+    
     --resume-light: #eddfff;
     --text-color: #5100bb;
+    --dark-text-color: #3b0088;
     --home-first-bg1: rgba(238, 226, 255, 0.3);
     --home-first-bg2: rgba(35, 0, 80, 0.3);
     --home-dot: rgb(211, 211, 211);
@@ -51,11 +53,15 @@
     --add_btn2: #6c00b4;
     --add_btn_text: #ffffff;
     --que_parts_bg: rgba(0, 0, 0, 0.1);
+    --que_parts_shadow: rgba(178, 119, 255, 0.747);
+    --que_inp_bg: rgba(237, 223, 255, 0.5);
+    --que-placeholder: rgba(96, 24, 190, 0.7);
   }
   
   .dark{
     --resume-light: #5100bb;
     --text-color: #eddfff;
+    --dark-text-color: #f8f3ff;
     --home-first-bg1: #5100bb;
     --home-first-bg2: #eddfff;
     --home-dot: rgb(214, 214, 214);
@@ -65,6 +71,9 @@
     --add_btn2: #e6c0ff;
     --add_btn_text: #000000;
     --que_parts_bg: rgba(255, 255, 255, 0.2);
+    --que_parts_shadow: rgba(35, 0, 82, 0.7);
+    --que_inp_bg: rgba(81, 0, 187, 0.795);
+    --que-placeholder: rgba(237, 223, 255, 0.7);
   }
   
   body{
@@ -150,8 +159,20 @@
     transform: translateX(-10em);
   }
 
+  .add_item{
+    background-color: var(--add_btn1);
+    color: var(--add_btn_text);
+  }
+
+  .custom_sec_items{
+    background-color: var(--que_parts_bg);
+  }
+
   .resume_que_parts{
     background-color: var(--que_parts_bg);
+    backdrop-filter: blur(1em);
+    overflow: hidden;
+    box-shadow: 0.5em 0.5em 2em var(--que_parts_shadow);
   }
   
   /* Custom keyframes */
@@ -407,12 +428,32 @@
   border-radius: 8px;
 }
 
-.x-item-icon{
+.x-item-icon, .pencil-icon{
   color: var(--text-color);
+}
+.x-item-icon:hover{
+  color: red;
+}
+.pencil-icon:hover{
+  color: rgb(0, 179, 0);
 }
 
 .icons{
   color: var(--custom_icons);
+}
+
+.resume-input-label{
+  color: var(--dark-text-color);
+}
+
+.resume-input{
+  background-color: var(--que_inp_bg);
+  border: solid 1px var(--text-color);
+  accent-color: var(--que_inp_bg);
+}
+
+.resume-input::placeholder{
+  color: var(--que-placeholder);
 }
 
 .a4_page{

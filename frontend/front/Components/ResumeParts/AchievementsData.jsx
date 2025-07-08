@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { PencilIcon, XIcon } from 'lucide-react';
+import { PencilIcon, XIcon, Plus, Check } from 'lucide-react';
 import { toast } from "sonner";
 
 export const AchievementsData = ({ formData, setFormData }) => {
@@ -61,7 +61,7 @@ export const AchievementsData = ({ formData, setFormData }) => {
 
         {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
             <div>
-              <label htmlFor="achievement" className="block text-sm font-medium mb-1">
+              <label htmlFor="achievement" className="resume-input-label block text-sm font-medium mb-1">
                     Achievement Name
               </label>
               <input
@@ -71,18 +71,25 @@ export const AchievementsData = ({ formData, setFormData }) => {
                 value={currentAchievement.title}
                 onChange={handleInputChange}
                 placeholder="Achievement Name"
-                className="border p-2 mb-4 w-full rounded-lg"
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
                 />
             </div>
       
             {/* </div> */}
 
         <div className="mb-4">
-            <button
-            onClick={handleSaveAchievements}
-            className="bg-green-500 text-white px-4 py-2 rounded-lg"
-            >
-            {editIndex !== null ? "Update Achievement" : "Add Achievement"}
+
+            <button type="button" className="flex add_btn"
+                onClick={handleSaveAchievements}
+                >
+                <span className="add_text flex items-center justify-center">
+                <span className="m-2 add_btn_text_part"> 
+                    {editIndex !== null ? "Update" : "Add Achievement"}
+                </span>
+                </span>
+                <span className="add_plus p-1 flex items-center justify-center">
+                    {editIndex !== null ? <Check className="h-8 w-8" /> : <Plus className="h-8 w-8" />}
+                </span>
             </button>
         </div>
 
@@ -101,13 +108,13 @@ export const AchievementsData = ({ formData, setFormData }) => {
                                 onClick={() => handleEditAchievement(index)}
                                 className="h-7 w-7 text-gray-500 hover:text-resume-primary"
                             >
-                                <PencilIcon className="h-3.5 w-3.5" />
+                                <PencilIcon className="h-3.5 w-3.5 pencil-icon" />
                             </button>
                             <button
                                 onClick={() => handleDeleteAchievement(index)}
                                 className="h-7 w-7 text-gray-500 hover:text-red-500"
                             >
-                                <XIcon className="h-3.5 w-3.5" />
+                                <XIcon className="h-3.5 w-3.5 x-item-icon" />
                             </button>
                         </div>
             </li>

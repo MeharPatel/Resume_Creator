@@ -8,7 +8,9 @@ import { AchievementsData } from "../Components/ResumeParts/AchievementsData";
 import { ProjectsData } from "../Components/ResumeParts/ProjectsData";
 import { SocialLinksData } from "../Components/ResumeParts/SocialLinksData";
 import { CustomSection } from "../Components/ResumeParts/CustomSection";
+import { ResumePreviewPage } from "../Components/ResumePreviewPage";
 import { BACKEND_URL } from "../src/config";
+import { Link } from "react-router-dom";
 
 const steps = [
   { id: "personal", label: "Personal", index: 1 },
@@ -107,7 +109,7 @@ const ResumeQues = () => {
         );
       case 2:
         return (
-          <div className="resume_que_parts p-6 rounded-xl shadow-md">
+          <div className="resume_que_parts p-6 rounded-xl shadow-md z-10">
             <EducationData formData={formData} setFormData={setFormData} />
             <div className="mt-6 flex justify-between">
               <button
@@ -253,11 +255,11 @@ const ResumeQues = () => {
                 onClick={BackStep}>
                 Previous: Social Accounts
               </button>
-              <button
+              <Link to='/resumepreview' formData = {formData}
                 className="primary-button text-white py-2 px-4 rounded-md hover:opacity-90 transition-opacity"
                 onClick={handleSave}>
                 Done: Save Data
-              </button>
+              </Link>
             </div>
           </div>
         );
@@ -334,8 +336,8 @@ const ResumeQues = () => {
           {renderStepContent()}
           
           {currentStep !== "preview" && currentStep !== "personal" && (
-            <div className="mt-8 py-6 border-t border-gray-200 text-center">
-              <p className="text-sm text-gray-500 mb-4">
+            <div className="mt-10 py-6 text-center">
+              <p className="text-sm mb-4">
                 You can always return to previous steps by clicking on the progress bar above.
               </p>
               <div className="flex justify-center gap-4">

@@ -15,9 +15,10 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
   });
 
   const template = templates.multipage[selectedTemplate];
+  
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen">
+    <div className="p-8 min-h-screen">
       
       {/* Resume Preview */}
       <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
@@ -68,9 +69,9 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           </section>
 
           {/* Education */}
-          {formData.education.length > 0 && (
+          {'education' in formData && (
             <section className="page-break">
-              <h2 className={template.sectionTitle}>Education</h2>
+              {formData.education.length > 0 && <h2 className={template.sectionTitle}>Education</h2>}
               {formData.education.map((edu, index) => (
                 <div key={index} className="mt-2">
                   <div className="flex">
@@ -92,9 +93,9 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           )}
 
           {/* Experience */}
-          {formData.experience.length > 0 && (
+          {'experience' in formData && (
             <section className="page-break">
-              <h2 className={template.sectionTitle}>Experience</h2>
+              {formData.experience.length > 0 && <h2 className={template.sectionTitle}>Experience</h2>}
               {formData.experience.map((exp, index) => (
                 <div key={index} className="mt-2">
                   <div className="flex">
@@ -115,9 +116,9 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           )}
 
           {/* Skills */}
-          {formData.skills.length > 0 && (
+          {'skills' in formData && (
             <section className="page-break">
-              <h2 className={template.sectionTitle}>Skills</h2>
+              {formData.skills.length > 0 && <h2 className={template.sectionTitle}>Skills</h2>}
               <div className="flex flex-wrap gap-2">
                 {formData.skills.map((skill, index) => (
                   <span key={index} className={template.skill}>
@@ -129,9 +130,9 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           )}
 
           {/* Achievements */}
-          {formData.achievements.length > 0 && (
+          {'achievements' in formData && (
             <section className="page-break">
-              <h2 className={template.sectionTitle}>Achievements</h2>
+              {formData.achievements.length > 0 && <h2 className={template.sectionTitle}>Achievements</h2>}
               {formData.achievements.map((achievement, index) => (
                 <div key={index} className="mt-2 flex">
                   <span className="h-4 w-4 me-2 mt-2">
@@ -144,9 +145,9 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           )}
 
           {/* Project */}
-          {formData.projects.length > 0 && (
+          {'projects' in formData && (
             <section className="page-break">
-              <h2 className={template.sectionTitle}>Projects</h2>
+              {formData.projects.length > 0 && <h2 className={template.sectionTitle}>Projects</h2>}
               {formData.projects.map((proj, index) => (
                 <div key={index} className="mt-2">
                   <div className="flex">
@@ -165,6 +166,7 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
           )}
 
           {/* Social Links */}
+          { 'socialLinks' in formData &&
           <section className="page-break">
             <div className="grid grid-cols-2 gap-0 mt-2">
               {formData.socialLinks.github.length > 0 && (
@@ -207,7 +209,7 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
                   <h3 className={template.itemSubtitle}>{formData.socialLinks.portfolio}</h3>
                 </div>
               )}
-              {formData.otherSocialLinks.map((soc, index) => (
+              {'otherSocialLinks' in formData && formData.otherSocialLinks.map((soc, index) => (
                 <div key={index} className={`${template.custom_icons} break-after`}>
                   <span className={template.itemSubtitle}>{soc.name}</span> {" "}
                   <span className={template.itemSubtitle}>{soc.link}</span>
@@ -215,10 +217,11 @@ export const ResumePreview1 = ({ formData, selectedTemplate }) => {
               ))}
             </div>
           </section>
+          }
 
           {/* Custom Sections */}
-          <div>
-            {formData.customSections.map((section, sectionIndex) => (
+          <div>          
+            {'customSections' in formData && formData.customSections.map((section, sectionIndex) => (
               <div key={sectionIndex} className={`${template.customSection} page-break`}>
                 <h2 className={template.customSectionTitle}>{section.sectionName}</h2>
                 <div className="flex flex-wrap gap-2">

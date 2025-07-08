@@ -1,5 +1,5 @@
 import React from 'react'
-import { XIcon } from 'lucide-react';
+import { XIcon, Plus } from 'lucide-react';
 import { toast } from "sonner";
 
 export const ExperienceData = ({ formData, setFormData }) => {
@@ -18,19 +18,22 @@ export const ExperienceData = ({ formData, setFormData }) => {
 
       {formData.experience.map((exp, index) => (
         <div key={index} className="mb-4 p-5 exp-one">
-          
-          <div className='flex justify-end'>
+          <div className="flex justify-end">
             <button
               onClick={() => handleDeleteExperience(index)}
-              className="h-7 w-7 text-gray-500 hover:text-red-500">
-                <XIcon className="h-3.5 w-3.5" />
-              </button>
-            </div>
+              className="h-7 w-7 text-gray-500 hover:text-red-500"
+            >
+              <XIcon className="h-3.5 w-3.5 x-item-icon" />
+            </button>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor={index + "company"} className="block text-sm font-medium mb-1">
-                    Company
+              <label
+                htmlFor={index + "company"}
+                className="resume-input-label block text-sm font-medium mb-1"
+              >
+                Company
               </label>
               <input
                 type="text"
@@ -43,12 +46,15 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   updatedExperience[index].company = e.target.value;
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
+              />
             </div>
             <div>
-              <label htmlFor={index + "position"} className="block text-sm font-medium mb-1">
-                      Position
+              <label
+                htmlFor={index + "position"}
+                className="resume-input-label block text-sm font-medium mb-1"
+              >
+                Position
               </label>
               <input
                 type="text"
@@ -61,15 +67,18 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   updatedExperience[index].position = e.target.value;
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-              </div>
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
+              />
             </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor={index + "start_date"} className="block text-sm font-medium mb-1">
-                    Start Date
+              <label
+                htmlFor={index + "start_date"}
+                className="resume-input-label block text-sm font-medium mb-1"
+              >
+                Start Date
               </label>
               <input
                 type="month"
@@ -81,33 +90,40 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   updatedExperience[index].start_date = e.target.value;
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
+              />
             </div>
             <div>
-            <div className="flex items-center mb-2">
-              <label htmlFor={index + "end_date"} className="block text-sm font-medium">
-                End Date
-              </label>
-              <div className="ml-auto flex items-center space-x-2">
-                <input
-                  className='cursor-pointer'
-                  type="checkbox" 
-                  id={index + "currentJob"}
-                  defaultChecked={exp.current}
-                  onChange={(e) => {
-                    const updatedExperience = [...formData.experience];
-                    updatedExperience[index].current = e.target.value;
-                    setFormData({ ...formData, experience: updatedExperience });
-                  }}
-                />
-                <label 
-                  htmlFor={index + "currentJob"} 
-                  className="text-xs text-gray-600 cursor-pointer">
-                  Currently working here
+              <div className="flex items-center mb-2">
+                <label
+                  htmlFor={index + "end_date"}
+                  className="resume-input-label block text-sm font-medium"
+                >
+                  End Date
                 </label>
+                <div className="ml-auto flex items-center space-x-2">
+                  <input
+                    className="resume-input cursor-pointer"
+                    type="checkbox"
+                    id={index + "currentJob"}
+                    defaultChecked={exp.current}
+                    onChange={(e) => {
+                      const updatedExperience = [...formData.experience];
+                      updatedExperience[index].current = e.target.value;
+                      setFormData({
+                        ...formData,
+                        experience: updatedExperience,
+                      });
+                    }}
+                  />
+                  <label
+                    htmlFor={index + "currentJob"}
+                    className="resume-input-label text-xs text-gray-600 cursor-pointer"
+                  >
+                    Currently working here
+                  </label>
+                </div>
               </div>
-            </div>
               <input
                 type="month"
                 id={index + "end_date"}
@@ -119,47 +135,61 @@ export const ExperienceData = ({ formData, setFormData }) => {
                   setFormData({ ...formData, experience: updatedExperience });
                 }}
                 disabled={exp.current}
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-              </div>
+                className="resume-input border p-2 mb-4 w-full rounded-lg"
+              />
             </div>
+          </div>
 
-            <div>
-              <label htmlFor={index + "description"} className="block text-sm font-medium mb-1">
-                    Description
-              </label>
-              <input
-                id={index + "description"}
-                type="text"
-                name="description"
-                value={exp.description}
-                onChange={(e) => {
-                  const updatedExperience = [...formData.experience];
-                  updatedExperience[index].description = e.target.value;
-                  setFormData({ ...formData, experience: updatedExperience });
-                }}
-                className="border p-2 mb-4 w-full rounded-lg"
-                />
-            </div>
-
+          <div>
+            <label
+              htmlFor={index + "description"}
+              className="resume-input-label block text-sm font-medium mb-1"
+            >
+              Description
+            </label>
+            <input
+              id={index + "description"}
+              type="text"
+              name="description"
+              value={exp.description}
+              onChange={(e) => {
+                const updatedExperience = [...formData.experience];
+                updatedExperience[index].description = e.target.value;
+                setFormData({ ...formData, experience: updatedExperience });
+              }}
+              className="resume-input border p-2 mb-4 w-full rounded-lg"
+            />
+          </div>
         </div>
       ))}
 
       <button
+        type="button"
+        className="flex add_btn"
         onClick={() =>
           setFormData({
             ...formData,
             experience: [
               ...formData.experience,
-              { company: "", position: "", start_date: "", end_date: "", current: false, description: "" },
+              {
+                company: "",
+                position: "",
+                start_date: "",
+                end_date: "",
+                current: false,
+                description: "",
+              },
             ],
           })
         }
-        className="bg-green-500 text-white px-4 py-2 mb-6 rounded-lg"
       >
-        + Add Another
+        <span className="add_text flex items-center justify-center">
+          <span className="m-2 add_btn_text_part"> Add Experience </span>
+        </span>
+        <span className="add_plus p-1 flex items-center justify-center">
+          <Plus className="h-8 w-8" />
+        </span>
       </button>
-
     </div>
   );
 }

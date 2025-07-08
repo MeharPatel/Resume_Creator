@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PlusIcon, PencilIcon, XIcon } from 'lucide-react';
+import { PencilIcon, XIcon, Plus, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 export const CustomSection = ({ formData, setFormData, handleChange }) => {
@@ -106,7 +106,7 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
 
             <div className="mb-6">
                 <div>
-                    <label htmlFor="title" className="block text-sm font-medium mb-1">
+                    <label htmlFor="title" className="resume-input-label block text-sm font-medium mb-1">
                         Section Title <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -116,12 +116,12 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                         placeholder="Section Title"
                         value={currentSection.title}
                         onChange={handleInputChange}
-                        className="border p-2 mb-4 w-full rounded-lg"
+                        className="resume-input border p-2 mb-4 w-full rounded-lg"
                     />
                 </div>
 
                 <div>
-                    <label htmlFor="item" className="block text-sm font-medium mb-1">
+                    <label htmlFor="item" className="resume-input-label block text-sm font-medium mb-1">
                         Item <span className="text-red-500">*</span>
                     </label>
                     <div className="flex gap-2 mb-4">
@@ -131,11 +131,11 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                             placeholder="Item Content"
                             value={currentItem}
                             onChange={handleItemInputChange}
-                            className="border p-2 flex-1 rounded-lg"
+                            className="resume-input border p-2 flex-1 rounded-lg"
                         />
                         <button
                             onClick={handleAddOrUpdateItem}
-                            className="bg-green-500 text-white px-4 py-2 rounded-lg"
+                            className="add_item px-4 py-2"
                         >
                             {editItemIndex !== null ? 'Update Item' : 'Add Item'}
                         </button>
@@ -166,19 +166,27 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                     </ul>
                 </div>
 
-                <button
-                    onClick={handleSaveSection}
-                    className="primary-button text-white px-4 py-2 rounded-md mb-4"
-                >
-                    <PlusIcon className="h-4 w-4 inline mr-1" /> { editSectionIndex !== null ? "Update Section" : "Add Section" } 
-                </button>
+                <div className='mt-4'>
+                    <button type="button" className="flex add_btn"
+                        onClick={handleSaveSection}
+                        >
+                        <span className="add_text flex items-center justify-center">
+                        <span className="m-2 add_btn_text_part"> 
+                            { editSectionIndex !== null ? "Update Section" : "Add Section" } 
+                        </span>
+                        </span>
+                        <span className="add_plus p-1 flex items-center justify-center">
+                            {editSectionIndex !== null ? <Check className="h-8 w-8" /> : <Plus className="h-8 w-8" />}
+                        </span>
+                    </button>
+                </div>
             </div>
 
             <div className="flex flex-wrap gap-2 mb-6">
                 {formData.customSections.map((section, index) => (
                     <div
                         key={index}
-                        className="bg-gray-200 text-gray-700 px-3 py-1 rounded-xl flex items-center justify-between w-full mb-2"
+                        className="custom_sec_items px-3 py-1 rounded-xl flex items-center justify-between w-full mb-2"
                     >
                         <div>
                             <h4 className="font-medium">{section.title}</h4>
@@ -191,15 +199,15 @@ export const CustomSection = ({ formData, setFormData, handleChange }) => {
                         <div className="flex gap-1">
                             <button
                             onClick={() => handleEditSection(index)}
-                                className="h-7 w-7 text-gray-500 hover:text-resume-primary"
+                                className="h-7 w-7"
                             >
-                                <PencilIcon className="h-3.5 w-3.5" />
+                                <PencilIcon className="h-3.5 w-3.5 pencil-icon" />
                             </button>
                             <button
                                 onClick={() => handleDeleteSection(index)}
-                                className="h-7 w-7 text-gray-500 hover:text-red-500"
+                                className="h-7 w-7"
                             >
-                                <XIcon className="h-3.5 w-3.5" />
+                                <XIcon className="h-3.5 w-3.5 x-item-icon" />
                             </button>
                         </div>
                     </div>
