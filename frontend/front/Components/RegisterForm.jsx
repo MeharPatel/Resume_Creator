@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 import { toast } from "sonner";
+import { BACKEND_URL } from "../src/config";
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -20,11 +21,19 @@ const RegisterForm = () => {
 
   const password = watch("password"); // Watch password for confirmPassword validation
 
-  const onSubmit = (data) => {
-    toast.success("Registration form submitted! This is just a UI demo.");
-    console.log(data);
-    reset(); // Reset form after submission
-    // In a real app, you would handle registration here
+  const [message, setMessage] = useState('');
+
+  const onSubmit = async (data) => {
+    await fetch(`${BACKEND_URL}/register_user`, {
+          method : 'POST',
+          headers : { 'Content-Type' : 'application/json' },
+          body : JSON.stringify(data)
+        })
+      .then(response => response.json())
+      .then(data => setMessage(data.message))
+      .catch(err => console.error(err, "Something went wrong!"));
+    console.log(message);
+    // reset();
   };
 
   return (
@@ -173,6 +182,10 @@ const RegisterForm = () => {
       {errors.acceptTerms && (
         <span className="text-sm text-red-500">{errors.acceptTerms.message}</span>
       )}
+
+      <div className="text-red-600 font-bold">
+        {message}
+      </div>
 
       <button
         type="submit"

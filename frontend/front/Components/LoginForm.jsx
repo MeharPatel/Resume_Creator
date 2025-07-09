@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
 import { toast } from "sonner";
+import { BACKEND_URL } from '../src/config'
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
   const [showPassword, setShowPassword] = useState(false);
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm({
@@ -14,11 +18,24 @@ const LoginForm = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    toast.success("Login form submitted! This is just a UI demo.");
+  const [message, setMessage] = useState();
+
+  const onSubmit = async (data) => {
+    await fetch(`${BACKEND_URL}/login_user`, {
+              method : 'POST',
+              headers : { 'Content-Type' : 'application/json' },
+              body : JSON.stringify(data)
+            })
+          .then(response => response.json())
+          .then(data => {
+            if(data.status == 200) navigate('/')
+            else setMessage(data.message)
+          })
+          .catch(err => console.error(err, "Something went wrong!"));
     console.log(data);
-    reset(); // Reset form after submission
-    // In a real app, you would handle authentication here
+    console.log(message);
+    
+    // reset(); 
   };
 
   return (
