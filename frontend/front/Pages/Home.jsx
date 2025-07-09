@@ -8,11 +8,6 @@ const Home = () => {
       <section className="relative pt-32 pb-20 md:py-40 overflow-hidden">
         {/* Background pattern */}
         <div className="home-first-bg absolute inset-0 -z-10"></div>
-        {/* <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-white to-transparent -z-10"></div> */}
-        
-        {/* Animated shapes */}
-        {/* <div className="absolute top-1/4 left-10 w-64 h-64 bg-resume-primary/5 rounded-full animate-float -z-10"></div> */}
-        {/* <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-resume-secondary/5 rounded-full animate-float -z-10" style={{ animationDelay: '1s' }}></div> */}
 
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -28,30 +23,30 @@ const Home = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Link to="/resumecreator">
-                  <button className="primary-button text-lg">
+                  <button className="primary-button text-lg px-3 py-2 rounded-lg shadow-xl">
                     Create Your Resume
                   </button>
                 </Link>
                 <Link to="/about">
-                  <button variant="outline" className="secondary-button text-lg">
+                  <button variant="outline" className="secondary-button p-1 rounded-lg text-lg">
                     Learn More
                   </button>
                 </Link>
               </div>
               
               <div className="mt-8 flex items-center space-x-2 text-sm">
-                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full">
-                  <CheckIcon className="h-3 w-3" />
+                <span className="inline-flex items-center justify-center home-check-icon p-1 rounded-full">
+                  <CheckIcon className="h-4 w-4" />
                 </span>
                 <span>No credit card required</span>
                 
-                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full ml-4">
-                  <CheckIcon className="h-3 w-3" />
+                <span className="inline-flex items-center justify-center home-check-icon p-1 rounded-full ml-4">
+                  <CheckIcon className="h-4 w-4" />
                 </span>
                 <span>ATS-friendly templates</span>
                 
-                <span className="inline-flex items-center justify-center bg-green-100 p-1 rounded-full ml-4">
-                  <CheckIcon className="h-3 w-3" />
+                <span className="inline-flex items-center justify-center home-check-icon p-1 rounded-full ml-4">
+                  <CheckIcon className="h-4 w-4" />
                 </span>
                 <span>Unlimited downloads</span>
               </div>
@@ -63,9 +58,9 @@ const Home = () => {
                 alt="Resume Example" 
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 -left-6 home-pic-text-down p-4 rounded-lg shadow-lg">
                 <div className="flex items-center">
-                  <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                  <div className="h-8 w-8 rounded-full home-check-icon flex items-center justify-center">
                     <CheckIcon className="h-5 w-5" />
                   </div>
                   <div className="ml-3">
@@ -74,7 +69,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+              <div className="absolute -top-6 -right-6 home-pic-text-down p-4 rounded-lg shadow-lg">
                 <p className="text-sm font-semibold">3 Professional Themes</p>
                 <div className="flex mt-2 space-x-1">
                   <span className="w-4 h-4 bg-blue-500 rounded-full"></span>
@@ -221,7 +216,7 @@ const Home = () => {
       </section>
       
       {/* Testimonials */}
-      <section className="py-20 home-mid-sectionsw">
+      <section className="py-20 home-mid-sections home-mid-sections">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -320,30 +315,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
-
-
-// import React from 'react'
-
-// export const Home = () => {
-
-//   const getData = async () => {
-//     const response = await fetch('http://localhost:3000/test', {
-//       method : 'GET',
-//       headers : { 'Content-Type' : 'application/json' }
-//     })
-
-//     // const result = await response.json()
-//     console.log(response);    
-//   }
-
-//   return (
-//     <div>
-
-//       <button className='bg-red-200' onClick = {getData} >Click Me</button>
-//       <div>Home</div>
-//     </div>
-//   )
-// }
