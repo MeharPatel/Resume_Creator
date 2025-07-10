@@ -33,7 +33,7 @@ const RegisterForm = () => {
       .then(data => setMessage(data.message))
       .catch(err => console.error(err, "Something went wrong!"));
     console.log(message);
-    // reset();
+    reset();
   };
 
   return (

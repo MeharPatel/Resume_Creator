@@ -22,15 +22,16 @@ const Home = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Link to="/resumecreator">
-                  <button className="primary-button text-lg px-3 py-2 rounded-lg shadow-xl">
-                    Create Your Resume
-                  </button>
-                </Link>
-                <Link to="/about">
-                  <button variant="outline" className="secondary-button p-1 rounded-lg text-lg">
-                    Learn More
-                  </button>
+
+                  <Link to="/resumecreator" className="relative px-6 py-3 font-bold group">
+                      <span className="create-btn absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+                      <span className="absolute inset-0 w-full h-full border-4 create-btn-border"></span>
+                      <span className="relative create-btn-text">Create Your Resume</span>
+                  </Link>
+
+                <Link to="/about" className="learn-more-btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium">
+                    <span className="learn-more-btn-span absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                    <span className="learn-more-btn-text relative transition duration-300 ease">Learn More</span>
                 </Link>
               </div>
               
@@ -96,7 +97,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in">
+            <div className="mid-section-cards overflow-hidden border-resume-primary/10 animate-fade-in">
               <div className="p-6">
                 <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
@@ -111,7 +112,7 @@ const Home = () => {
             </div>
             
             {/* Feature 2 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="mid-section-cards overflow-hidden border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="p-6">
                 <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
@@ -126,7 +127,7 @@ const Home = () => {
             </div>
             
             {/* Feature 3 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="mid-section-cards overflow-hidden border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="p-6">
                 <div className="h-12 w-12 rounded-full gradient-bg flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">

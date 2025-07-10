@@ -89,7 +89,7 @@ const Navbar = () => {
                 asChild
                 variant="ghost"
                 className="interactive whitespace-nowrap">
-                Experience
+                Contact
               </Link>
             
             <ThemeToggle className="ml-2" />

@@ -35,7 +35,7 @@ const LoginForm = () => {
     console.log(data);
     console.log(message);
     
-    // reset(); 
+    reset(); 
   };
 
   return (

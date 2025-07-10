@@ -4,13 +4,13 @@ const AboutPage = () => {
   return (
     <div className="pt-28">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <section className="py-16 md:py-24 about-mid-sections">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="gradient-text">VibeResume</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl mb-8">
               We help job seekers create professional, ATS-friendly resumes that get interviews and land dream jobs.
             </p>
           </div>
@@ -23,13 +23,13 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4">
                 VibeResume was founded in 2023 with a simple mission: to help job seekers create professional resumes that actually get noticed by employers.
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4">
                 After witnessing friends and family struggle with outdated resume templates and confusing builder tools, we decided to create a solution that combines beautiful design with ATS-friendly functionality.
               </p>
-              <p className="text-gray-600">
+              <p>
                 Today, we've helped thousands of job seekers land interviews and secure their dream jobs across various industries.
               </p>
             </div>
@@ -45,46 +45,46 @@ const AboutPage = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 about-mid-sections">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Value 1 */}
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow animate-fade-in">
+            <div className="about-mid-section-cards p-8 rounded-xl transition-shadow animate-fade-in">
               <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 text-white">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Excellence</h3>
-              <p className="text-gray-600">
+              <p>
                 We strive for excellence in every aspect of our service, from the design of our templates to the user experience of our platform.
               </p>
             </div>
             
             {/* Value 2 */}
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="about-mid-section-cards p-8 rounded-xl transition-shadow animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 text-white">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Accessibility</h3>
-              <p className="text-gray-600">
+              <p>
                 We believe everyone deserves access to professional resume tools, regardless of their background or experience level.
               </p>
             </div>
             
             {/* Value 3 */}
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="about-mid-section-cards p-8 rounded-xl transition-shadow animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 text-white">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
-              <p className="text-gray-600">
+              <p>
                 We continuously improve our platform, staying up-to-date with the latest resume trends and applicant tracking system requirements.
               </p>
             </div>
@@ -109,7 +109,7 @@ const AboutPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">ATS-Friendly Templates</h3>
-                <p className="text-gray-600">
+                <p>
                   Our resume templates are optimized to pass through Applicant Tracking Systems, ensuring your resume actually reaches human recruiters.
                 </p>
               </div>
@@ -124,7 +124,7 @@ const AboutPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Privacy-Focused</h3>
-                <p className="text-gray-600">
+                <p>
                   We respect your privacy. Your data is secure and we never share your personal information with third parties.
                 </p>
               </div>
@@ -139,7 +139,7 @@ const AboutPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Time-Saving</h3>
-                <p className="text-gray-600">
+                <p>
                   Our intuitive builder helps you create a professional resume in minutes, not hours, so you can focus on your job search.
                 </p>
               </div>
@@ -154,7 +154,7 @@ const AboutPage = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
-                <p className="text-gray-600">
+                <p>
                   Our team is available to answer your questions and provide guidance throughout your resume creation process.
                 </p>
               </div>
@@ -164,13 +164,13 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="about-mid-sections py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready to Create Your Professional Resume?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl mb-8">
               Join thousands of job seekers who have found success with VibeResume.
             </p>
             

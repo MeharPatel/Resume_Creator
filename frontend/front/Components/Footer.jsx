@@ -26,7 +26,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/builder" className="footer-link transition-colors">
+                <Link to="/resumecreator" className="footer-link transition-colors">
                   Resume Builder
                 </Link>
               </li>

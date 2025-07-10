@@ -1,6 +1,6 @@
 const AuthLayout = ({ title, children }) => {
   return (
-    <div className="container flex items-center justify-center min-h-screen py-16">
+    <div className="container flex items-center justify-center min-h-screen py-32">
       <div className="w-full max-w-md">
         <div className="text-center">
           <div className="gradient-text text-2xl">{title}</div>
