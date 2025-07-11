@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { CheckIcon } from "lucide-react";
+import { ArrowBigRight, ArrowRight, CheckIcon } from "lucide-react";
 
 const Home = () => {
   return (
@@ -199,7 +199,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-white text-xl font-semibold">Creative</h3>
                 <p className="text-white/80 mb-4">Unique design that stands out</p>
-                <Link to="/builder" className="text-white font-medium hover:text-resume-primary transition-colors">
+                <Link to="/resumecreator" className="text-white font-medium hover:text-resume-primary transition-colors">
                   Try This Template →
                 </Link>
               </div>
@@ -207,11 +207,18 @@ const Home = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Link to="/builder">
-              <button className="primary-button text-lg">
-                Create Your Resume Now
-              </button>
+
+            <Link to="/resumecreator" class="create-grd-btn relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+                <span class="gradient-bg absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
+                <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                    <ArrowRight className="h-6 w-6" />
+                </span>
+                <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                    <ArrowRight className='h-6 w-6' />
+                </span>
+                <span class="relative w-full text-left transition-colors duration-200 ease-in-out">Create Your Resume Now</span>
             </Link>
+
           </div>
         </div>
       </section>
@@ -230,7 +237,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in">
+            <div className="mid-section-cards overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in">
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
@@ -248,7 +255,7 @@ const Home = () => {
             </div>
             
             {/* Testimonial 2 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="mid-section-cards overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
@@ -266,7 +273,7 @@ const Home = () => {
             </div>
             
             {/* Testimonial 3 */}
-            <div className="overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="mid-section-cards overflow-hidden hover:shadow-lg transition-shadow border-resume-primary/10 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="h-10 w-10 rounded-full home-some-dot flex items-center justify-center mr-4">
@@ -299,7 +306,7 @@ const Home = () => {
               Join thousands of job seekers who have successfully landed their dream jobs with our professional resume builder.
             </p>
             
-            <Link to="/builder">
+            <Link to="/resumecreator">
               <button className="bg-white hover:bg-gray-100 font-semibold py-3 px-8 text-lg rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
                 Get Started for Free
               </button>

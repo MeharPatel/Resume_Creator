@@ -121,12 +121,14 @@ const ContactPage = () => {
                   />
                 </div>
                 
-                <button 
-                  type="submit" 
-                  className="p-3 rounded-md primary-button w-full" 
-                  disabled={isSubmitting}
+                <button className="overflow-hidden w-full contact-send-btn rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:shadow-none shadow-lg"
+                type="submit"
+                disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                    <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-full group-hover:h-full opacity-10"></span>
+                    <span className="relative contact-send-text font-bold">
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </span>
                 </button>
               </form>
             </div>
@@ -135,7 +137,7 @@ const ContactPage = () => {
             <div className="animate-fade-in">
               <h2 className="resume-input-label text-2xl font-bold mb-6">Contact Information</h2>
               
-              <div className="contact-mid-sections p-8 rounded-xl shadow-sm space-y-8">
+              <div className="contact-mid-sections p-8 rounded-md shadow-sm space-y-8">
                 <div>
                   <h3 className="resume-input-label text-lg font-semibold mb-2">Email</h3>
                   <p className="flex items-center">
