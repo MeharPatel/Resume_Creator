@@ -305,11 +305,16 @@ const Home = () => {
             <p className="text-xl mb-8">
               Join thousands of job seekers who have successfully landed their dream jobs with our professional resume builder.
             </p>
-            
-            <Link to="/resumecreator">
-              <button className="bg-white hover:bg-gray-100 font-semibold py-3 px-8 text-lg rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-                Get Started for Free
-              </button>
+
+            <Link to="/resumecreator" class="create-grd-btn relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold transition-all duration-150 ease-in-out rounded-lg hover:pl-10 hover:pr-6 group">
+                <span class="gradient-bg absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out group-hover:h-full"></span>
+                <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                    <ArrowRight className="h-6 w-6" />
+                </span>
+                <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                    <ArrowRight className='h-6 w-6' />
+                </span>
+                <span class="relative w-full text-left transition-colors duration-200 ease-in-out">Get Started For Free</span>
             </Link>
             
             <p className="mt-6 text-sm">

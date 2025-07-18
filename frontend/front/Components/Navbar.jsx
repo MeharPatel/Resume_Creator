@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav
       className={`navbar fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         scrolled
-          ? "backdrop-blur-md py-2 shadow-md glass"
+          ? "backdrop-blur-md py-2 shadow-lg scrolled"
           : "bg-transparent py-4"
       }`}
     >
