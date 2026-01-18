@@ -20,14 +20,14 @@ jobs:
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: client/package-lock.json
+          cache-dependency-path: frontend/front/package-lock.json
 
       - name: Install dependencies
-        working-directory: client
+        working-directory: frontend/front
         run: npm ci
 
       - name: Build Vite app
-        working-directory: client
+        working-directory: frontend/front
         run: npm run build
 
       - name: Deploy to Netlify
