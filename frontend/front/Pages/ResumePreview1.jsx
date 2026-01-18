@@ -1,6 +1,6 @@
 import { templates } from '../src/util/templates';
 import { usePDF } from 'react-to-pdf';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { HomeIcon, BriefcaseBusiness, AtSign, Phone, GraduationCap, Building2, Award, ChartPie, FolderHeart, Star, Github, Linkedin, Instagram, Facebook, User, Signature } from 'lucide-react';
 
 export const ResumePreview1 = ({ formData, selectedTemplate }) => {

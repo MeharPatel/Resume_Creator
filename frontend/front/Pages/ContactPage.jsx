@@ -203,7 +203,7 @@ const ContactPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="contact-mid-section-cards p-6 rounded-md animate-fade-in">
-              <h3 className="text-lg font-semibold mb-3">Is VibeResume free to use?</h3>
+              <h3 className="text-lg font-semibold mb-3">Is Make-Your-Resume free to use?</h3>
               <p>
                 Yes, you can create and download your resume completely free of charge. We also offer premium templates and features for those who want additional options.
               </p>

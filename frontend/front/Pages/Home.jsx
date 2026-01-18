@@ -267,7 +267,7 @@ const Home = () => {
                   </div>
                 </div>
                 <p>
-                  "The step-by-step process made it so easy to create a professional resume. I landed my dream job within 2 weeks of using VibeResume!"
+                  "The step-by-step process made it so easy to create a professional resume. I landed my dream job within 2 weeks of using Make-Your-Resume!"
                 </p>
               </div>
             </div>
@@ -285,7 +285,7 @@ const Home = () => {
                   </div>
                 </div>
                 <p>
-                  "As a recent graduate with limited experience, I was worried about my resume. VibeResume helped me highlight my skills and I got a job offer within a month!"
+                  "As a recent graduate with limited experience, I was worried about my resume. Make-Your-Resume helped me highlight my skills and I got a job offer within a month!"
                 </p>
               </div>
             </div>

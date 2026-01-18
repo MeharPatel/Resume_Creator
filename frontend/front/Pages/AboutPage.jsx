@@ -8,7 +8,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="gradient-text">VibeResume</span>
+              About <span className="gradient-text">Make-Your-Resume</span>
             </h1>
             <p className="text-xl mb-8">
               We help job seekers create professional, ATS-friendly resumes that get interviews and land dream jobs.
@@ -24,7 +24,7 @@ const AboutPage = () => {
             <div className="animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="mb-4">
-                VibeResume was founded in 2023 with a simple mission: to help job seekers create professional resumes that actually get noticed by employers.
+                Make-Your-Resume was founded in 2023 with a simple mission: to help job seekers create professional resumes that actually get noticed by employers.
               </p>
               <p className="mb-4">
                 After witnessing friends and family struggle with outdated resume templates and confusing builder tools, we decided to create a solution that combines beautiful design with ATS-friendly functionality.
@@ -96,7 +96,7 @@ const AboutPage = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">
-            Why Choose <span className="gradient-text">VibeResume</span>
+            Why Choose <span className="gradient-text">Make-Your-Resume</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -171,7 +171,7 @@ const AboutPage = () => {
               Ready to Create Your Professional Resume?
             </h2>
             <p className="text-xl mb-8">
-              Join thousands of job seekers who have found success with VibeResume.
+              Join thousands of job seekers who have found success with Make-Your-Resume.
             </p>
             
             <Link to="/builder">
