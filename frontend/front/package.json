@@ -11,21 +11,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^4.3.0",
     "axios": "^1.8.4",
     "file-saver": "^2.0.5",
     "framer-motion": "^12.10.5",
     "front": "file:",
     "lucide-react": "^0.509.0",
     "react": "^19.1.0",
-    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.3",
     "react-router-dom": "^7.5.1",
-    "react-slider": "^2.0.6",
-    "react-to-pdf": "^2.0.0",
-    "sonner": "^2.0.3",
-    "windy-pdf": "^0.4.0"
+    "sonner": "^2.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
