@@ -64,6 +64,7 @@ const Try = ({ initialSections }) => {
               <li>Use bullet points for better readability</li>
               <li>Quantify achievements with numbers when possible</li>
               <li>Proofread for any spelling or grammar errors</li>
+              <li>Proofread for any spelling or grammar errors</li>
             </ul>
           </div>
     </div>
